@@ -32,11 +32,11 @@ class SendQuestionModalComponent extends Component
     protected function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255'],
-            'subject' => ['required', 'string', 'max:255'],
-            'question' => ['required', 'string'],
-            'recaptcha' => ['required', 'captcha'],
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'question' => 'required|string',
+            'recaptcha' => 'required|captcha',
         ];
     }
 
@@ -60,6 +60,8 @@ class SendQuestionModalComponent extends Component
         $this->dispatch('modalOpened');
     }
 
+    // Listener to close modal from JS
+    #[On('closeSendQuestionModalEvent')]
     public function closeModal()
     {
         $this->showModal = false;
@@ -78,26 +80,27 @@ class SendQuestionModalComponent extends Component
     public function submit()
     {
         $this->protectAgainstSpam();
+        //  $this->recaptcha = request('g-recaptcha-response'); // Re-added temporarily for testing if needed
 
         $validatedData = $this->validate();
 
         try {
             unset($validatedData['recaptcha']);
 
-            $contactRequestData = ContactRequestData::fromArray([
-                'name' => $this->name,
-                'email' => $this->email,
-                'subject' => $this->subject,
-                'question' => $this->question,
-            ]);
-
+            $contactRequestData = ContactRequestData::fromArray($validatedData);
             app(CreateContactRequestAction::class)->execute($contactRequestData);
 
-            session()->flash('success', 'Your question has been sent successfully!');
-            $this->resetInputFields();
+            // Dispatch browser event for JS to handle success message
+            $this->dispatch('questionSentSuccessfully', message: 'We\'ve received your question, we will contact you soon.');
 
-        } catch (Throwable $e) {
-            Log::error('Error saving contact request or sending email: '.$e->getMessage());
+            $this->resetInputFields();
+            // Removed automatic modal close: $this->closeModal();
+
+        } catch (Throwable $e) { // Changed to Throwable
+            Log::error('Error saving contact request: '.$e->getMessage());
+            // Dispatch browser event for JS to handle error message (optional)
+            $this->dispatch('questionSendFailed', message: 'There was an error sending your question. Please try again.');
+            // Keep session flash as fallback
             session()->flash('error', 'There was an error sending your question. Please try again.');
         }
     }

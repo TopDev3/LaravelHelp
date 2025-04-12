@@ -14,6 +14,7 @@
     <!-- Calendly widget CSS -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
+
     <!-- === CSS CDNs & StyleSheets === -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css"/>
@@ -1636,6 +1637,7 @@
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/plugin.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -1653,7 +1655,7 @@
 <!-- Typed.js CDN -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-{{-- Typed.js Initialization and reCAPTCHA Script --}}
+{{-- Typed.js Initialization, reCAPTCHA, and SweetAlert Logic --}}
 <script>
     document.addEventListener('livewire:init', () => { 
         // --- Typed.js Initialization ---
@@ -1739,6 +1741,38 @@
                  }
             }, 250); 
         });
+
+        // --- SweetAlert Listeners ---
+        Livewire.on('questionSentSuccessfully', (event) => {
+            // Safely access the message, provide a default if missing
+            const message = event.message || 'Your question has been sent successfully!';
+
+            Swal.fire({
+                title: 'Success!',
+                text: message, // Use the message from the event
+                icon: 'success',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#DC3545' // Match your btn-main color if possible
+            }).then((result) => {
+                // After the user clicks "Ok"
+                Livewire.dispatch('closeSendQuestionModalEvent'); // Dispatch event to close LW modal
+            });
+        });
+
+        Livewire.on('questionSendFailed', (event) => {
+             // Safely access the message, provide a default if missing
+            const message = event.message || 'An error occurred. Please try again.';
+            
+            Swal.fire({
+                title: 'Error!',
+                text: message, // Use the message from the event
+                icon: 'error',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#DC3545' 
+            });
+            // Don't close the modal on error, let the user retry
+        });
+
     });
 </script>
 
