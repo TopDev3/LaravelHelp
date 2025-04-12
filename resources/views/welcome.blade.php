@@ -244,7 +244,6 @@
 
     <!-- ========= Fact Section Start ========== -->
     <section class="section achievement bg-primary">
-
         <h3
                 class="section__subtitle fw-semibold mx-auto position-absolute d-flex align-items-center justify-content-center fs-4 text-primary bg-white animated-border">
             <div class="border-effect"></div>
@@ -259,34 +258,32 @@
                 </span>
         </h3>
 
-
         <div class="container">
-            {{-- Keep wrapper centered --}}
             <div
                     class="achivement__wrapper mx-auto d-flex justify-content-center align-items-center flex-wrap gap-4">
 
-                {{-- Keep items centered, removed specific gap/column-gap here --}}
+                {{-- Ensure full width, space between, and NO wrapping --}}
                 <div
-                        class="achivement__counts d-flex flex-wrap justify-content-center align-items-center row-gap-3 odometer-trigger">
+                        class="achivement__counts w-100 d-flex justify-content-between align-items-center row-gap-3 odometer-trigger"> 
 
-                    {{-- Added significant horizontal padding for spacing --}}
-                    <div class="achivement__count-item text-center px-md-5 mb-3 mb-sm-0">
+                    {{-- Removed px-md-5 and mb-sm-0 --}}
+                    <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
                             <span class="odometer" data-target="12">0</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Years Experience</p>
                     </div>
 
-                    {{-- Added significant horizontal padding --}}
-                    <div class="achivement__count-item text-center px-md-5 mb-3 mb-sm-0">
+                    {{-- Removed px-md-5 and mb-sm-0 --}}
+                    <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
                             <span class="odometer" data-target="150">0</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Projects Built</p>
                     </div>
 
-                     {{-- Added significant horizontal padding --}}
-                    <div class="achivement__count-item text-center px-md-5 mb-3 mb-sm-0">
+                     {{-- Removed px-md-5 and mb-sm-0 --}}
+                    <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
                             <span class="odometer" data-target="2.5">0</span> k
                         </h2>

@@ -3,9 +3,11 @@
 namespace App\Actions;
 
 use App\Data\ContactRequestData;
+use App\Mail\QuestionReceivedNotification;
 use App\Models\ContactRequest;
+use Illuminate\Support\Facades\Mail;
 
-class CreateContactRequestAction
+class SendContactRequestAction
 {
     public function execute(ContactRequestData $contactRequestData): void
     {
@@ -27,5 +29,10 @@ class CreateContactRequestAction
 
     }
 
-    private function sendContactRequestEmail(ContactRequest $contactRequest): void {}
+    private function sendContactRequestEmail(ContactRequest $contactRequest): void
+    {
+
+        Mail::to(config('config.support_email'))
+            ->send(new QuestionReceivedNotification($contactRequest));
+    }
 }

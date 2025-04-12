@@ -2,7 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Actions\CreateContactRequestAction;
+use App\Actions\SendContactRequestAction;
 use App\Data\ContactRequestData;
 use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\On;
@@ -89,7 +89,7 @@ class SendQuestionModalComponent extends Component
             unset($validatedData['recaptcha']);
 
             $contactRequestData = ContactRequestData::fromArray($validatedData);
-            app(CreateContactRequestAction::class)->execute($contactRequestData);
+            app(SendContactRequestAction::class)->execute($contactRequestData);
 
             // Dispatch browser event for JS to handle success message
             $this->dispatch('questionSentSuccessfully', message: 'We\'ve received your question, we will contact you soon.');
@@ -98,7 +98,7 @@ class SendQuestionModalComponent extends Component
             // Removed automatic modal close: $this->closeModal();
 
         } catch (Throwable $e) { // Changed to Throwable
-            Log::error('Error saving contact request: '.$e->getMessage());
+            Log::error('Error sending M365 email: '.$e->getMessage());
             // Dispatch browser event for JS to handle error message (optional)
             $this->dispatch('questionSendFailed', message: 'There was an error sending your question. Please try again.');
             // Keep session flash as fallback
