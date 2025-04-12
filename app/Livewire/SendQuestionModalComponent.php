@@ -2,38 +2,52 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\QuestionSubmitted; // Asegúrate de crear este Mailable
-use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+use App\Actions\CreateContactRequestAction;
+use App\Data\ContactRequestData;
+use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\On;
+use Livewire\Component;
+use Spatie\Honeypot\Http\Livewire\Concerns\HoneypotData;
+use Spatie\Honeypot\Http\Livewire\Concerns\UsesSpamProtection;
+use Throwable;
 
 class SendQuestionModalComponent extends Component
 {
+    use UsesSpamProtection;
+
+    public HoneypotData $extraFields;
+
     public $showModal = false;
+
     public $name = '';
+
     public $email = '';
+
     public $subject = '';
+
     public $question = '';
+
     public $recaptcha;
 
-	protected $rules
-		= [
-			'name'      => ['required', 'string', 'max:255'],
-			'email'     => ['required', 'email', 'max:255'],
-			'subject'   => ['required', 'string', 'max:255'],
-			'question'  => ['required', 'string'],
-			'recaptcha' => ['required', 'captcha'],
-		];
+    protected function rules()
+    {
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'subject' => ['required', 'string', 'max:255'],
+            'question' => ['required', 'string'],
+            'recaptcha' => ['required', 'captcha'],
+        ];
+    }
 
-	protected $messages
-		= [
-			'recaptcha.required' => 'Please verify that you are not a robot.',
+    protected $messages = [
+        'recaptcha.required' => 'Please verify that you are not a robot.',
         'recaptcha.captcha' => 'Captcha error! try again later or contact site admin.',
     ];
 
     public function mount()
     {
+        $this->extraFields = new HoneypotData;
         // Escucha el evento para abrir el modal
         // Livewire.on('openSendQuestionModal', () => { this.showModal = true; });
     }
@@ -43,8 +57,7 @@ class SendQuestionModalComponent extends Component
     {
         $this->resetInputFields();
         $this->showModal = true;
-        // Dispatch browser event after modal state is updated
-        $this->dispatch('modalOpened'); 
+        $this->dispatch('modalOpened');
     }
 
     public function closeModal()
@@ -58,29 +71,34 @@ class SendQuestionModalComponent extends Component
         $this->email = '';
         $this->subject = '';
         $this->question = '';
-        $this->recaptcha = null; // Reset recaptcha token
+        $this->recaptcha = null;
         $this->resetErrorBag();
     }
 
     public function submit()
     {
-        // Obtener el token de reCAPTCHA del request
+        $this->protectAgainstSpam();
         $this->recaptcha = request('g-recaptcha-response');
-        
         $validatedData = $this->validate();
 
         try {
-            // Aquí puedes enviar el correo electrónico
-            // Mail::to('tu-email@ejemplo.com')->send(new QuestionSubmitted($validatedData));
-            
+            unset($validatedData['recaptcha']);
+
+            $contactRequestData = ContactRequestData::fromArray([
+                'name' => $this->name,
+                'email' => $this->email,
+                'subject' => $this->subject,
+                'question' => $this->question,
+            ]);
+
+            app(CreateContactRequestAction::class)->execute($contactRequestData);
+
             session()->flash('success', 'Your question has been sent successfully!');
             $this->resetInputFields();
-            // Opcional: cerrar el modal después del éxito
-            // $this->closeModal(); 
 
-        } catch (\Exception $e) {
+        } catch (Throwable $e) {
+            Log::error('Error saving contact request or sending email: '.$e->getMessage());
             session()->flash('error', 'There was an error sending your question. Please try again.');
-             // Log::error('Error sending question email: ' . $e->getMessage());
         }
     }
 

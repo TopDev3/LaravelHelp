@@ -1,6 +1,3 @@
 <?php
 
-class SendContactRequestAction
-{
-
-}
+class SendContactRequestAction {}

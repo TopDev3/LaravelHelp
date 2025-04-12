@@ -14,6 +14,9 @@
     
                 <div class="modal-body py-4">
                     <form wire:submit.prevent="submit" id="questionFormLivewire">
+                        {{-- Correct Honeypot directive for Livewire trait --}}
+                        @honeypot 
+                        
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label text-secondary">Your Name</label>
