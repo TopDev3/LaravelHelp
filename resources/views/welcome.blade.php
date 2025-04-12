@@ -8,15 +8,10 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Title&Favicon -->
-    <title>Laravel Help</title>
+    <title>LaravelHelp</title>
 
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-        <style>
-            /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */@layer theme{:root,:host{--font-sans:'Instrument Sans',ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-50:oklch(.971 .013 17.38);--color-red-100:oklch(.936 .032 17.717);--color-red-200:oklch(.885 .062 18.334);--color-red-300:oklch(.808 .114 19.571);--color-red-400:oklch(.704 .191 22.216);--color-red-500:oklch(.637 .237 25.331);--color-red-600:oklch(.577 .245 27.325);--color-red-700:oklch(.505 .213 27.518);--color-red-800:oklch(.444 .177 26.899);--color-red-900:oklch(.396 .141 25.723);--color-red-950:oklch(.258 .092 26.042);--color-orange-50:oklch(.98 .016 73.684);--color-orange-100:oklch(.954 .038 75.164);--color-orange-200:oklch(.901 .076 70.697);--color-orange-300:oklch(.837 .128 66.29);--color-orange-400:oklch(.75 .183 55.934);--color-orange-500:oklch(.705 .213 47.604);--color-orange-600:oklch(.646 .222 41.116);--color-orange-700:oklch(.553 .195 38.402);--color-orange-800:oklch(.47 .157 37.304);--color-orange-900:oklch(.408 .123 38.172);--color-orange-950:oklch(.266 .079 36.259);--color-amber-50:oklch(.987 .022 95.277);--color-amber-100:oklch(.962 .059 95.617);--color-amber-200:oklch(.924 .12 95.746);--color-amber-300:oklch(.879 .169 91.605);--color-amber-400:oklch(.828 .189 84.429);--color-amber-500:oklch(.769 .188 70.08);--color-amber-600:oklch(.666 .179 58.318);--color-amber-700:oklch(.555 .163 48.998);--color-amber-800:oklch(.473 .137 46.201);--color-amber-900:oklch(.414 .112 45.904);--color-amber-950:oklch(.279 .077 45.635);--color-yellow-50:oklch(.987 .026 102.212);--color-yellow-100:oklch(.973 .071 103.193);--color-yellow-200:oklch(.945 .129 101.54);--color-yellow-300:oklch(.905 .182 98.111);--color-yellow-400:oklch(.852 .199 91.936);--color-yellow-500:oklch(.795 .184 86.047);--color-yellow-600:oklch(.681 .162 75.834);--color-yellow-700:oklch(.554 .135 66.442);--color-yellow-800:oklch(.476 .114 61.907);--color-yellow-900:oklch(.421 .095 57.708);--color-yellow-950:oklch(.286 .066 53.813);--color-lime-50:oklch(.986 .031 120.757);--color-lime-100:oklch(.967 .067 122.328);--color-lime-200:oklch(.938 .127 124.321);--color-lime-300:oklch(.897 .196 126.665);--color-lime-400:oklch(.841 .238 128.85);--color-lime-500:oklch(.768 .233 130.85);--color-lime-600:oklch(.648 .2 131.684);--color-lime-700:oklch(.532 .157 131.589);--color-lime-800:oklch(.453 .124 130.933);--color-lime-900:oklch(.405 .101 131.063);--color-lime-950:oklch(.274 .072 132.109);--color-green-50:oklch(.982 .018 155.826);--color-green-100:oklch(.962 .044 156.743);--color-green-200:oklch(.925 .084 155.995);--color-green-300:oklch(.871 .15 154.449);--color-green-400:oklch(.792 .209 151.711);--color-green-500:oklch(.723 .219 149.579);--color-green-600:oklch(.627 .194 149.214);--color-green-700:oklch(.527 .154 150.069);--color-green-800:oklch(.448 .119 151.328);--color-green-900:oklch(.393 .095 152.535);--color-green-950:oklch(.266 .065 152.934);--color-emerald-50:oklch(.979 .021 166.113);--color-emerald-100:oklch(.95 .052 163.051);--color-emerald-200:oklch(.905 .093 164.15);--color-emerald-300:oklch(.845 .143 164.978);--color-emerald-400:oklch(.765 .177 163.223);--color-emerald-500:oklch(.696 .17 162.48);--color-emerald-600:oklch(.596 .145 163.225);--color-emerald-700:oklch(.508 .118 165.612);--color-emerald-800:oklch(.432 .095 166.913);--color-emerald-900:oklch(.378 .077 168.94);--color-emerald-950:oklch(.262 .051 172.552);--color-teal-50:oklch(.984 .014 180.72);--color-teal-100:oklch(.953 .051 180.801);--color-teal-200:oklch(.91 .096 180.426);--color-teal-300:oklch(.855 .138 181.071);--color-teal-400:oklch(.777 .152 181.912);--color-teal-500:oklch(.704 .14 182.503);--color-teal-600:oklch(.6 .118 184.704);--color-teal-700:oklch(.511 .096 186.391);--color-teal-800:oklch(.437 .078 188.216);--color-teal-900:oklch(.386 .063 188.416);--color-teal-950:oklch(.277 .046 192.524);--color-cyan-50:oklch(.984 .019 200.873);--color-cyan-100:oklch(.956 .045 203.388);--color-cyan-200:oklch(.917 .08 205.041);--color-cyan-300:oklch(.865 .127 207.078);--color-cyan-400:oklch(.789 .154 211.53);--color-cyan-500:oklch(.715 .143 215.221);--color-cyan-600:oklch(.609 .126 221.723);--color-cyan-700:oklch(.52 .105 223.128);--color-cyan-800:oklch(.45 .085 224.283);--color-cyan-900:oklch(.398 .07 227.392);--color-cyan-950:oklch(.302 .056 229.695);--color-sky-50:oklch(.977 .013 236.62);--color-sky-100:oklch(.951 .026 236.824);--color-sky-200:oklch(.901 .058 230.902);--color-sky-300:oklch(.828 .111 230.318);--color-sky-400:oklch(.746 .16 232.661);--color-sky-500:oklch(.685 .169 237.323);--color-sky-600:oklch(.588 .158 241.966);--color-sky-700:oklch(.5 .134 242.749);--color-sky-800:oklch(.443 .11 240.79);--color-sky-900:oklch(.391 .09 240.876);--color-sky-950:oklch(.293 .066 243.157);--color-blue-50:oklch(.97 .014 254.604);--color-blue-100:oklch(.932 .032 255.585);--color-blue-200:oklch(.882 .059 254.128);--color-blue-300:oklch(.809 .105 251.813);--color-blue-400:oklch(.707 .165 254.624);--color-blue-500:oklch(.623 .214 259.815);--color-blue-600:oklch(.546 .245 262.881);--color-blue-700:oklch(.488 .243 264.376);--color-blue-800:oklch(.424 .199 265.638);--color-blue-900:oklch(.379 .146 265.522);--color-blue-950:oklch(.282 .091 267.935);--color-indigo-50:oklch(.962 .018 272.314);--color-indigo-100:oklch(.93 .034 272.788);--color-indigo-200:oklch(.87 .065 274.039);--color-indigo-300:oklch(.785 .115 274.713);--color-indigo-400:oklch(.673 .182 276.935);--color-indigo-500:oklch(.585 .233 277.117);--color-indigo-600:oklch(.511 .262 276.966);--color-indigo-700:oklch(.457 .24 277.023);--color-indigo-800:oklch(.398 .195 277.366);--color-indigo-900:oklch(.359 .144 278.697);--color-indigo-950:oklch(.257 .09 281.288);--color-violet-50:oklch(.969 .016 293.756);--color-violet-100:oklch(.943 .029 294.588);--color-violet-200:oklch(.894 .057 293.283);--color-violet-300:oklch(.811 .111 293.571);--color-violet-400:oklch(.702 .183 293.541);--color-violet-500:oklch(.606 .25 292.717);--color-violet-600:oklch(.541 .281 293.009);--color-violet-700:oklch(.491 .27 292.581);--color-violet-800:oklch(.432 .232 292.759);--color-violet-900:oklch(.38 .189 293.745);--color-violet-950:oklch(.283 .141 291.089);--color-purple-50:oklch(.977 .014 308.299);--color-purple-100:oklch(.946 .033 307.174);--color-purple-200:oklch(.902 .063 306.703);--color-purple-300:oklch(.827 .119 306.383);--color-purple-400:oklch(.714 .203 305.504);--color-purple-500:oklch(.627 .265 303.9);--color-purple-600:oklch(.558 .288 302.321);--color-purple-700:oklch(.496 .265 301.924);--color-purple-800:oklch(.438 .218 303.724);--color-purple-900:oklch(.381 .176 304.987);--color-purple-950:oklch(.291 .149 302.717);--color-fuchsia-50:oklch(.977 .017 320.058);--color-fuchsia-100:oklch(.952 .037 318.852);--color-fuchsia-200:oklch(.903 .076 319.62);--color-fuchsia-300:oklch(.833 .145 321.434);--color-fuchsia-400:oklch(.74 .238 322.16);--color-fuchsia-500:oklch(.667 .295 322.15);--color-fuchsia-600:oklch(.591 .293 322.896);--color-fuchsia-700:oklch(.518 .253 323.949);--color-fuchsia-800:oklch(.452 .211 324.591);--color-fuchsia-900:oklch(.401 .17 325.612);--color-fuchsia-950:oklch(.293 .136 325.661);--color-pink-50:oklch(.971 .014 343.198);--color-pink-100:oklch(.948 .028 342.258);--color-pink-200:oklch(.899 .061 343.231);--color-pink-300:oklch(.823 .12 346.018);--color-pink-400:oklch(.718 .202 349.761);--color-pink-500:oklch(.656 .241 354.308);--color-pink-600:oklch(.592 .249 .584);--color-pink-700:oklch(.525 .223 3.958);--color-pink-800:oklch(.459 .187 3.815);--color-pink-900:oklch(.408 .153 2.432);--color-pink-950:oklch(.284 .109 3.907);--color-rose-50:oklch(.969 .015 12.422);--color-rose-100:oklch(.941 .03 12.58);--color-rose-200:oklch(.892 .058 10.001);--color-rose-300:oklch(.81 .117 11.638);--color-rose-400:oklch(.712 .194 13.428);--color-rose-500:oklch(.645 .246 16.439);--color-rose-600:oklch(.586 .253 17.585);--color-rose-700:oklch(.514 .222 16.935);--color-rose-800:oklch(.455 .188 13.697);--color-rose-900:oklch(.41 .159 10.272);--color-rose-950:oklch(.271 .105 12.094);--color-slate-50:oklch(.984 .003 247.858);--color-slate-100:oklch(.968 .007 247.896);--color-slate-200:oklch(.929 .013 255.508);--color-slate-300:oklch(.869 .022 252.894);--color-slate-400:oklch(.704 .04 256.788);--color-slate-500:oklch(.554 .046 257.417);--color-slate-600:oklch(.446 .043 257.281);--color-slate-700:oklch(.372 .044 257.287);--color-slate-800:oklch(.279 .041 260.031);--color-slate-900:oklch(.208 .042 265.755);--color-slate-950:oklch(.129 .042 264.695);--color-gray-50:oklch(.985 .002 247.839);--color-gray-100:oklch(.967 .003 264.542);--color-gray-200:oklch(.928 .006 264.531);--color-gray-300:oklch(.872 .01 258.338);--color-gray-400:oklch(.707 .022 261.325);--color-gray-500:oklch(.551 .027 264.364);--color-gray-600:oklch(.446 .03 256.802);--color-gray-700:oklch(.373 .034 259.733);--color-gray-800:oklch(.278 .033 256.848);--color-gray-900:oklch(.21 .034 264.665);--color-gray-950:oklch(.13 .028 261.692);--color-zinc-50:oklch(.985 0 0);--color-zinc-100:oklch(.967 .001 286.375);--color-zinc-200:oklch(.92 .004 286.32);--color-zinc-300:oklch(.871 .006 286.286);--color-zinc-400:oklch(.705 .015 286.067);--color-zinc-500:oklch(.552 .016 285.938);--color-zinc-600:oklch(.442 .017 285.786);--color-zinc-700:oklch(.37 .013 285.805);--color-zinc-800:oklch(.274 .006 286.033);--color-zinc-900:oklch(.21 .006 285.885);--color-zinc-950:oklch(.141 .005 285.823);--color-neutral-50:oklch(.985 0 0);--color-neutral-100:oklch(.97 0 0);--color-neutral-200:oklch(.922 0 0);--color-neutral-300:oklch(.87 0 0);--color-neutral-400:oklch(.708 0 0);--color-neutral-500:oklch(.556 0 0);--color-neutral-600:oklch(.439 0 0);--color-neutral-700:oklch(.371 0 0);--color-neutral-800:oklch(.269 0 0);--color-neutral-900:oklch(.205 0 0);--color-neutral-950:oklch(.145 0 0);--color-stone-50:oklch(.985 .001 106.423);--color-stone-100:oklch(.97 .001 106.424);--color-stone-200:oklch(.923 .003 48.717);--color-stone-300:oklch(.869 .005 56.366);--color-stone-400:oklch(.709 .01 56.259);--color-stone-500:oklch(.553 .013 58.071);--color-stone-600:oklch(.444 .011 73.639);--color-stone-700:oklch(.374 .01 67.558);--color-stone-800:oklch(.268 .007 34.298);--color-stone-900:oklch(.216 .006 56.043);--color-stone-950:oklch(.147 .004 49.25);--color-black:#000;--color-white:#fff;--spacing:.25rem;--breakpoint-sm:40rem;--breakpoint-md:48rem;--breakpoint-lg:64rem;--breakpoint-xl:80rem;--breakpoint-2xl:96rem;--container-3xs:16rem;--container-2xs:18rem;--container-xs:20rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-xl:36rem;--container-2xl:42rem;--container-3xl:48rem;--container-4xl:56rem;--container-5xl:64rem;--container-6xl:72rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-base:1rem;--text-base--line-height: 1.5 ;--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2/1.5);--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5/2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-6xl:3.75rem;--text-6xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--text-8xl:6rem;--text-8xl--line-height:1;--text-9xl:8rem;--text-9xl--line-height:1;--font-weight-thin:100;--font-weight-extralight:200;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--font-weight-black:900;--tracking-tighter:-.05em;--tracking-tight:-.025em;--tracking-normal:0em;--tracking-wide:.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-tight:1.25;--leading-snug:1.375;--leading-normal:1.5;--leading-relaxed:1.625;--leading-loose:2;--radius-xs:.125rem;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--radius-4xl:2rem;--shadow-2xs:0 1px #0000000d;--shadow-xs:0 1px 2px 0 #0000000d;--shadow-sm:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--shadow-md:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--shadow-lg:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--shadow-xl:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--shadow-2xl:0 25px 50px -12px #00000040;--inset-shadow-2xs:inset 0 1px #0000000d;--inset-shadow-xs:inset 0 1px 1px #0000000d;--inset-shadow-sm:inset 0 2px 4px #0000000d;--drop-shadow-xs:0 1px 1px #0000000d;--drop-shadow-sm:0 1px 2px #00000026;--drop-shadow-md:0 3px 3px #0000001f;--drop-shadow-lg:0 4px 4px #00000026;--drop-shadow-xl:0 9px 7px #0000001a;--drop-shadow-2xl:0 25px 25px #00000026;--ease-in:cubic-bezier(.4,0,1,1);--ease-out:cubic-bezier(0,0,.2,1);--ease-in-out:cubic-bezier(.4,0,.2,1);--animate-spin:spin 1s linear infinite;--animate-ping:ping 1s cubic-bezier(0,0,.2,1)infinite;--animate-pulse:pulse 2s cubic-bezier(.4,0,.6,1)infinite;--animate-bounce:bounce 1s infinite;--blur-xs:4px;--blur-sm:8px;--blur-md:12px;--blur-lg:16px;--blur-xl:24px;--blur-2xl:40px;--blur-3xl:64px;--perspective-dramatic:100px;--perspective-near:300px;--perspective-normal:500px;--perspective-midrange:800px;--perspective-distant:1200px;--aspect-video:16/9;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-font-feature-settings:var(--font-sans--font-feature-settings);--default-font-variation-settings:var(--font-sans--font-variation-settings);--default-mono-font-family:var(--font-mono);--default-mono-font-feature-settings:var(--font-mono--font-feature-settings);--default-mono-font-variation-settings:var(--font-mono--font-variation-settings)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}body{line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1;color:color-mix(in oklab,currentColor 50%,transparent)}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.absolute{position:absolute}.relative{position:relative}.static{position:static}.inset-0{inset:calc(var(--spacing)*0)}.-mt-\[4\.9rem\]{margin-top:-4.9rem}.-mb-px{margin-bottom:-1px}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-6{margin-bottom:calc(var(--spacing)*6)}.-ml-8{margin-left:calc(var(--spacing)*-8)}.flex{display:flex}.hidden{display:none}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-\[335\/376\]{aspect-ratio:335/376}.h-1{height:calc(var(--spacing)*1)}.h-1\.5{height:calc(var(--spacing)*1.5)}.h-2{height:calc(var(--spacing)*2)}.h-2\.5{height:calc(var(--spacing)*2.5)}.h-3{height:calc(var(--spacing)*3)}.h-3\.5{height:calc(var(--spacing)*3.5)}.h-14{height:calc(var(--spacing)*14)}.h-14\.5{height:calc(var(--spacing)*14.5)}.min-h-screen{min-height:100vh}.w-1{width:calc(var(--spacing)*1)}.w-1\.5{width:calc(var(--spacing)*1.5)}.w-2{width:calc(var(--spacing)*2)}.w-2\.5{width:calc(var(--spacing)*2.5)}.w-3{width:calc(var(--spacing)*3)}.w-3\.5{width:calc(var(--spacing)*3.5)}.w-\[448px\]{width:448px}.w-full{width:100%}.max-w-\[335px\]{max-width:335px}.max-w-none{max-width:none}.flex-1{flex:1}.shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.transform{transform:var(--tw-rotate-x)var(--tw-rotate-y)var(--tw-rotate-z)var(--tw-skew-x)var(--tw-skew-y)}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.items-center{align-items:center}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}:where(.space-x-1>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:3.40282e38px}.rounded-sm{border-radius:var(--radius-sm)}.rounded-t-lg{border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg)}.rounded-br-lg{border-bottom-right-radius:var(--radius-lg)}.rounded-bl-lg{border-bottom-left-radius:var(--radius-lg)}.border{border-style:var(--tw-border-style);border-width:1px}.border-\[\#19140035\]{border-color:#19140035}.border-\[\#e3e3e0\]{border-color:#e3e3e0}.border-black{border-color:var(--color-black)}.border-transparent{border-color:#0000}.bg-\[\#1b1b18\]{background-color:#1b1b18}.bg-\[\#FDFDFC\]{background-color:#fdfdfc}.bg-\[\#dbdbd7\]{background-color:#dbdbd7}.bg-\[\#fff2f2\]{background-color:#fff2f2}.bg-white{background-color:var(--color-white)}.p-6{padding:calc(var(--spacing)*6)}.px-5{padding-inline:calc(var(--spacing)*5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.pb-12{padding-bottom:calc(var(--spacing)*12)}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-\[13px\]{font-size:13px}.leading-\[20px\]{--tw-leading:20px;line-height:20px}.leading-normal{--tw-leading:var(--leading-normal);line-height:var(--leading-normal)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.text-\[\#1b1b18\]{color:#1b1b18}.text-\[\#706f6c\]{color:#706f6c}.text-\[\#F53003\],.text-\[\#f53003\]{color:#f53003}.text-white{color:var(--color-white)}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.opacity-100{opacity:1}.shadow-\[0px_0px_1px_0px_rgba\(0\,0\,0\,0\.03\)\,0px_1px_2px_0px_rgba\(0\,0\,0\,0\.06\)\]{--tw-shadow:0px 0px 1px 0px var(--tw-shadow-color,#00000008),0px 1px 2px 0px var(--tw-shadow-color,#0000000f);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\[inset_0px_0px_0px_1px_rgba\(26\,26\,0\,0\.16\)\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#1a1a0029);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.\!filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)!important}.filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.delay-300{transition-delay:.3s}.duration-750{--tw-duration:.75s;transition-duration:.75s}.not-has-\[nav\]\:hidden:not(:has(:is(nav))){display:none}.before\:absolute:before{content:var(--tw-content);position:absolute}.before\:top-0:before{content:var(--tw-content);top:calc(var(--spacing)*0)}.before\:top-1\/2:before{content:var(--tw-content);top:50%}.before\:bottom-0:before{content:var(--tw-content);bottom:calc(var(--spacing)*0)}.before\:bottom-1\/2:before{content:var(--tw-content);bottom:50%}.before\:left-\[0\.4rem\]:before{content:var(--tw-content);left:.4rem}.before\:border-l:before{content:var(--tw-content);border-left-style:var(--tw-border-style);border-left-width:1px}.before\:border-\[\#e3e3e0\]:before{content:var(--tw-content);border-color:#e3e3e0}@media (hover:hover){.hover\:border-\[\#1915014a\]:hover{border-color:#1915014a}.hover\:border-\[\#19140035\]:hover{border-color:#19140035}.hover\:border-black:hover{border-color:var(--color-black)}.hover\:bg-black:hover{background-color:var(--color-black)}}@media (width>=64rem){.lg\:-mt-\[6\.6rem\]{margin-top:-6.6rem}.lg\:mb-0{margin-bottom:calc(var(--spacing)*0)}.lg\:mb-6{margin-bottom:calc(var(--spacing)*6)}.lg\:-ml-px{margin-left:-1px}.lg\:ml-0{margin-left:calc(var(--spacing)*0)}.lg\:block{display:block}.lg\:aspect-auto{aspect-ratio:auto}.lg\:w-\[438px\]{width:438px}.lg\:max-w-4xl{max-width:var(--container-4xl)}.lg\:grow{flex-grow:1}.lg\:flex-row{flex-direction:row}.lg\:justify-center{justify-content:center}.lg\:rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.lg\:rounded-tl-lg{border-top-left-radius:var(--radius-lg)}.lg\:rounded-r-lg{border-top-right-radius:var(--radius-lg);border-bottom-right-radius:var(--radius-lg)}.lg\:rounded-br-none{border-bottom-right-radius:0}.lg\:p-8{padding:calc(var(--spacing)*8)}.lg\:p-20{padding:calc(var(--spacing)*20)}}@media (prefers-color-scheme:dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-\[\#3E3E3A\]{border-color:#3e3e3a}.dark\:border-\[\#eeeeec\]{border-color:#eeeeec}.dark\:bg-\[\#0a0a0a\]{background-color:#0a0a0a}.dark\:bg-\[\#1D0002\]{background-color:#1d0002}.dark\:bg-\[\#3E3E3A\]{background-color:#3e3e3a}.dark\:bg-\[\#161615\]{background-color:#161615}.dark\:bg-\[\#eeeeec\]{background-color:#eeeeec}.dark\:text-\[\#1C1C1A\]{color:#1c1c1a}.dark\:text-\[\#A1A09A\]{color:#a1a09a}.dark\:text-\[\#EDEDEC\]{color:#ededec}.dark\:text-\[\#F61500\]{color:#f61500}.dark\:text-\[\#FF4433\]{color:#f43}.dark\:shadow-\[inset_0px_0px_0px_1px_\#fffaed2d\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#fffaed2d);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.dark\:before\:border-\[\#3E3E3A\]:before{content:var(--tw-content);border-color:#3e3e3a}@media (hover:hover){.dark\:hover\:border-\[\#3E3E3A\]:hover{border-color:#3e3e3a}.dark\:hover\:border-\[\#62605b\]:hover{border-color:#62605b}.dark\:hover\:border-white:hover{border-color:var(--color-white)}.dark\:hover\:bg-white:hover{background-color:var(--color-white)}}}@starting-style{.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing)*4);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:translate-y-6{--tw-translate-y:calc(var(--spacing)*6);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:opacity-0{opacity:0}}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{75%,to{opacity:0;transform:scale(2)}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,to{animation-timing-function:cubic-bezier(.8,0,1,1);transform:translateY(-25%)}50%{animation-timing-function:cubic-bezier(0,0,.2,1);transform:none}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false;initial-value:rotateX(0)}@property --tw-rotate-y{syntax:"*";inherits:false;initial-value:rotateY(0)}@property --tw-rotate-z{syntax:"*";inherits:false;initial-value:rotateZ(0)}@property --tw-skew-x{syntax:"*";inherits:false;initial-value:skewX(0)}@property --tw-skew-y{syntax:"*";inherits:false;initial-value:skewY(0)}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}
-        </style>
-    @endif
+    <!-- Calendly widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
     <!-- === CSS CDNs & StyleSheets === -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -59,8 +54,12 @@
         </div>
 
         <div class="d-block w-100 offcanvas__bottom">
-            <button type="button" class="btn btn-main w-100">
-                Help me now!
+            {{-- Added modal trigger attributes --}}
+            <button type="button" 
+                    class="btn btn-main w-100" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#modal-help-me-now">
+                Help me NOW!
             </button>
         </div>
     </div>
@@ -74,7 +73,7 @@
         <div class="header__wrapper d-flex align-items-center justify-content-between">
             <!-- header-logo -->
             <div class="header__logo">
-                <a href="index.html">
+                <a href="#home">
                     <img src="assets/img/logo/logo.png" alt="logo"/>
                 </a>
             </div>
@@ -85,12 +84,12 @@
                 <!-- header__nav -->
                 <div class="header__nav d-none d-xl-block">
                     <ul class="d-flex gap-4 mx-auto header__nav-menu">
-                        <li><a class="p-3" href="">Home</a></li>
-                        <li><a class="p-3" href="">Problems</a></li>
-                        <li><a class="p-3" href="">Benefits</a></li>
-                        <li><a class="p-3" href="">About Us</a></li>
-                        <li><a class="p-3" href="">Schedule</a></li>
-                        <li><a class="p-3" href="">Contact Us</a></li>
+                        <li><a class="p-3" href="#home">Home</a></li>
+                        <li><a class="p-3" href="#problems">Problems</a></li>
+                        <li><a class="p-3" href="#benefits">Benefits</a></li>
+                        <li><a class="p-3" href="#about">About Us</a></li>
+                        <li><a class="p-3" href="#schedule">Schedule</a></li>
+                        <li><a class="p-3" href="#contact">FAQ</a></li>
                     </ul>
                 </div>
                 <!-- header__nav--end -->
@@ -106,9 +105,9 @@
                 <button type="button"
                         class="btn btn-main btn-header d-none d-xl-inline-block fs-16"
                         data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
+                        data-bs-target="#modal-help-me-now" {{-- Corrected target --}}
                 >
-                    Help me now!
+                    Help me NOW!
                 </button>
 
                 <button type="button" class="header__menuBar d-xl-none" type="button" data-bs-toggle="offcanvas"
@@ -129,7 +128,7 @@
 <main>
 
     <!-- === Hero Section Start === -->
-    <section class="section hero overflow-hidden">
+    <section id="home" class="section hero overflow-hidden">
 
         <div class="hero__ingradient hero__ingradient-1"></div>
         <div class="hero__ingradient hero__ingradient-2"></div>
@@ -150,15 +149,18 @@
 
 
                         <!-- Hero Form -->
-                        <div class="hero__form-wrapper mt-4 ps-0 ps-lg-5 ms-0 ms-lg-5 mb-1 mb-lg-3">
+                        <div class="hero__form-wrapper mt-4 ps-0 ms-0 mb-1 mb-lg-3">
                             <form action="" class="hero__form">
                                 <div class="row g-3">
                                     <div class="col-lg-6">
                                         <input class="email px-4 py-3 bg-white" type="email" placeholder="Enter your email">
                                     </div>
                                     <div class="col-lg-6">
-                                        <button type="button" class="btn btn-main hero__form-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule Free
-                                            Consultation
+                                        {{-- Removed data-bs-toggle and data-bs-target, added onclick for Calendly --}}
+                                        <button type="button" 
+                                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                                                class="btn btn-main hero__form-btn">
+                                            Schedule Free Consultation
                                         </button>
                                     </div>
                                 </div>
@@ -172,8 +174,7 @@
                                 <p class="fs-6 mb-0">contact us at <a href="mailto:contact@laravelhelp.com" class="text-primary">contact@laravelhelp.com</a></p>
                                 <span> | </span>
                                 <button
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#modal-send-question"
+                                        onclick="Livewire.dispatch('openSendQuestionModal')" 
                                         type="button"
                                         class="btn btn-outline btn-sm d-flex align-items-center gap-2 mx-auto"
                                         style="padding: 0.3rem 0.75rem; font-size: 0.875rem;">
@@ -226,7 +227,10 @@
                         <!-- Hero Buttons -->
                         <div
                                 class="hero__btn-wrapper d-flex gap-1 justify-content-center align-items-center flex-wrap">
-                            <button class="btn btn-outline">
+                            {{-- Updated button to trigger paid Calendly popup, kept original text --}}
+                            <button type="button" 
+                                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;"
+                                    class="btn btn-outline">
                                 Hire My Services
                             </button>
                         </div>
@@ -306,7 +310,7 @@
 
 
     <!-- ======== Challenges Section Start ========= -->
-    <section class="section challenges overflow-hidden">
+    <section id="problems" class="section challenges overflow-hidden">
         <div class="container">
             <h3
                     class="section__subtitle section__subtitle-2 fw-semibold mx-auto position-relative d-flex align-items-center justify-content-center  mx-auto fs-4 text-primary bg-white animated-border">
@@ -517,8 +521,10 @@
 
             <div
                     class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2 pt-lg-3 ">
-
-                <button class="btn btn-main mx-auto">
+                {{-- Changed button to trigger free Calendly popup --}}
+                <button type="button" 
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                        class="btn btn-main mx-auto">
                     Fix These Issues Now
                 </button>
             </div>
@@ -528,7 +534,7 @@
 
 
     <!-- ======= Offer Section Start ========== -->
-    <section class="section offer-section overflow-hidden">
+    <section id="benefits" class="section offer-section overflow-hidden">
         <div class="container">
             <h3
                     class="section__subtitle section__subtitle-2 fw-semibold mx-auto position-relative d-flex align-items-center justify-content-center  mx-auto fs-4 text-primary bg-white animated-border">
@@ -758,8 +764,10 @@
 
 
             <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-3 pt-lg-3">
-
-                <button class="btn btn-main mx-auto">
+                {{-- Changed button to trigger free Calendly popup --}}
+                <button type="button" 
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                        class="btn btn-main mx-auto">
                     Book Your Free Audit
                 </button>
             </div>
@@ -771,7 +779,7 @@
 
 
     <!-- ========= Why Choose Us Section Start ========== -->
-    <section class="section choose-us overflow-hidden">
+    <section id="about" class="section choose-us overflow-hidden">
         <div class="container">
             <h3
                     class="section__subtitle section__subtitle-2 fw-semibold mx-auto position-relative d-flex align-items-center justify-content-center  mx-auto fs-4 text-primary bg-white animated-border">
@@ -996,7 +1004,7 @@
 
 
     <!-- ======== Work Together Section Start =========== -->
-    <section class="section work-together bg-primary">
+    <section id="schedule" class="section work-together bg-primary">
 
         <h3
                 class="section__subtitle fw-semibold mx-auto position-absolute d-flex align-items-center justify-content-center fs-4 text-primary bg-white animated-border">
@@ -1009,7 +1017,7 @@
             </svg>
 
             <span>
-                    Let’s Work Together
+                    Let's Work Together
                 </span>
         </h3>
 
@@ -1080,12 +1088,17 @@
                             <h3 class="fs-5 fw-bold text-secondary">
                                 Book Your Free Call
                             </h3>
-                            <form action="" class="book__form mt-4">
-                                <input type="email" placeholder="Enter your email">
+                            {{-- Removed form tag, changed button type and added onclick --}}
+                            {{-- <form action="" class="book__form mt-4"> --}}
+                                {{-- <input type="email" placeholder="Enter your email"> --}}
 
-                                <button type="submit" class="btn btn-main mt-3">Book My Free Call</button>
+                                <button type="button" 
+                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                                        class="btn btn-main mt-3 w-100"> {{-- Added w-100 for consistency --}}
+                                    Book My Free Call
+                                </button>
 
-                            </form>
+                            {{-- </form> --}}
 
                         </div>
                     </div>
@@ -1178,124 +1191,94 @@
                         <!-- Slides -->
 
                         <div class="swiper-slide">
-
+                            {{-- Testimonial 1 --}}
                             <div class="testimonial__slide shadow-1 border-card m-3 m-lg-4">
                                 <div class="d-flex align-items-start testimonial__content">
                                     <div>
                                         <span class="testimonial__icon">"</span>
                                     </div>
-
                                     <p class="p-3 fs-32">
-                                        “John transformed our Laravel app from a <span
-                                                class="fw-bold text-secondary">slow, buggy mess</span> into a <span
-                                                class="fw-bold text-secondary">high-performance system</span> in just
-                                        weeks.”
+                                        "Our legacy Laravel app was becoming a bottleneck. The insights from the initial audit were spot-on, and the subsequent performance optimization work <span class="fw-bold text-secondary">dramatically reduced our server load</span> and sped up key user actions."
                                     </p>
                                 </div>
-
-
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold testimonial__author-title text-secondary">
-                                            Sarah Chen
+                                            Michael Chen
                                         </h4>
-
                                         <p class="testimonial__author-tag">
-                                            CTO, TechFlow
+                                            Lead Developer, Innovate Solutions
                                         </p>
                                     </div>
-
                                     <div class="p-2">
                                         <button class="fs-5 fw-bold testimonial__btn">
-                                            5x faster
+                                            +40% Performance
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
 
-
                         <div class="swiper-slide">
-
+                             {{-- Testimonial 2 --}}
                             <div class="testimonial__slide shadow-1 border-card m-3 m-lg-4">
                                 <div class="d-flex align-items-start testimonial__content">
                                     <div>
                                         <span class="testimonial__icon">"</span>
                                     </div>
-
                                     <p class="p-3 fs-32">
-                                        “John transformed our Laravel app from a <span
-                                                class="fw-bold text-secondary">slow, buggy mess</span> into a <span
-                                                class="fw-bold text-secondary">high-performance system</span> in just
-                                        weeks.”
+                                        "We were stuck on an old PHP and Laravel version. The team handled the <span class="fw-bold text-secondary">entire upgrade process smoothly</span>, including addressing breaking changes and ensuring our test suite passed. Highly recommended for complex upgrades."
                                     </p>
                                 </div>
-
-
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold text-secondary">
-                                            Sarah Chen
+                                            Samantha Rivera
                                         </h4>
-
-                                        <p>
-                                            CTO, TechFlow
+                                        <p class="testimonial__author-tag">
+                                            CTO, Growth Startup LLC
                                         </p>
                                     </div>
-
                                     <div class="p-2">
                                         <button class="fs-5 fw-bold testimonial__btn">
-                                            5x faster
+                                            Upgraded to Latest LTS
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
 
-
                         <div class="swiper-slide">
-
+                             {{-- Testimonial 3 --}}
                             <div class="testimonial__slide shadow-1 border-card m-3 m-lg-4">
                                 <div class="d-flex align-items-start testimonial__content">
                                     <div>
                                         <span class="testimonial__icon">"</span>
                                     </div>
-
                                     <p class="p-3 fs-32">
-                                        “John transformed our Laravel app from a <span
-                                                class="fw-bold text-secondary">slow, buggy mess</span> into a <span
-                                                class="fw-bold text-secondary">high-performance system</span> in just
-                                        weeks.”
+                                        "The free audit quickly identified architectural issues we suspected but couldn't pinpoint. The follow-up refactoring resulted in <span class="fw-bold text-secondary">cleaner, more maintainable code</span> and fewer recurring bugs. Great communication throughout."
                                     </p>
                                 </div>
-
-
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold text-secondary">
-                                            Sarah Chen
+                                            David Lee
                                         </h4>
-
-                                        <p>
-                                            CTO, TechFlow
+                                        <p class="testimonial__author-tag">
+                                            Founder, SaaS Platform Co.
                                         </p>
                                     </div>
-
                                     <div class="p-2">
                                         <button class="fs-5 fw-bold testimonial__btn">
-                                            5x faster
+                                            Code Quality Improved
                                         </button>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
+
+                    <div
 
 
                     <div
@@ -1326,8 +1309,12 @@
                         join <span class="text-secondary fw-bold">50+ companies</span> who improved their Laravel
                         applications
                     </p>
-
-                    <button class="btn btn-main cta__btn mt-3 mt-lg-0">Book Your Free Call</button>
+                    {{-- Updated button to trigger free Calendly popup --}}
+                    <button type="button" 
+                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                            class="btn btn-main cta__btn mt-3 mt-lg-0">
+                        Book Your Free Call
+                    </button>
                 </div>
             </div>
         </div>
@@ -1336,7 +1323,7 @@
 
 
     <!-- ========= Faq Section Start ========== -->
-    <section class="section faq faq--section position-relative overflow-hidden">
+    <section id="contact" class="section faq faq--section position-relative overflow-hidden">
         <div class="container">
             <h3
                     class="section__subtitle section__subtitle-2 fw-semibold mx-auto position-relative d-flex align-items-center justify-content-center  mx-auto fs-4 text-primary bg-white animated-border">
@@ -1344,185 +1331,157 @@
                 <div class="border-effect"></div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
                     <path
-                            d="M34.2745 8.67189C34.2873 8.7197 34.2938 8.76901 34.2938 8.81859V16.5241C34.2938 16.7255 34.188 16.9114 34.0161 17.0115L27.6561 20.7353V28.1155C27.6561 28.2143 27.6306 28.3114 27.5821 28.3969C27.5337 28.4824 27.4639 28.5536 27.3799 28.6031L14.1033 36.3747C14.0729 36.3921 14.0398 36.4033 14.0066 36.4154C13.9942 36.4195 13.9825 36.4272 13.9694 36.4308C13.8766 36.4556 13.779 36.4556 13.6862 36.4308C13.6709 36.4267 13.6571 36.4181 13.6427 36.4126C13.6122 36.4012 13.5805 36.3915 13.5516 36.3747L0.2777 28.6029C0.19335 28.5537 0.123262 28.4827 0.0745061 28.3972C0.0257499 28.3116 5.028e-05 28.2144 0 28.1155V4.99892C0 4.94825 0.00696594 4.89908 0.0192903 4.8514C0.0234431 4.8352 0.0330882 4.82048 0.0387145 4.80427C0.0490295 4.77485 0.0588086 4.7446 0.0739461 4.71723C0.084261 4.69897 0.0993985 4.68426 0.111857 4.66737C0.127798 4.64489 0.142266 4.62174 0.160886 4.60199C0.176828 4.58592 0.197591 4.57393 0.215542 4.5599C0.235636 4.54301 0.253453 4.52475 0.276226 4.5114L6.91409 0.625668C6.99814 0.576484 7.09341 0.550598 7.19039 0.550598C7.28736 0.550598 7.38263 0.576484 7.46668 0.625668L14.1039 4.5114H14.1052C14.1273 4.52557 14.1461 4.54301 14.166 4.55921C14.184 4.57324 14.2041 4.58592 14.2199 4.60144C14.2393 4.62174 14.2531 4.64503 14.2696 4.66737C14.2814 4.68426 14.2973 4.69897 14.307 4.71723C14.3228 4.74529 14.3317 4.77485 14.3429 4.8044C14.3484 4.82048 14.358 4.8352 14.3622 4.85209C14.3749 4.8999 14.3814 4.94935 14.3816 4.99892V19.4371L19.9123 16.1988V8.81791C19.9123 8.76888 19.9192 8.71888 19.9317 8.67189C19.9365 8.65499 19.9455 8.64029 19.951 8.62421C19.9621 8.59466 19.9717 8.56427 19.9869 8.53704C19.9972 8.51878 20.0123 8.50407 20.0243 8.48718C20.0407 8.4647 20.0545 8.44154 20.0738 8.42179C20.0899 8.40572 20.1099 8.39373 20.1278 8.3797C20.1486 8.36281 20.1665 8.34456 20.1886 8.33121L26.8272 4.44547C26.9112 4.39622 27.0065 4.3703 27.1035 4.3703C27.2004 4.3703 27.2957 4.39622 27.3797 4.44547L34.0169 8.33121C34.0404 8.34524 34.0583 8.36281 34.0791 8.37888C34.0962 8.39305 34.1163 8.40572 34.1323 8.42111C34.1516 8.44154 34.1654 8.4647 34.1818 8.48718C34.1944 8.50407 34.2096 8.51878 34.2194 8.53704C34.2352 8.56427 34.2441 8.59466 34.2551 8.62421C34.2614 8.64029 34.2704 8.65499 34.2745 8.67189ZM33.1875 16.199V9.79133L30.8647 11.1509L27.656 13.0296V19.4372L33.1875 16.199ZM26.5503 27.7904V21.3782L23.3939 23.2113L14.3809 28.4421V34.9143L26.5503 27.7904ZM1.10638 5.97152V27.7904L13.2744 34.9137V28.4428L6.91771 24.7845L6.9157 24.7831L6.91302 24.7817C6.89159 24.7691 6.8735 24.7509 6.85354 24.7355C6.83613 24.7213 6.81617 24.7101 6.80103 24.6945L6.79969 24.6925C6.78174 24.6749 6.76928 24.6532 6.75414 24.6335C6.74021 24.6145 6.72374 24.5984 6.71262 24.5788L6.71195 24.5766C6.69949 24.5556 6.69185 24.5303 6.68288 24.5065C6.6739 24.4853 6.66225 24.4656 6.65662 24.4432C6.64979 24.4166 6.64845 24.3877 6.64564 24.3603C6.64296 24.3394 6.63733 24.3182 6.63733 24.2971V9.20994L3.42912 7.33042L1.10638 5.97152ZM7.19112 1.76199L1.66097 4.99892L7.18978 8.23572L12.7191 4.99811L7.18978 1.76199H7.19112ZM10.067 21.9627L13.2751 20.0848V5.97152L10.9526 7.33124L7.74358 9.20981V23.323L10.067 21.9627ZM27.1034 5.5818L21.574 8.81859L27.1034 12.0555L32.6321 8.81791L27.1034 5.5818ZM26.5501 13.0296L23.3414 11.1509L21.0188 9.79133V16.199L24.2269 18.077L26.5503 19.4372L26.5501 13.0296ZM13.827 27.4695L21.9373 22.7613L25.9915 20.4085L20.4662 17.1738L14.1045 20.8979L8.30648 24.2922L13.827 27.4695Z"
-                            fill="#DC3545"/>
-                </svg>
+                            d="M34.2745 8.67189C34.2873 8.7197 34.2938 8.76901 34.2938 8.81859V16.5241C34.2938 16.7255 34.188 16.9114 34.0161 17.0115L27.6561 20.7353V28.1155C27.6561 28.2143 27.6306 28.3114 27.5821 28.3969C27.5337 28.4824 27.4639 28.5536 27.3799 28.6031L14.1033 36.3747C14.0729 36.3921 14.0398 36.4033 14.0066 36.4154C13.9942 36.4195 13.9825 36.4272 13.9694 36.4308C13.8766 36.4556 13.779 36.4556 13.6862 36.4308C13.6709 36.4267 13.6571 36.4181 13.6427 36.4126C13.6122 36.4012 13.5805 36.3915 13.5516 36.3747L0.2777 28.6029C0.19335 28.5537 0.123262 28.4827 0.0745061 28.3972C0.0257499 28.3116 5.028e-05 28.2144 0 28.1155V4.99892C0 4.94825 0.00696594 4.89908 0.0192903 4.8514C0.0234431 4.8352 0.0330882 4.82048 0.0387145 4.80427C0.0490295 4.77485 0.0588086 4.7446 0.0739461 4.71723C0.084261 4.69897 0.0993985 4.68426 0.111857 4.66737C0.127798 4.64489 0.142266 4.62174 0.160886 4.60199C0.176828 4.58592 0.197591 4.57393 0.215542 4.5599C0.235636 4.54301 0.253453 4.52475 0.276226 4.5114L6.91409 0.625668C6.99814 0.576484 7.09341 0.550598 7.19039 0.550598C7.28736 0.550598 7.38263 0.576484 7.46668 0.625668L14.1039 4.5114H14.1052C14.1273 4.52557 14.1461 4.54301 14.166 4.55921C14.184 4.57324 14.2041 4.58592 14.2199 4.60144C14.2393 4.62174 14.2531 4.64503 14.2696 4.66737C14.2814 4.68426 14.2973 4.69897 14.307 4.71723C14.3228 4.74529 14.3317 4.77485 14.3429 4.8044C14.3484 4.82048 14.358 4.8352 14.3622 4.85209C14.3749 4.8999 14.3814 4.94935 14.3816 4.99892V19.4371L19.9123 16.1988V8.81791C19.9123 8.76888 19.9192 8.71888 19.9317 8.67189C19.9365 8.65499 19.9455 8.64029 19.951 8.62421C19.9621 8.59466 19.9717 8.56427 19.9869 8.53704C19.9972 8.51878 20.0123 8.50407 20.0243 8.48718C20.0407 8.4647 20.0545 8.44154 20.0738 8.42179C20.0899 8.40572 20.1099 8.39373 20.1278 8.3797C20.1486 8.36281 20.1665 8.34456 20.1886 8.33121L26.8272 4.44547C26.9112 4.39622 27.0065 4.3703 27.1035 4.3703C27.2004 4.3703 27.2957 4.39622 27.3797 4.44547L34.0169 8.33121C34.0404 8.34524 34.0583 8.36281 34.0791 8.37888C34.0962 8.39305 34.1163 8.40572 34.1323 8.42111C34.1516 8.44154 34.1654 8.4647 34.1818 8.48718C34.1944 8.50407 34.2096 8.51878 34.2194 8.53704C34.2352 8.56427 34.2441 8.59466 34.2551 8.62421C34.2614 8.64029 34.2704 8.65499 34.2745 8.67189ZM33.1875 16.199V9.79133L30.8647 11.1509L27.656 13.0296V19.4372L33.1875 16.199ZM26.5503 27.7904V21.3782L23.3939 23.2113L14.3809 28.4421V34.9143L26.5503 27.7904ZM1.10638 5.97152V27.7904L13.2744 34.9137V28.4428L6.91771 24.7845L6.9157 24.7831L6.91302 24.7817C6.89159 24.7691 6.8735 24.7509 6.85354 24.7355C6.83613 24.7213 6.81617 24.7101 6.80103 24.6945L6.79969 24.6925C6.78174 24.6749 6.76928 24.6532 6.75414 24.6335C6.74021 24.6145 6.72374 24.5984 6.71262 24.5788L6.71195 24.5766C6.69949 24.5556 6.69185 24.5303 6.68288 24.5065C6.6739 24.4853 6.66225 24.4656 6.65662 24.4432C6.64979 24.4166 6.64845 24.3877 6.64564 24.3603C6.64296 24.3394 6.63733 24.3182 6.63733 24.2971V9.20994L3.42912 7.33042L1.10638 5.97152ZM7.19112 1.76199L1.66097 4.99892L7.18978 8.23572L12.7191 4.99811L7.18978 1.76199H7.19112ZM10.067 21.9627L13.2751 20.0848V5.97152L10.9526 7.33124L7.74358 9.20981V23.323L10.067 21.9627ZM27.1034 5.5818L21.574 8.81859L27.1034 12.0555L32.6321 8.81791L27.1034 5.5818ZM26.5501 13.0296L23.3414 11.1509L21.0188 9.79133V16.199L24.2269 18.077L26.5503 19.4372L26.5501 13.0296ZM13.827 27.4695L21.9373 22.7613L25.9915 20.4085L20.4662 17.1738L14.1045 20.8979L8.30648 24.2922L13.827 27.4695Z" 
+                        fill="#DC3545"/>
+            </svg>
 
-                <span>
-                        Still Have Questions?
-                    </span>
-            </h3>
+            <span>
+                    Still Have Questions?
+                </span>
+        </h3>
 
-            <div class="faq__title">
-                <h2
-                        class="section__title fs-3 fw-bold text-hea text-center mt-3 mt-lg-5 pt-2 pt-lg-3 mb-2 mb-lg-3 bottom-to-top-anim">
-                    Common Questions
-                </h2>
-                <p>Everything you need to know about the free consultation</p>
+        <div class="faq__title">
+            <h2
+                    class="section__title fs-3 fw-bold text-hea text-center mt-3 mt-lg-5 pt-2 pt-lg-3 mb-2 mb-lg-3 bottom-to-top-anim">
+                Common Questions
+            </h2>
+            <p>Everything you need to know about the free consultation and our services</p>
+        </div>
+
+        <div class="faq__wrapper position-relative">
+
+            <div class="faq__content mb-4 mb-lg-5">
+                <div class="accordion faq" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header ">
+                            <button class="accordion-button fs-5 text-secondary fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                What happens during the free 30-minute audit?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    It's a focused session where we discuss your Laravel application's pain points (performance, bugs, outdated code, etc.). You can share your screen, show specific code snippets, or describe the issues. I'll provide initial analysis, identify potential root causes, and suggest actionable steps you can take. You'll leave with valuable insights, whether you decide to hire me or not.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                Do I need to give you access to my code for the free audit?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    No, full access is not required for the initial 30-minute audit. You can share specific code snippets via screenshare or describe the problems you're facing. If we decide to work together on a larger project, we can discuss secure access methods then, often via a temporary, read-only account on your Git repository.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                What kind of Laravel problems can you help with?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    I specialize in tackling common Laravel issues like slow performance (database queries, N+1 problems, caching), upgrading older Laravel/PHP versions, fixing complex bugs, improving application architecture for maintainability, implementing automated tests, enhancing security, and updating outdated dependencies safely.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                    aria-controls="collapseFour">
+                                How much do your services cost after the free audit?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    Pricing depends on the project scope and complexity. After the free audit, if you're interested in proceeding, we'll discuss your specific needs and I can provide a detailed proposal with clear deliverables and pricing options (e.g., hourly rate, fixed project fee, or retainer).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                    aria-controls="collapseFive">
+                                Do you work with teams or just solo developers?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    I work with both! I can augment existing development teams by providing specialized Laravel expertise, help train your team on best practices, or take on specific refactoring/optimization tasks. I also work directly with businesses or solo developers who need dedicated help improving their Laravel applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
+                                    aria-controls="collapseSix">
+                                What is the "Help Me Now" service and how does it differ from the free audit?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $50 USD and allows you to book a dedicated slot quickly via Calendly for in-depth troubleshooting or guidance.
+                                </p>
+                                <p class="mt-2">
+                                    The free audit is a 30-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <div class="faq__wrapper position-relative">
-
-                <div class="faq__content mb-4 mb-lg-5">
-                    <div class="accordion faq" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header ">
-                                <button class="accordion-button fs-5 text-secondary fw-bold" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                    What happens after I submit my email?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        After you submit your email, Laravel processes your request depending on the
-                                        context: <br>
-                                        1. Email Verification – You'll receive a confirmation link to activate your
-                                        account. <br>
-                                        2. Password Reset – You'll get an email with a reset link that expires after
-                                        a
-                                        certain time. <br>
-                                        3. Notifications – Your message will be sent to the designated recipient.
-                                        <br>
-                                        If you don’t receive an email, check your spam folder or ensure your email
-                                        is correct.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                    Is the consultancy really free?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        After you submit your email, Laravel processes your request depending on the
-                                        context: <br>
-                                        1. Email Verification – You'll receive a confirmation link to activate your
-                                        account. <br>
-                                        2. Password Reset – You'll get an email with a reset link that expires after
-                                        a
-                                        certain time. <br>
-                                        3. Notifications – Your message will be sent to the designated recipient.
-                                        <br>
-                                        If you don’t receive an email, check your spam folder or ensure your email
-                                        is correct.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                    What kind of projects do you work with?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        After you submit your email, Laravel processes your request depending on the
-                                        context: <br>
-                                        1. Email Verification – You'll receive a confirmation link to activate your
-                                        account. <br>
-                                        2. Password Reset – You'll get an email with a reset link that expires after
-                                        a
-                                        certain time. <br>
-                                        3. Notifications – Your message will be sent to the designated recipient.
-                                        <br>
-                                        If you don’t receive an email, check your spam folder or ensure your email
-                                        is correct.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">
-                                    How long does the call last?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        After you submit your email, Laravel processes your request depending on the
-                                        context: <br>
-                                        1. Email Verification – You'll receive a confirmation link to activate your
-                                        account. <br>
-                                        2. Password Reset – You'll get an email with a reset link that expires after
-                                        a
-                                        certain time. <br>
-                                        3. Notifications – Your message will be sent to the designated recipient.
-                                        <br>
-                                        If you don’t receive an email, check your spam folder or ensure your email
-                                        is correct.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fs-5 text-secondary fw-bold collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">
-                                    Do you sign NDAs?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse"
-                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        After you submit your email, Laravel processes your request depending on the
-                                        context: <br>
-                                        1. Email Verification – You'll receive a confirmation link to activate your
-                                        account. <br>
-                                        2. Password Reset – You'll get an email with a reset link that expires after
-                                        a
-                                        certain time. <br>
-                                        3. Notifications – Your message will be sent to the designated recipient.
-                                        <br>
-                                        If you don’t receive an email, check your spam folder or ensure your email
-                                        is correct.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="faq__bottom text-center">
+                <div class="cardBox d-sm-flex">
+                    <div class="cardBox__content">
+                        <p>Have more questions or ready to start?</p>
                     </div>
-                </div>
-
-                <div class="faq__bottom text-center">
-                    <div class="cardBox d-sm-flex">
-                        <div class="cardBox__content">
-                            <p>Can't find what you're looking for?</p>
-                        </div>
-                        <a href="#" class="btn btn-main btn--sm mt-3 mt-sm-0">
-                            Ask Your Question
-                        </a>
-                    </div>
+                    <a href="#" onclick="event.preventDefault(); Livewire.dispatch('openSendQuestionModal')" class="btn btn-main btn--sm mt-3 mt-sm-0"> 
+                        Ask Your Question
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- ========= Faq Section End ========== -->
 
     <!-- ========= News letter Section Start ========== -->
@@ -1548,10 +1507,10 @@
                      alt="">
                 <img src="assets/img/icons-img/newsletter-obj.svg" class="newsletter-obj-2 position-absolute"
                      alt="">
-                <div class="newsletter__content">
-                    <h2 class="bottom-to-top-anim">These problems are common for you:</h2>
-                    <p>Slow database queries</p>
-                    <a href="" class="btn btn-main">Get Your Free Laravel Audit</a>
+                <div class="newsletter__content text-center">
+                    <h2 class="bottom-to-top-anim">Is your application plagued by...</h2>
+                    <p class="fs-5 text-secondary fw-medium" style="min-height: 1.5em;"><span id="common-problems"></span></p>
+                    <a href="#schedule" class="btn btn-main mt-3">Get Your Free Laravel Audit</a>
                 </div>
             </div>
         </div>
@@ -1564,7 +1523,7 @@
 
 <!-- ========= Footer Section Start ========== -->
 <footer class="footer footer--section">
-    <div class="footer__top">
+    {{--<div class="footer__top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mt-lg-0">
@@ -1637,19 +1596,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--}}
     <div class="footer__bottom">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div
-                            class="footer__bottom-wrapper d-sm-flex align-items-center justify-content-between text-center text-md-start">
-                        <p>© 2025 Laravel Expert. All rights reserved.</p>
-                        <ul
+                            class="d-sm-flex align-items-center justify-content-between text-center text-md-start">
+                        <p>© {{date('Y')}} LaravelHelp. All rights reserved.</p>
+                        {{--<ul
                                 class="footer__bottom-menu mt-1 mt-lg-0 d-flex align-items-center justify-content-center justify-content-md-start">
                             <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms of Service</a></li>
-                        </ul>
+                        </ul>--}}
                     </div>
                 </div>
             </div>
@@ -1662,7 +1621,14 @@
 <!-- ============  Vertically centered modal ==============-->
 
 <x-modal-help-me-now/>
-<x-modal-send-question/>
+
+
+@livewire('send-question-modal-component')
+@livewireScripts
+{!! NoCaptcha::renderJs() !!} 
+
+<!-- Calendly widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -1683,6 +1649,77 @@
 
 <!-- <script src="assets/js/split-type.js"></script> -->
 <script src="assets/js/mygsap.js"></script>
+
+<!-- Typed.js CDN -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+{{-- Typed.js Initialization and reCAPTCHA Script --}}
+<script>
+    // Use 'load' event to ensure external scripts like Typed.js are loaded
+    window.addEventListener('load', function() { 
+        // Typed.js for problems
+        const problems = [
+            "Slow database queries?",
+            "N+1 Issues?",
+            "Outdated dependencies?",
+            "Messy architecture?",
+            "A lack of tests?",
+            "Security vulnerabilities?",
+            "High server costs?"
+        ];
+
+        const typedElement = document.getElementById('common-problems'); 
+        if (typedElement) {
+            try { // Add try-catch for robustness
+                var typedProblems = new Typed('#common-problems', { 
+                    strings: problems,
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    backDelay: 1500,
+                    startDelay: 500,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|',
+                });
+            } catch (e) {
+                console.error("Error initializing Typed.js:", e);
+            }
+        } else {
+            console.warn("Typed.js target element '#common-problems' not found."); 
+        }
+
+        // Note: Livewire initialization might happen before 'load'.
+        // We keep reCAPTCHA logic separate if needed, but often 'load' is late enough.
+        // If Livewire events don't fire inside 'load', move the 'Livewire.on' part outside
+        // but keep Typed.js init inside 'load'. For now, let's try keeping it together.
+        
+        let recaptchaWidgetId = null;
+        // Ensure Livewire object exists before adding listener
+        if (typeof Livewire !== 'undefined') { 
+            Livewire.on('modalOpened', () => {
+                const container = document.getElementById('recaptcha-container');
+                if (container && container.innerHTML.trim() === '' && typeof grecaptcha !== 'undefined') {
+                    try {
+                        recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+                            'sitekey' : '{{ config("no-captcha.sitekey") }}',
+                            'theme' : 'light'
+                        });
+                    } catch (e) {
+                        console.error('Error rendering reCAPTCHA:', e);
+                    }
+                } else if (container && recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined') {
+                    try {
+                        grecaptcha.reset(recaptchaWidgetId);
+                    } catch (e) {
+                        console.error('Error resetting reCAPTCHA:', e);
+                    }
+                }
+            });
+        } else {
+             console.warn('Livewire object not found when trying to attach modalOpened listener.');
+        }
+    });
+</script>
 
 </body>
 
