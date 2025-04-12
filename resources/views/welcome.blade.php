@@ -1744,18 +1744,18 @@
 
         // --- SweetAlert Listeners ---
         Livewire.on('questionSentSuccessfully', (event) => {
-            // Safely access the message, provide a default if missing
             const message = event.message || 'Your question has been sent successfully!';
-
             Swal.fire({
                 title: 'Success!',
-                text: message, // Use the message from the event
+                text: message,
                 icon: 'success',
                 confirmButtonText: 'Ok',
-                confirmButtonColor: '#DC3545' // Match your btn-main color if possible
+                confirmButtonColor: '#DC3545' 
             }).then((result) => {
                 // After the user clicks "Ok"
-                Livewire.dispatch('closeSendQuestionModalEvent'); // Dispatch event to close LW modal
+                console.log('SweetAlert closed, dispatching closeSendQuestionModalEvent...'); // Log added
+                Livewire.dispatch('closeSendQuestionModalEvent'); 
+                console.log('closeSendQuestionModalEvent dispatched.'); // Log added
             });
         });
 

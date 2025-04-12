@@ -64,6 +64,7 @@ class SendQuestionModalComponent extends Component
     #[On('closeSendQuestionModalEvent')]
     public function closeModal()
     {
+        Log::debug('closeSendQuestionModalEvent received, closing modal.');
         $this->showModal = false;
     }
 
