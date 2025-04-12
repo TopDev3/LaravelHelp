@@ -1685,22 +1685,41 @@
         // --- reCAPTCHA Logic ---
         let recaptchaWidgetId = null;
 
+        function setRecaptchaToken(token) {
+            const hiddenInput = document.getElementById('recaptcha_token_input');
+            if (hiddenInput) {
+                hiddenInput.value = token;
+                // Manually trigger input event for Livewire to pick up the change
+                hiddenInput.dispatchEvent(new Event('input')); 
+                console.log('reCAPTCHA token set on hidden input');
+            } else {
+                console.error('Hidden reCAPTCHA input not found!');
+            }
+        }
+
         Livewire.on('modalOpened', () => {
             console.log('Modal opened event received.'); 
-            
-            // Increased delay to ensure modal DOM is fully ready
             setTimeout(() => {
                 const container = document.getElementById('recaptcha-container');
                 if (container) {
                     console.log('Recaptcha container found.'); 
                     if (typeof grecaptcha !== 'undefined' && grecaptcha.render && container.innerHTML.trim() === '') {
-                        console.log('Rendering reCAPTCHA...'); 
+                        console.log('Rendering reCAPTCHA using hidden input sync...'); 
                         try {
                             recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
-                                'sitekey' : '{{ config("services.recaptcha.site_key") }}', // Using updated config key
-                                'theme' : 'light'
+                                'sitekey' : '{{ config('captcha.sitekey') }}',
+                                'theme' : 'light',
+                                'callback' : setRecaptchaToken, // Use named function
+                                'expired-callback': () => { 
+                                    console.log('reCAPTCHA token expired');
+                                    setRecaptchaToken(null); // Clear hidden input
+                                 },
+                                 'error-callback': () => { 
+                                    console.error('reCAPTCHA error callback triggered');
+                                    setRecaptchaToken(null); // Clear hidden input
+                                 }
                             });
-                             console.log('Render called, widget ID:', recaptchaWidgetId); 
+                             console.log('Render call successful, widget ID:', recaptchaWidgetId); 
                         } catch (e) {
                             console.error('Error rendering reCAPTCHA:', e);
                         }
@@ -1708,16 +1727,17 @@
                         console.log('Resetting reCAPTCHA widget:', recaptchaWidgetId); 
                         try {
                             grecaptcha.reset(recaptchaWidgetId);
+                            setRecaptchaToken(null); // Clear hidden input on reset
                         } catch (e) {
                             console.error('Error resetting reCAPTCHA:', e);
                         }
                     } else {
-                        console.warn('grecaptcha not ready or container not empty/found.'); 
+                        console.warn('grecaptcha not ready or container not empty.'); 
                     }
                  } else {
-                     console.warn('Recaptcha container not found in modal (after delay).'); // Updated log
+                     console.warn('Recaptcha container not found in modal (after delay).'); 
                  }
-            }, 250); // Increased delay to 250ms
+            }, 250); 
         });
     });
 </script>

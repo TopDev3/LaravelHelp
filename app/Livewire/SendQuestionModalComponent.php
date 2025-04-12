@@ -78,7 +78,7 @@ class SendQuestionModalComponent extends Component
     public function submit()
     {
         $this->protectAgainstSpam();
-        $this->recaptcha = request('g-recaptcha-response');
+
         $validatedData = $this->validate();
 
         try {

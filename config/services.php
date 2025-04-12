@@ -41,4 +41,14 @@ return [
         'enabled' => env('RECAPTCHA_ENABLED', true),
     ],
 
+    'google' => [
+        'recaptcha' => [
+            'site_key' => env('RECAPTCHA_SITE_KEY'),
+            'secret_key' => env('RECAPTCHA_SECRET_KEY'),
+            'version' => 'v2',
+            'size' => 'normal', // 'normal', 'compact' or 'invisible'.
+            'theme' => 'light', // 'light' or 'dark'.
+        ],
+    ],
+
 ];

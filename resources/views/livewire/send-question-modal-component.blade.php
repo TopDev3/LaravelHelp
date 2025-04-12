@@ -14,9 +14,12 @@
     
                 <div class="modal-body py-4">
                     <form wire:submit.prevent="submit" id="questionFormLivewire">
-                        {{-- Correct Honeypot directive for Livewire trait --}}
-                        @honeypot 
+                        {{-- Honeypot Fields --}}
+                       @honeypot
                         
+                        {{-- Hidden input bound to Livewire recaptcha property --}}
+                        <input type="hidden" wire:model="recaptcha" id="recaptcha_token_input">
+
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label text-secondary">Your Name</label>
@@ -42,7 +45,7 @@
                             <textarea wire:model="question" class="form-control px-3 py-2 bg-white @error('question') is-invalid @enderror" id="question" rows="4"></textarea>
                             @error('question') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
-    
+
                         <div class="mb-3" wire:ignore>
                             <div id="recaptcha-container"></div> {{-- Container for explicit rendering --}}
                         </div>
