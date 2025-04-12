@@ -1655,9 +1655,8 @@
 
 {{-- Typed.js Initialization and reCAPTCHA Script --}}
 <script>
-    // Use 'load' event to ensure external scripts like Typed.js are loaded
-    window.addEventListener('load', function() { 
-        // Typed.js for problems
+    document.addEventListener('livewire:init', () => { 
+        // --- Typed.js Initialization ---
         const problems = [
             "Slow database queries?",
             "N+1 Issues?",
@@ -1667,11 +1666,10 @@
             "Security vulnerabilities?",
             "High server costs?"
         ];
-
-        const typedElement = document.getElementById('common-problems'); 
+        const typedElement = document.getElementById('common-problems');
         if (typedElement) {
-            try { // Add try-catch for robustness
-                var typedProblems = new Typed('#common-problems', { 
+            try {
+                new Typed('#common-problems', { 
                     strings: problems,
                     typeSpeed: 50,
                     backSpeed: 30,
@@ -1681,43 +1679,46 @@
                     showCursor: true,
                     cursorChar: '|',
                 });
-            } catch (e) {
-                console.error("Error initializing Typed.js:", e);
-            }
-        } else {
-            console.warn("Typed.js target element '#common-problems' not found."); 
-        }
+            } catch (e) { console.error("Error initializing Typed.js:", e); }
+        } else { console.warn("Typed.js target element '#common-problems' not found."); }
 
-        // Note: Livewire initialization might happen before 'load'.
-        // We keep reCAPTCHA logic separate if needed, but often 'load' is late enough.
-        // If Livewire events don't fire inside 'load', move the 'Livewire.on' part outside
-        // but keep Typed.js init inside 'load'. For now, let's try keeping it together.
-        
+        // --- reCAPTCHA Logic ---
         let recaptchaWidgetId = null;
-        // Ensure Livewire object exists before adding listener
-        if (typeof Livewire !== 'undefined') { 
-            Livewire.on('modalOpened', () => {
+
+        Livewire.on('modalOpened', () => {
+            console.log('Modal opened event received.'); 
+            
+            // Increased delay to ensure modal DOM is fully ready
+            setTimeout(() => {
                 const container = document.getElementById('recaptcha-container');
-                if (container && container.innerHTML.trim() === '' && typeof grecaptcha !== 'undefined') {
-                    try {
-                        recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
-                            'sitekey' : '{{ config("no-captcha.sitekey") }}',
-                            'theme' : 'light'
-                        });
-                    } catch (e) {
-                        console.error('Error rendering reCAPTCHA:', e);
+                if (container) {
+                    console.log('Recaptcha container found.'); 
+                    if (typeof grecaptcha !== 'undefined' && grecaptcha.render && container.innerHTML.trim() === '') {
+                        console.log('Rendering reCAPTCHA...'); 
+                        try {
+                            recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+                                'sitekey' : '{{ config("services.recaptcha.site_key") }}', // Using updated config key
+                                'theme' : 'light'
+                            });
+                             console.log('Render called, widget ID:', recaptchaWidgetId); 
+                        } catch (e) {
+                            console.error('Error rendering reCAPTCHA:', e);
+                        }
+                    } else if (typeof grecaptcha !== 'undefined' && grecaptcha.reset && recaptchaWidgetId !== null) {
+                        console.log('Resetting reCAPTCHA widget:', recaptchaWidgetId); 
+                        try {
+                            grecaptcha.reset(recaptchaWidgetId);
+                        } catch (e) {
+                            console.error('Error resetting reCAPTCHA:', e);
+                        }
+                    } else {
+                        console.warn('grecaptcha not ready or container not empty/found.'); 
                     }
-                } else if (container && recaptchaWidgetId !== null && typeof grecaptcha !== 'undefined') {
-                    try {
-                        grecaptcha.reset(recaptchaWidgetId);
-                    } catch (e) {
-                        console.error('Error resetting reCAPTCHA:', e);
-                    }
-                }
-            });
-        } else {
-             console.warn('Livewire object not found when trying to attach modalOpened listener.');
-        }
+                 } else {
+                     console.warn('Recaptcha container not found in modal (after delay).'); // Updated log
+                 }
+            }, 250); // Increased delay to 250ms
+        });
     });
 </script>
 
