@@ -269,7 +269,7 @@
                     {{-- Removed px-md-5 and mb-sm-0 --}}
                     <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
-                            <span class="odometer" data-target="12">0</span> +
+                            <span class="odometer" data-target="15">0</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Years Experience</p>
                     </div>
@@ -277,7 +277,7 @@
                     {{-- Removed px-md-5 and mb-sm-0 --}}
                     <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
-                            <span class="odometer" data-target="150">0</span> +
+                            <span class="odometer" data-target="45">0</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Projects Built</p>
                     </div>
@@ -703,7 +703,7 @@
                                 </div>
 
                                 <h4 class="fs-5 fw-bold text-secondary offer__item-title mb-2">
-                                    12+ Years Experience
+                                    15+ Years Experience
                                 </h4>
 
                             </div>
@@ -800,23 +800,28 @@
                 <div class="col-lg-3 ">
                     <div class="left__part text-center text-lg-start left-to-right-anim">
                         <div class="img pb-1">
-                            <img class="img-fluid radius-8 choose__us-img" src="./assets/img/office.png" alt="">
+                            <img class="img-fluid radius-8 choose__us-img" src="./assets/img/me.png" alt="">
                         </div>
 
 
                         <div
                                 class="developer border-card radius-16 shadow-1 py-4 px-2  d-flex gap-3 align-items-center mt-4">
                             <div class="">
-                                <img class="developer-img img-fluid" src="./assets/img/office.png" alt="img">
+                                <img class="developer-img img-fluid" src="./assets/img/me.png" alt="img">
                             </div>
 
                             <div class="developer__details">
+                                <p class="mb-1" style="font-size: 0.85rem;">
+                                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8990106" target="_blank" rel="noopener noreferrer" class="text-primary d-inline-flex align-items-center">
+                                        <i class="ri-file-pdf-line me-1"></i> IEEE article
+                                    </a>
+                                </p>
                                 <h4 class="fs-20 fw-bold text-secondary text-start">
-                                    John Smith
+                                    Andrés Pineda, Ph.D.
                                 </h4>
 
                                 <p class="text-secondary fs-14">
-                                    Senior Laravel Developer
+                                    Software Architect
                                 </p>
                             </div>
 
@@ -825,7 +830,7 @@
 
                         <div class="developer__socials-group pt-2">
 
-                            <a href="#" class="developer__social-link">
+                            <a href="https://twitter.com/afpinedac" target="_blank" rel="noopener noreferrer" class="developer__social-link">
                                 <div
                                         class="developer__social border-card radius-16 shadow-1  d-flex gap-3 align-items-center mt-3">
                                     <div class="developer__social-icon">
@@ -840,7 +845,7 @@
                                     <div class="developer__social-username">
 
                                         <p class="text-secondary fs-16">
-                                            @johnsmith
+                                            @afpinedac
                                         </p>
 
                                     </div>
@@ -849,7 +854,7 @@
                             </a>
 
 
-                            <a href="#" class="developer__social-link">
+                            <a href="https://github.com/afpinedac" target="_blank" rel="noopener noreferrer" class="developer__social-link">
                                 <div
                                         class="developer__social border-card radius-16 shadow-1  d-flex gap-3 align-items-center mt-3">
                                     <div class="developer__social-icon">
@@ -864,7 +869,7 @@
                                     <div class="developer__social-username">
 
                                         <p class="text-secondary fs-16">
-                                            github.com/johnsmith
+                                            github.com/afpinedac
                                         </p>
 
                                     </div>
@@ -873,30 +878,7 @@
                             </a>
 
 
-                            <a href="#" class="developer__social-link">
 
-                                <div
-                                        class="developer__social border-card radius-16 shadow-1  d-flex gap-3 align-items-center mt-3">
-                                    <div class="developer__social-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                             viewBox="0 0 20 20" fill="none">
-                                            <path
-                                                    d="M10 0.246582C4.475 0.246582 0 4.72158 0 10.2466C0 14.6716 2.8625 18.4091 6.8375 19.7341C7.3375 19.8216 7.525 19.5216 7.525 19.2591C7.525 19.0216 7.5125 18.2341 7.5125 17.3966C5 17.8591 4.35 16.7841 4.15 16.2216C4.0375 15.9341 3.55 15.0466 3.125 14.8091C2.775 14.6216 2.275 14.1591 3.1125 14.1466C3.9 14.1341 4.4625 14.8716 4.65 15.1716C5.55 16.6841 6.9875 16.2591 7.5625 15.9966C7.65 15.3466 7.9125 14.9091 8.2 14.6591C5.975 14.4091 3.65 13.5466 3.65 9.72158C3.65 8.63408 4.0375 7.73408 4.675 7.03408C4.575 6.78408 4.225 5.75908 4.775 4.38408C4.775 4.38408 5.6125 4.12158 7.525 5.40908C8.325 5.18408 9.175 5.07158 10.025 5.07158C10.875 5.07158 11.725 5.18408 12.525 5.40908C14.4375 4.10908 15.275 4.38408 15.275 4.38408C15.825 5.75908 15.475 6.78408 15.375 7.03408C16.0125 7.73408 16.4 8.62158 16.4 9.72158C16.4 13.5591 14.0625 14.4091 11.8375 14.6591C12.2 14.9716 12.5125 15.5716 12.5125 16.5091C12.5125 17.8466 12.5 18.9216 12.5 19.2591C12.5 19.5216 12.6875 19.8341 13.1875 19.7341C17.1375 18.4091 20 14.6591 20 10.2466C20 4.72158 15.525 0.246582 10 0.246582Z"
-                                                    fill="#212529"/>
-                                        </svg>
-                                    </div>
-
-                                    <div class="developer__social-username">
-
-                                        <p class="text-secondary fs-16">
-                                            github.com/johnsmith
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                            </a>
 
 
                         </div>
@@ -932,7 +914,7 @@
                                             </div>
 
                                             <h3 class="fs-32 fw-bold text-secondary">
-                                                <span>12</span>+
+                                                <span>15</span>+
                                             </h3>
                                         </div>
 
@@ -960,7 +942,7 @@
                                             </div>
 
                                             <h3 class="fs-32 fw-bold text-secondary">
-                                                <span>150</span>+
+                                                <span>45</span>+
                                             </h3>
                                         </div>
 
@@ -977,11 +959,11 @@
 
                                 <div class="col-lg-12">
                                     <div class="radius-16 shadow-1 border-card p-3 text-center">
-                                        <img src="./assets/img/choose-banner.png" class="img-fluid" alt="">
 
                                         <h4 class="text-center fs-20 fw-bold text-secondary my-3">
-                                            Follow industries best practices/standards
+                                            Follow industry best practices and standards.
                                         </h4>
+                                        <img src="./assets/img/choose-banner.png" class="img-fluid" alt="">
 
                                     </div>
                                 </div>
@@ -1118,7 +1100,7 @@
 
                         <div class="fact__item-content">
                             <h3 class="fs-5 fw-bold text-secondary">
-                                <span>12</span>+
+                                <span>15</span>+
                             </h3>
                             <p>
                                 Years Experience
@@ -1140,7 +1122,7 @@
 
                         <div class="fact__item-content">
                             <h3 class="fs-5 fw-bold text-secondary">
-                                <span>150</span>+
+                                <span>45</span>+
                             </h3>
                             <p>
                                 Projects Delivered
@@ -1202,7 +1184,7 @@
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold testimonial__author-title text-secondary">
-                                            Michael Chen
+                                            Michael Ross
                                         </h4>
                                         <p class="testimonial__author-tag">
                                             Lead Developer, Innovate Solutions
@@ -1231,10 +1213,10 @@
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold text-secondary">
-                                            Samantha Rivera
+                                            Kristin Rivera
                                         </h4>
                                         <p class="testimonial__author-tag">
-                                            CTO, Growth Startup LLC
+                                            Prooject Manager, Startup Hub
                                         </p>
                                     </div>
                                     <div class="p-2">
@@ -1260,7 +1242,7 @@
                                 <div class="d-flex align-items-center justify-content-between mt-2">
                                     <div>
                                         <h4 class="fw-bold text-secondary">
-                                            David Lee
+                                            Scott Boruta
                                         </h4>
                                         <p class="testimonial__author-tag">
                                             Founder, SaaS Platform Co.
@@ -1301,10 +1283,10 @@
             <div class="row text-center px-3">
                 <div
                         class="cta d-lg-flex mx-auto align-items-center justify-content-center border-card radius-16 flex-wrap bottom-to-top-anim">
-                    <img src="./assets/img/office.png" alt="" class="cta__img">
+                    <img src="./assets/img/me.png" alt="" class="cta__img">
 
                     <p class="mt-3 mt-lg-0">
-                        join <span class="text-secondary fw-bold">50+ companies</span> who improved their Laravel
+                        join <span class="text-secondary fw-bold">the companies</span> who improved their Laravel
                         applications
                     </p>
                     {{-- Updated button to trigger free Calendly popup --}}
