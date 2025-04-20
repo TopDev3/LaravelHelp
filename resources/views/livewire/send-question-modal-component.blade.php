@@ -68,7 +68,6 @@
                 <div class="modal-footer border-top-0">
                     <button type="button" class="btn btn-outline btn-sm" wire:click="closeModal">Close</button> 
                     <button type="submit" form="questionFormLivewire" class="btn btn-main btn-sm d-flex align-items-center gap-2" wire:loading.attr="disabled" wire:target="submit">
-                        <span wire:loading wire:target="submit" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         <i wire:loading.remove wire:target="submit" class="ri-send-plane-fill"></i>
                         Send Question
                     </button>

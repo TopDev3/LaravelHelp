@@ -12,9 +12,9 @@ class SendContactRequestAction
     public function execute(ContactRequestData $contactRequestData): void
     {
 
-        $contactRequest = $this->storeContactRequest($contactRequestData);
+        $this->storeContactRequest($contactRequestData);
 
-        $this->sendContactRequestEmail($contactRequest);
+        $this->sendContactRequestEmail($contactRequestData);
 
     }
 
@@ -29,10 +29,13 @@ class SendContactRequestAction
 
     }
 
-    private function sendContactRequestEmail(ContactRequest $contactRequest): void
+    private function sendContactRequestEmail(ContactRequestData $contactRequestData): void
     {
 
-        Mail::to(config('config.support_email'))
-            ->send(new QuestionReceivedNotification($contactRequest));
+        defer(function () use ($contactRequestData) {
+            Mail::to(config('config.support_email'))
+                ->send(new QuestionReceivedNotification($contactRequestData));
+        });
+
     }
 }
