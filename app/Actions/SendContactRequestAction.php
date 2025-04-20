@@ -32,10 +32,8 @@ class SendContactRequestAction
     private function sendContactRequestEmail(ContactRequestData $contactRequestData): void
     {
 
-        defer(function () use ($contactRequestData) {
-            Mail::to(config('config.support_email'))
-                ->send(new QuestionReceivedNotification($contactRequestData));
-        });
+        Mail::to(config('config.support_email'))
+            ->send(new QuestionReceivedNotification($contactRequestData));
 
     }
 }
