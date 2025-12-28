@@ -148,7 +148,7 @@
                         </h1>
 
                         <p class="hero__desc fs-5 mt-3 mt-lg-5 mb-2 mb-lg-3 pb-1">
-                            Book a free Laravel code audit and get actionable insights in just 30 minutes.
+                            Book a free Laravel code audit and get actionable insights in just 60 minutes.
                         </p>
 
 
@@ -205,7 +205,7 @@
                                         </svg>
                                     </span>
                                 <p class="text-secondary fs-16">
-                                    30-minute free consultation
+                                    60-minute free consultation
                                 </p>
                             </div>
 
@@ -560,7 +560,7 @@
                 What You Get With a Free Audit
             </h2>
 
-            <p class="fs-20 text-center mt-2 mt-lg-3">Schedule your free 30-minute consultation and receive expert
+            <p class="fs-20 text-center mt-2 mt-lg-3">Schedule your free 60-minute consultation and receive expert
                 insights tailored <br class="d-none d-md-flex"> to your application.</p>
 
 
@@ -1258,7 +1258,7 @@
                                     </div>
 
                                     <p class="fs-18">
-                                        30-minute consultation call
+                                        60-minute consultation call
                                     </p>
                                 </div>
 
@@ -1571,7 +1571,7 @@
                             <button class="accordion-button fs-5 text-secondary fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                What happens during the free 30-minute audit?
+                                What happens during the free 60-minute audit?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show"
@@ -1596,7 +1596,7 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    No, full access is not required for the initial 30-minute audit. You can share specific code snippets via screenshare or describe the problems you're facing. If we decide to work together on a larger project, we can discuss secure access methods then, often via a temporary, read-only account on your Git repository.
+                                    No, full access is not required for the initial 60-minute audit. You can share specific code snippets via screenshare or describe the problems you're facing. If we decide to work together on a larger project, we can discuss secure access methods then, often via a temporary, read-only account on your Git repository.
                                 </p>
                             </div>
                         </div>
@@ -1671,10 +1671,10 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $50 USD and allows you to book a dedicated slot quickly via Calendly for in-depth troubleshooting or guidance.
+                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $120 USD and allows you to book a dedicated slot quickly via Calendly for in-depth troubleshooting or guidance.
                                 </p>
                                 <p class="mt-2">
-                                    The free audit is a 30-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
+                                    The free audit is a 60-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
                                 </p>
                             </div>
                         </div>

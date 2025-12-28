@@ -16,7 +16,7 @@
                     The "Help Me Now" service provides an **urgent 1-hour consultation** to tackle your immediate challenges.
                 </p>
                 <p class="mb-4">
-                    This dedicated session is available for **$50 USD**. 
+                    This dedicated session is available for **$120 USD**. 
                 </p>
                 <p class="text-center">
                     Click below to schedule your priority session immediately:
@@ -26,7 +26,7 @@
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;" 
                         class="btn btn-main d-inline-flex align-items-center gap-2">
                          <i class="ri-calendar-schedule-fill"></i>
-                         Schedule Urgent Session ($50)
+                         Schedule Urgent Session ($120)
                      </a>
                 </div>
             </div>

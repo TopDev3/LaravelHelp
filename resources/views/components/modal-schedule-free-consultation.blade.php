@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close btn-close-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-secondary">
-                <p>Please use the Calendly links available on the main page buttons to schedule your free 30-minute consultation.</p>
+                <p>Please use the Calendly links available on the main page buttons to schedule your free 60-minute consultation.</p>
                 
                 <p class="mt-4 text-muted fst-italic">
                     <small><strong>Note:</strong> I will try to respond to your request in the shortest possible time.</small>
