@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="home" href="https://forge.laravel.com">
+
+        <title inertia>Forge</title>
+        <link rel="icon" type="image/svg+xml" href="https://forge.laravel.com/favicon.svg" media="(prefers-color-scheme: light)" />
+        <link rel="icon" type="image/svg+xml" href="https://forge.laravel.com/favicon-dark.svg" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://forge.laravel.com/favicon-32x32.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://forge.laravel.com/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://forge.laravel.com/favicon-16x16.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://forge.laravel.com/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://forge.laravel.com/apple-touch-icon.png" media="(prefers-color-scheme: light)" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://forge.laravel.com/apple-touch-icon-dark.png" media="(prefers-color-scheme: dark)" />
+
+        <link
+            rel="stylesheet"
+            href="https://rsms.me/inter/inter.css"
+        />
+
+        <link rel="preload" as="style" href="https://forge.laravel.com/build/assets/monaco-DcPBmD3Q.css" /><link rel="preload" as="style" href="https://forge.laravel.com/build/assets/app-Bwul0tiw.css" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/app-5m_OGcMH.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/monaco-BtrS4ryB.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/Login-BIOdqH8T.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/AuthCard.vue_vue_type_script_setup_true_lang-CFhc-n5I.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/useToast-BvfHZ-Ug.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/Guest.vue_vue_type_script_setup_true_lang-BbJrbj6c.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/library-BQiNL3t_.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/dayjs.min-C42czT9J.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/_plugin-vue_export-helper-DlAUqK2U.js" /><link rel="modulepreload" as="script" href="https://forge.laravel.com/build/assets/LaravelLogo-CvpFOXsv.js" /><link rel="stylesheet" href="https://forge.laravel.com/build/assets/monaco-DcPBmD3Q.css" /><link rel="stylesheet" href="https://forge.laravel.com/build/assets/app-Bwul0tiw.css" /><script type="module" src="https://forge.laravel.com/build/assets/app-5m_OGcMH.js"></script><script type="module" src="https://forge.laravel.com/build/assets/Login-BIOdqH8T.js"></script>                    <script src="https://cdn.usefathom.com/script.js" data-site="UZINDLYX" defer></script>
+                    </head>
+    <body class="w-full lg:min-w-[1024px] h-svh overflow-y-clip font-sans antialiased text-default text-sm">
+        <div id="app" data-page="{&quot;component&quot;:&quot;Auth\/Login&quot;,&quot;props&quot;:{&quot;errors&quot;:{},&quot;toast&quot;:null,&quot;auth&quot;:{&quot;user&quot;:null,&quot;impersonating&quot;:false},&quot;currentOrganization&quot;:null,&quot;defaultPlainThreadTier&quot;:&quot;tier_01JBHK9PMWNSFFPGQFW0TG6F7A&quot;,&quot;currentTeam&quot;:null,&quot;currentServer&quot;:null,&quot;currentSite&quot;:null,&quot;sudoMode&quot;:{&quot;duration&quot;:900},&quot;features&quot;:{&quot;terminal&quot;:true},&quot;docsRoot&quot;:&quot;https:\/\/forge.laravel.com\/docs&quot;,&quot;canCreateServers&quot;:false},&quot;url&quot;:&quot;\/sign-in&quot;,&quot;version&quot;:&quot;74cfe0a7b33b28abab1f9eb7a144c1bc&quot;,&quot;clearHistory&quot;:false,&quot;encryptHistory&quot;:false,&quot;deferredProps&quot;:{&quot;unpaidInvoices&quot;:[&quot;hasUnpaidInvoices&quot;]}}"></div>
+                    
+            <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b4d2bf3e9db8cbb',t:'MTc2Njg4NDE2MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
