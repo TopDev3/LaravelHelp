@@ -9,10 +9,7 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-    
+
     <!-- Title -->
     <title>LaravelHelp - Expert Laravel Consulting & Audits</title>
 
@@ -61,9 +58,9 @@
 
         <div class="d-block w-100 offcanvas__bottom">
             {{-- Added modal trigger attributes --}}
-            <button type="button" 
-                    class="btn btn-main w-100" 
-                    data-bs-toggle="modal" 
+            <button type="button"
+                    class="btn btn-main w-100"
+                    data-bs-toggle="modal"
                     data-bs-target="#modal-help-me-now">
                 Help me NOW!
             </button>
@@ -164,7 +161,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         {{-- Removed data-bs-toggle and data-bs-target, added onclick for Calendly --}}
-                                        <button type="button" 
+                                        <button type="button"
                                                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
                                                 class="btn btn-main hero__form-btn">
                                             Schedule Free Consultation
@@ -181,7 +178,7 @@
                                 <p class="fs-6 mb-0">contact us at <a href="mailto:contact@laravelhelp.com" class="text-primary">contact@laravelhelp.com</a></p>
                                 <span> | </span>
                                 <button
-                                        onclick="Livewire.dispatch('openSendQuestionModal')" 
+                                        onclick="Livewire.dispatch('openSendQuestionModal')"
                                         type="button"
                                         class="btn btn-outline btn-sm d-flex align-items-center gap-2 mx-auto"
                                         style="padding: 0.3rem 0.75rem; font-size: 0.875rem;">
@@ -235,7 +232,7 @@
                         <div
                                 class="hero__btn-wrapper d-flex gap-1 justify-content-center align-items-center flex-wrap">
                             {{-- Updated button to trigger paid Calendly popup, kept original text --}}
-                            <button type="button" 
+                            <button type="button"
                                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;"
                                     class="btn btn-outline">
                                 Hire My Services
@@ -271,7 +268,7 @@
 
                 {{-- Ensure full width, space between, and NO wrapping --}}
                 <div
-                        class="achivement__counts w-100 d-flex justify-content-between align-items-center row-gap-3 odometer-trigger"> 
+                        class="achivement__counts w-100 d-flex justify-content-between align-items-center row-gap-3 odometer-trigger">
 
                     {{-- Removed px-md-5 and mb-sm-0 --}}
                     <div class="achivement__count-item text-center mb-3">
@@ -527,7 +524,7 @@
             <div
                     class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2 pt-lg-3 ">
                 {{-- Changed button to trigger free Calendly popup --}}
-                <button type="button" 
+                <button type="button"
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
                         class="btn btn-main mx-auto">
                     Fix These Issues Now
@@ -770,7 +767,7 @@
 
             <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-3 pt-lg-3">
                 {{-- Changed button to trigger free Calendly popup --}}
-                <button type="button" 
+                <button type="button"
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
                         class="btn btn-main mx-auto">
                     Book Your Free Audit
@@ -1309,7 +1306,7 @@
                             {{-- <form action="" class="book__form mt-4"> --}}
                                 {{-- <input type="email" placeholder="Enter your email"> --}}
 
-                                <button type="button" 
+                                <button type="button"
                                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
                                         class="btn btn-main mt-3 w-100"> {{-- Added w-100 for consistency --}}
                                     Book My Free Call
@@ -1527,7 +1524,7 @@
                         applications
                     </p>
                     {{-- Updated button to trigger free Calendly popup --}}
-                    <button type="button" 
+                    <button type="button"
                             onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
                             class="btn btn-main cta__btn mt-3 mt-lg-0">
                         Book Your Free Call
@@ -1548,7 +1545,7 @@
                 <div class="border-effect"></div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="37" viewBox="0 0 35 37" fill="none">
                     <path
-                            d="M34.2745 8.67189C34.2873 8.7197 34.2938 8.76901 34.2938 8.81859V16.5241C34.2938 16.7255 34.188 16.9114 34.0161 17.0115L27.6561 20.7353V28.1155C27.6561 28.2143 27.6306 28.3114 27.5821 28.3969C27.5337 28.4824 27.4639 28.5536 27.3799 28.6031L14.1033 36.3747C14.0729 36.3921 14.0398 36.4033 14.0066 36.4154C13.9942 36.4195 13.9825 36.4272 13.9694 36.4308C13.8766 36.4556 13.779 36.4556 13.6862 36.4308C13.6709 36.4267 13.6571 36.4181 13.6427 36.4126C13.6122 36.4012 13.5805 36.3915 13.5516 36.3747L0.2777 28.6029C0.19335 28.5537 0.123262 28.4827 0.0745061 28.3972C0.0257499 28.3116 5.028e-05 28.2144 0 28.1155V4.99892C0 4.94825 0.00696594 4.89908 0.0192903 4.8514C0.0234431 4.8352 0.0330882 4.82048 0.0387145 4.80427C0.0490295 4.77485 0.0588086 4.7446 0.0739461 4.71723C0.084261 4.69897 0.0993985 4.68426 0.111857 4.66737C0.127798 4.64489 0.142266 4.62174 0.160886 4.60199C0.176828 4.58592 0.197591 4.57393 0.215542 4.5599C0.235636 4.54301 0.253453 4.52475 0.276226 4.5114L6.91409 0.625668C6.99814 0.576484 7.09341 0.550598 7.19039 0.550598C7.28736 0.550598 7.38263 0.576484 7.46668 0.625668L14.1039 4.5114H14.1052C14.1273 4.52557 14.1461 4.54301 14.166 4.55921C14.184 4.57324 14.2041 4.58592 14.2199 4.60144C14.2393 4.62174 14.2531 4.64503 14.2696 4.66737C14.2814 4.68426 14.2973 4.69897 14.307 4.71723C14.3228 4.74529 14.3317 4.77485 14.3429 4.8044C14.3484 4.82048 14.358 4.8352 14.3622 4.85209C14.3749 4.8999 14.3814 4.94935 14.3816 4.99892V19.4371L19.9123 16.1988V8.81791C19.9123 8.76888 19.9192 8.71888 19.9317 8.67189C19.9365 8.65499 19.9455 8.64029 19.951 8.62421C19.9621 8.59466 19.9717 8.56427 19.9869 8.53704C19.9972 8.51878 20.0123 8.50407 20.0243 8.48718C20.0407 8.4647 20.0545 8.44154 20.0738 8.42179C20.0899 8.40572 20.1099 8.39373 20.1278 8.3797C20.1486 8.36281 20.1665 8.34456 20.1886 8.33121L26.8272 4.44547C26.9112 4.39622 27.0065 4.3703 27.1035 4.3703C27.2004 4.3703 27.2957 4.39622 27.3797 4.44547L34.0169 8.33121C34.0404 8.34524 34.0583 8.36281 34.0791 8.37888C34.0962 8.39305 34.1163 8.40572 34.1323 8.42111C34.1516 8.44154 34.1654 8.4647 34.1818 8.48718C34.1944 8.50407 34.2096 8.51878 34.2194 8.53704C34.2352 8.56427 34.2441 8.59466 34.2551 8.62421C34.2614 8.64029 34.2704 8.65499 34.2745 8.67189ZM33.1875 16.199V9.79133L30.8647 11.1509L27.656 13.0296V19.4372L33.1875 16.199ZM26.5503 27.7904V21.3782L23.3939 23.2113L14.3809 28.4421V34.9143L26.5503 27.7904ZM1.10638 5.97152V27.7904L13.2744 34.9137V28.4428L6.91771 24.7845L6.9157 24.7831L6.91302 24.7817C6.89159 24.7691 6.8735 24.7509 6.85354 24.7355C6.83613 24.7213 6.81617 24.7101 6.80103 24.6945L6.79969 24.6925C6.78174 24.6749 6.76928 24.6532 6.75414 24.6335C6.74021 24.6145 6.72374 24.5984 6.71262 24.5788L6.71195 24.5766C6.69949 24.5556 6.69185 24.5303 6.68288 24.5065C6.6739 24.4853 6.66225 24.4656 6.65662 24.4432C6.64979 24.4166 6.64845 24.3877 6.64564 24.3603C6.64296 24.3394 6.63733 24.3182 6.63733 24.2971V9.20994L3.42912 7.33042L1.10638 5.97152ZM7.19112 1.76199L1.66097 4.99892L7.18978 8.23572L12.7191 4.99811L7.18978 1.76199H7.19112ZM10.067 21.9627L13.2751 20.0848V5.97152L10.9526 7.33124L7.74358 9.20981V23.323L10.067 21.9627ZM27.1034 5.5818L21.574 8.81859L27.1034 12.0555L32.6321 8.81791L27.1034 5.5818ZM26.5501 13.0296L23.3414 11.1509L21.0188 9.79133V16.199L24.2269 18.077L26.5503 19.4372L26.5501 13.0296ZM13.827 27.4695L21.9373 22.7613L25.9915 20.4085L20.4662 17.1738L14.1045 20.8979L8.30648 24.2922L13.827 27.4695Z" 
+                            d="M34.2745 8.67189C34.2873 8.7197 34.2938 8.76901 34.2938 8.81859V16.5241C34.2938 16.7255 34.188 16.9114 34.0161 17.0115L27.6561 20.7353V28.1155C27.6561 28.2143 27.6306 28.3114 27.5821 28.3969C27.5337 28.4824 27.4639 28.5536 27.3799 28.6031L14.1033 36.3747C14.0729 36.3921 14.0398 36.4033 14.0066 36.4154C13.9942 36.4195 13.9825 36.4272 13.9694 36.4308C13.8766 36.4556 13.779 36.4556 13.6862 36.4308C13.6709 36.4267 13.6571 36.4181 13.6427 36.4126C13.6122 36.4012 13.5805 36.3915 13.5516 36.3747L0.2777 28.6029C0.19335 28.5537 0.123262 28.4827 0.0745061 28.3972C0.0257499 28.3116 5.028e-05 28.2144 0 28.1155V4.99892C0 4.94825 0.00696594 4.89908 0.0192903 4.8514C0.0234431 4.8352 0.0330882 4.82048 0.0387145 4.80427C0.0490295 4.77485 0.0588086 4.7446 0.0739461 4.71723C0.084261 4.69897 0.0993985 4.68426 0.111857 4.66737C0.127798 4.64489 0.142266 4.62174 0.160886 4.60199C0.176828 4.58592 0.197591 4.57393 0.215542 4.5599C0.235636 4.54301 0.253453 4.52475 0.276226 4.5114L6.91409 0.625668C6.99814 0.576484 7.09341 0.550598 7.19039 0.550598C7.28736 0.550598 7.38263 0.576484 7.46668 0.625668L14.1039 4.5114H14.1052C14.1273 4.52557 14.1461 4.54301 14.166 4.55921C14.184 4.57324 14.2041 4.58592 14.2199 4.60144C14.2393 4.62174 14.2531 4.64503 14.2696 4.66737C14.2814 4.68426 14.2973 4.69897 14.307 4.71723C14.3228 4.74529 14.3317 4.77485 14.3429 4.8044C14.3484 4.82048 14.358 4.8352 14.3622 4.85209C14.3749 4.8999 14.3814 4.94935 14.3816 4.99892V19.4371L19.9123 16.1988V8.81791C19.9123 8.76888 19.9192 8.71888 19.9317 8.67189C19.9365 8.65499 19.9455 8.64029 19.951 8.62421C19.9621 8.59466 19.9717 8.56427 19.9869 8.53704C19.9972 8.51878 20.0123 8.50407 20.0243 8.48718C20.0407 8.4647 20.0545 8.44154 20.0738 8.42179C20.0899 8.40572 20.1099 8.39373 20.1278 8.3797C20.1486 8.36281 20.1665 8.34456 20.1886 8.33121L26.8272 4.44547C26.9112 4.39622 27.0065 4.3703 27.1035 4.3703C27.2004 4.3703 27.2957 4.39622 27.3797 4.44547L34.0169 8.33121C34.0404 8.34524 34.0583 8.36281 34.0791 8.37888C34.0962 8.39305 34.1163 8.40572 34.1323 8.42111C34.1516 8.44154 34.1654 8.4647 34.1818 8.48718C34.1944 8.50407 34.2096 8.51878 34.2194 8.53704C34.2352 8.56427 34.2441 8.59466 34.2551 8.62421C34.2614 8.64029 34.2704 8.65499 34.2745 8.67189ZM33.1875 16.199V9.79133L30.8647 11.1509L27.656 13.0296V19.4372L33.1875 16.199ZM26.5503 27.7904V21.3782L23.3939 23.2113L14.3809 28.4421V34.9143L26.5503 27.7904ZM1.10638 5.97152V27.7904L13.2744 34.9137V28.4428L6.91771 24.7845L6.9157 24.7831L6.91302 24.7817C6.89159 24.7691 6.8735 24.7509 6.85354 24.7355C6.83613 24.7213 6.81617 24.7101 6.80103 24.6945L6.79969 24.6925C6.78174 24.6749 6.76928 24.6532 6.75414 24.6335C6.74021 24.6145 6.72374 24.5984 6.71262 24.5788L6.71195 24.5766C6.69949 24.5556 6.69185 24.5303 6.68288 24.5065C6.6739 24.4853 6.66225 24.4656 6.65662 24.4432C6.64979 24.4166 6.64845 24.3877 6.64564 24.3603C6.64296 24.3394 6.63733 24.3182 6.63733 24.2971V9.20994L3.42912 7.33042L1.10638 5.97152ZM7.19112 1.76199L1.66097 4.99892L7.18978 8.23572L12.7191 4.99811L7.18978 1.76199H7.19112ZM10.067 21.9627L13.2751 20.0848V5.97152L10.9526 7.33124L7.74358 9.20981V23.323L10.067 21.9627ZM27.1034 5.5818L21.574 8.81859L27.1034 12.0555L32.6321 8.81791L27.1034 5.5818ZM26.5501 13.0296L23.3414 11.1509L21.0188 9.79133V16.199L24.2269 18.077L26.5503 19.4372L26.5501 13.0296ZM13.827 27.4695L21.9373 22.7613L25.9915 20.4085L20.4662 17.1738L14.1045 20.8979L8.30648 24.2922L13.827 27.4695Z"
                         fill="#DC3545"/>
             </svg>
 
@@ -1691,7 +1688,7 @@
                     <div class="cardBox__content">
                         <p>Have more questions or ready to start?</p>
                     </div>
-                    <a href="#" onclick="event.preventDefault(); Livewire.dispatch('openSendQuestionModal')" class="btn btn-main btn--sm mt-3 mt-sm-0"> 
+                    <a href="#" onclick="event.preventDefault(); Livewire.dispatch('openSendQuestionModal')" class="btn btn-main btn--sm mt-3 mt-sm-0">
                         Ask Your Question
                     </a>
                 </div>
@@ -1842,7 +1839,7 @@
 
 @livewire('send-question-modal-component')
 @livewireScripts
-{!! NoCaptcha::renderJs() !!} 
+{!! NoCaptcha::renderJs() !!}
 
 <!-- Calendly widget JS -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
@@ -1886,7 +1883,7 @@ window.addEventListener('message', function(e) {
 
 {{-- Typed.js Initialization, reCAPTCHA, and SweetAlert Logic --}}
 <script>
-    document.addEventListener('livewire:init', () => { 
+    document.addEventListener('livewire:init', () => {
         // --- Typed.js Initialization ---
         const problems = [
             "Slow database queries?",
@@ -1900,7 +1897,7 @@ window.addEventListener('message', function(e) {
         const typedElement = document.getElementById('common-problems');
         if (typedElement) {
             try {
-                new Typed('#common-problems', { 
+                new Typed('#common-problems', {
                     strings: problems,
                     typeSpeed: 50,
                     backSpeed: 30,
@@ -1921,7 +1918,7 @@ window.addEventListener('message', function(e) {
             if (hiddenInput) {
                 hiddenInput.value = token;
                 // Manually trigger input event for Livewire to pick up the change
-                hiddenInput.dispatchEvent(new Event('input')); 
+                hiddenInput.dispatchEvent(new Event('input'));
                 console.log('reCAPTCHA token set on hidden input');
             } else {
                 console.error('Hidden reCAPTCHA input not found!');
@@ -1929,33 +1926,33 @@ window.addEventListener('message', function(e) {
         }
 
         Livewire.on('modalOpened', () => {
-            console.log('Modal opened event received.'); 
+            console.log('Modal opened event received.');
             setTimeout(() => {
                 const container = document.getElementById('recaptcha-container');
                 if (container) {
-                    console.log('Recaptcha container found.'); 
+                    console.log('Recaptcha container found.');
                     if (typeof grecaptcha !== 'undefined' && grecaptcha.render && container.innerHTML.trim() === '') {
-                        console.log('Rendering reCAPTCHA using hidden input sync...'); 
+                        console.log('Rendering reCAPTCHA using hidden input sync...');
                         try {
                             recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
                                 'sitekey' : '{{ config('captcha.sitekey') }}',
                                 'theme' : 'light',
                                 'callback' : setRecaptchaToken, // Use named function
-                                'expired-callback': () => { 
+                                'expired-callback': () => {
                                     console.log('reCAPTCHA token expired');
                                     setRecaptchaToken(null); // Clear hidden input
                                  },
-                                 'error-callback': () => { 
+                                 'error-callback': () => {
                                     console.error('reCAPTCHA error callback triggered');
                                     setRecaptchaToken(null); // Clear hidden input
                                  }
                             });
-                             console.log('Render call successful, widget ID:', recaptchaWidgetId); 
+                             console.log('Render call successful, widget ID:', recaptchaWidgetId);
                         } catch (e) {
                             console.error('Error rendering reCAPTCHA:', e);
                         }
                     } else if (typeof grecaptcha !== 'undefined' && grecaptcha.reset && recaptchaWidgetId !== null) {
-                        console.log('Resetting reCAPTCHA widget:', recaptchaWidgetId); 
+                        console.log('Resetting reCAPTCHA widget:', recaptchaWidgetId);
                         try {
                             grecaptcha.reset(recaptchaWidgetId);
                             setRecaptchaToken(null); // Clear hidden input on reset
@@ -1963,12 +1960,12 @@ window.addEventListener('message', function(e) {
                             console.error('Error resetting reCAPTCHA:', e);
                         }
                     } else {
-                        console.warn('grecaptcha not ready or container not empty.'); 
+                        console.warn('grecaptcha not ready or container not empty.');
                     }
                  } else {
-                     console.warn('Recaptcha container not found in modal (after delay).'); 
+                     console.warn('Recaptcha container not found in modal (after delay).');
                  }
-            }, 250); 
+            }, 250);
         });
 
         // --- SweetAlert Listeners ---
@@ -1979,11 +1976,11 @@ window.addEventListener('message', function(e) {
                 text: message,
                 icon: 'success',
                 confirmButtonText: 'Ok',
-                confirmButtonColor: '#DC3545' 
+                confirmButtonColor: '#DC3545'
             }).then((result) => {
                 // After the user clicks "Ok"
                 console.log('SweetAlert closed, dispatching closeSendQuestionModalEvent...'); // Log added
-                Livewire.dispatch('closeSendQuestionModalEvent'); 
+                Livewire.dispatch('closeSendQuestionModalEvent');
                 console.log('closeSendQuestionModalEvent dispatched.'); // Log added
             });
         });
@@ -1991,13 +1988,13 @@ window.addEventListener('message', function(e) {
         Livewire.on('questionSendFailed', (event) => {
              // Safely access the message, provide a default if missing
             const message = event.message || 'An error occurred. Please try again.';
-            
+
             Swal.fire({
                 title: 'Error!',
                 text: message, // Use the message from the event
                 icon: 'error',
                 confirmButtonText: 'Ok',
-                confirmButtonColor: '#DC3545' 
+                confirmButtonColor: '#DC3545'
             });
             // Don't close the modal on error, let the user retry
         });
