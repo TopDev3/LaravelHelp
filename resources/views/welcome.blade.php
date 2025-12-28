@@ -1848,6 +1848,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Calendly widget JS -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
+<!-- Calendly Event Listener for GTM -->
+<script>
+window.addEventListener('message', function(e) {
+    if (e.origin === 'https://calendly.com' && e.data.event) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': e.data.event,
+            'calendly_event_uri': e.data.payload ? e.data.payload.event.uri : null,
+            'calendly_invitee_uri': e.data.payload ? e.data.payload.invitee.uri : null
+        });
+    }
+});
+</script>
+
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery.waypoints.min.js"></script>
