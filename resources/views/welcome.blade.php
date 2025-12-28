@@ -1851,12 +1851,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Calendly Event Listener for GTM -->
 <script>
 window.addEventListener('message', function(e) {
-    if (e.origin === 'https://calendly.com' && e.data.event) {
+    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-            'event': e.data.event,
-            'calendly_event_uri': e.data.payload ? e.data.payload.event.uri : null,
-            'calendly_invitee_uri': e.data.payload ? e.data.payload.invitee.uri : null
+            event: 'calendly.event_scheduled'
         });
     }
 });
