@@ -32,10 +32,6 @@
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGCZQ97Z"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- ===== offcanvas Area Start ===== -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -1848,13 +1844,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Calendly widget JS -->
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<!-- Calendly Event Listener for GTM -->
+<!-- Calendly Event Listener - Google Ads Conversion -->
 <script>
 window.addEventListener('message', function(e) {
     if (e.data.event && e.data.event === 'calendly.event_scheduled') {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            event: 'calendly.event_scheduled'
+        gtag('event', 'conversion', {
+            'send_to': 'AW-799679405/2NUBCMPYrdgbEK3HqP0C',
+            'value': 1.0,
+            'currency': 'COP'
         });
     }
 });
