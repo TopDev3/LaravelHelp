@@ -10,8 +10,11 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
     
-    <!-- Title&Favicon -->
+    <!-- Title -->
     <title>LaravelHelp - Expert Laravel Consulting & Audits</title>
+
+    <!-- SEO Meta Tags -->
+    <x-seo-meta />
 
     <!-- Calendly widget CSS -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
