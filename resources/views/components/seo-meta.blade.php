@@ -32,17 +32,53 @@
 <meta name="theme-color" content="#DC3545">
 <meta name="msapplication-TileColor" content="#DC3545">
 
-<!-- Structured Data (JSON-LD) -->
+<!-- Favicon for Google -->
+<link rel="icon" type="image/x-icon" href="https://laravelhelp.com/assets/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="https://laravelhelp.com/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="https://laravelhelp.com/assets/img/logo/logo2.png">
+
+<!-- Structured Data: Organization (for Google Knowledge Panel & favicon) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LaravelHelp",
+    "url": "https://laravelhelp.com",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://laravelhelp.com/assets/img/logo/logo2.png",
+        "width": 512,
+        "height": 512
+    },
+    "image": "https://laravelhelp.com/assets/img/og-image.png",
+    "description": "Expert Laravel consulting services. We help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.",
+    "email": "contact@laravelhelp.com",
+    "sameAs": []
+}
+</script>
+
+<!-- Structured Data: WebSite (for search box) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LaravelHelp",
+    "url": "https://laravelhelp.com"
+}
+</script>
+
+<!-- Structured Data: ProfessionalService (for services) -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "LaravelHelp",
     "description": "Expert Laravel consulting services specializing in performance optimization, code audits, bug fixing, and application scaling.",
-    "url": "{{ url('/') }}",
-    "logo": "{{ asset('assets/img/logo/logo2.png') }}",
-    "image": "{{ asset('assets/img/og-image.png') }}",
+    "url": "https://laravelhelp.com",
+    "logo": "https://laravelhelp.com/assets/img/logo/logo2.png",
+    "image": "https://laravelhelp.com/assets/img/og-image.png",
     "priceRange": "$$",
+    "email": "contact@laravelhelp.com",
     "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
