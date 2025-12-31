@@ -163,26 +163,28 @@
                                         {{-- Removed data-bs-toggle and data-bs-target, added onclick for Calendly --}}
                                         <button type="button"
                                                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
-                                                class="btn btn-main hero__form-btn">
+                                                class="btn btn-main hero__form-btn"
+                                                style="white-space: nowrap; min-width: 250px; width: 250px;">
                                             Schedule Free Consultation
                                         </button>
                                     </div>
                                 </div>
                             </form>
-                            <div class="d-flex align-items-center my-4">
-                                <div class="w-100 border-top border-dark"></div>
-                                <span class="px-3 text-secondary fs-6">or</span>
-                                <div class="w-100 border-top border-dark"></div>
+                            <div class="d-flex align-items-center justify-content-center my-4 gap-3">
+                                <div style="height: 1px; width: 80px; background-color: #6c757d;"></div>
+                                <span class="text-secondary fs-6">or</span>
+                                <div style="height: 1px; width: 80px; background-color: #6c757d;"></div>
                             </div>
-                            <div class="mt-3 d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
-                                <p class="fs-6 mb-0">contact us at <a href="mailto:contact@laravelhelp.com" class="text-primary">contact@laravelhelp.com</a></p>
-                                <span> | </span>
+                            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
+                                <a href="mailto:contact@laravelhelp.com" class="btn btn-outline d-flex align-items-center justify-content-center gap-2" style="min-width: 250px; width: 250px;">
+                                    <i class="ri-mail-line fs-5"></i>
+                                    <span style="font-size: 0.85rem;">contact@laravelhelp.com</span>
+                                </a>
                                 <button
                                         onclick="Livewire.dispatch('openSendQuestionModal')"
                                         type="button"
-                                        class="btn btn-outline btn-sm d-flex align-items-center gap-2 mx-auto"
-                                        style="padding: 0.3rem 0.75rem; font-size: 0.875rem;">
-                                    <i class="ri-question-line"></i> Send us a question
+                                        class="btn btn-outline d-flex align-items-center justify-content-center gap-2" style="min-width: 250px; width: 250px;">
+                                    <i class="ri-question-line fs-5"></i> Send us a question
                                 </button>
                             </div>
                         </div>
