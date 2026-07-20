@@ -4,7 +4,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content border-card shadow-1" style="background-color: #f8f9fa;">
                 <div class="modal-header border-bottom-0">
-                    <h1 class="modal-title fs-5 text-secondary fw-bold" id="modalHelpMeNowLabel">Send us a question</h1>
+                    <h1 class="modal-title fs-5 text-secondary fw-bold" id="modalHelpMeNowLabel">Send me a question</h1>
                     <button 
                             type="button" 
                             class="btn-close btn-close-sm" 

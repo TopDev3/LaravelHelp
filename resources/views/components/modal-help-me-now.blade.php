@@ -22,8 +22,8 @@
                     Click below to schedule your priority session immediately:
                 </p>
                 <div class="text-center mt-4">
-                     <a href="#" 
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;" 
+                     <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
+                        onclick="bookConsultation(); return false;"
                         class="btn btn-main d-inline-flex align-items-center gap-2">
                          <i class="ri-calendar-schedule-fill"></i>
                          Schedule Urgent Session ($120)

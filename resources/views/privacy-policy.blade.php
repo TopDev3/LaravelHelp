@@ -7,8 +7,6 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Privacy Policy - LaravelHelp</title>
 
-    <!-- Calendly widget CSS -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
     <!-- === CSS CDNs & StyleSheets === -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -132,7 +130,7 @@
 
                 <h3>2. How We Use Your Information</h3>
                 <ul>
-                    <li>To provide and maintain our Service (e.g., scheduling consultations via Calendly).</li>
+                    <li>To provide and maintain our Service (e.g., scheduling consultations via Google Calendar).</li>
                     <li>To notify you about changes to our Service.</li>
                     <li>To provide customer support.</li>
                     <li>To gather analysis or valuable information so that we can improve our Service.</li>
@@ -144,7 +142,7 @@
                  <h3>3. Data Sharing and Disclosure</h3>
                  <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties except under the following circumstances:</p>
                  <ul>
-                    <li><strong>Service Providers:</strong> We may employ third-party companies and individuals (like Calendly for scheduling, Google Analytics for usage data, email providers) to facilitate our Service, provide the Service on our behalf, or assist us in analyzing how our Service is used. These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</li>
+                    <li><strong>Service Providers:</strong> We may employ third-party companies and individuals (like Google Calendar for scheduling, Google Analytics for usage data, email providers) to facilitate our Service, provide the Service on our behalf, or assist us in analyzing how our Service is used. These third parties have access to your Personal Information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</li>
                     <li><strong>Legal Requirements:</strong> We may disclose your Personal Information if required to do so by law or in response to valid requests by public authorities.</li>
                  </ul>
                 
@@ -164,7 +162,7 @@
                  <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
 
                 <h3>6. Third-Party Links</h3>
-                <p>Our Service may contain links to other sites that are not operated by us (e.g., Calendly). If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                <p>Our Service may contain links to other sites that are not operated by us (e.g., Google Calendar). If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
 
                 <h3>7. Children's Privacy</h3>
                 <p>Our Service does not address anyone under the age of 18 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
@@ -195,10 +193,10 @@
                          <h4>Quick Links</h4>
                          <ul class="footer__menu">
                              <li>
-                                 <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;">Schedule Consultation</a>
+                                 <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener">Schedule Consultation</a>
                              </li>
                              <li>
-                                 <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;">Hire My Services</a>
+                                 <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener">Hire My Services</a>
                              </li>
                              <li>
                                  <a href="{{ url('/') }}#testimonials">View Success Stories</a> {{-- Assuming testimonials have an ID or are part of a section --}}
@@ -283,7 +281,6 @@
 <x-modal-help-me-now/>
 
 {{-- Include JS --}}
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>

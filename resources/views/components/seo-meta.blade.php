@@ -1,6 +1,6 @@
 <!-- Primary Meta Tags -->
 <meta name="title" content="LaravelHelp - Expert Laravel Consulting, Performance Audits & Development">
-<meta name="description" content="Expert Laravel consulting services. We help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications. Get professional help from senior Laravel developers.">
+<meta name="description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications. Get professional help from a senior Laravel developer.">
 <meta name="keywords" content="Laravel consulting, Laravel developer, Laravel expert, PHP consulting, Laravel performance optimization, Laravel code audit, Laravel bug fixing, Livewire developer, Laravel API development, Laravel migration, Laravel upgrade, PHP developer, Laravel freelancer, Laravel agency, Laravel support, Laravel maintenance, Laravel security audit, Laravel scalability, Laravel architecture, Laravel best practices, Laravel slow app, PHP slow performance, Laravel app running slow, fix slow Laravel, Laravel optimization help, Laravel website slow, PHP application slow, Laravel performance issues, Laravel loading slow, slow Laravel queries, Laravel memory issues, Laravel timeout errors, fix Laravel bugs, Laravel application not working, Laravel error fixing, PHP performance problems, speed up Laravel, Laravel bottleneck, optimize Laravel app, Laravel high CPU usage">
 <meta name="author" content="LaravelHelp">
 <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url('/') }}">
 <meta property="og:title" content="LaravelHelp - Expert Laravel Consulting & Audits">
-<meta property="og:description" content="Expert Laravel consulting services. We help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
+<meta property="og:description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
 <meta property="og:image" content="{{ asset('assets/img/og-image.png') }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ url('/') }}">
 <meta name="twitter:title" content="LaravelHelp - Expert Laravel Consulting & Audits">
-<meta name="twitter:description" content="Expert Laravel consulting services. We help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
+<meta name="twitter:description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
 <meta name="twitter:image" content="{{ asset('assets/img/og-image.png') }}">
 
 <!-- Additional SEO -->
@@ -33,9 +33,9 @@
 <meta name="msapplication-TileColor" content="#DC3545">
 
 <!-- Favicon for Google -->
-<link rel="icon" type="image/x-icon" href="https://laravelhelp.com/assets/img/favicon.ico">
-<link rel="icon" type="image/png" sizes="48x48" href="https://laravelhelp.com/assets/img/favicon.ico">
-<link rel="apple-touch-icon" href="https://laravelhelp.com/assets/img/logo/logo2.png">
+<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
+<link rel="icon" type="image/x-icon" sizes="48x48" href="{{ asset('assets/img/favicon.ico') }}">
+<link rel="apple-touch-icon" href="{{ asset('assets/img/logo/logo2.png') }}">
 
 <!-- Structured Data: Organization (for Google Knowledge Panel & favicon) -->
 <script type="application/ld+json">
@@ -51,8 +51,8 @@
         "height": 512
     },
     "image": "https://laravelhelp.com/assets/img/og-image.png",
-    "description": "Expert Laravel consulting services. We help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.",
-    "email": "contact@laravelhelp.com",
+    "description": "Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.",
+    "email": "afpinedac@gmail.com",
     "sameAs": []
 }
 </script>
@@ -78,7 +78,7 @@
     "logo": "https://laravelhelp.com/assets/img/logo/logo2.png",
     "image": "https://laravelhelp.com/assets/img/og-image.png",
     "priceRange": "$$",
-    "email": "contact@laravelhelp.com",
+    "email": "afpinedac@gmail.com",
     "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"

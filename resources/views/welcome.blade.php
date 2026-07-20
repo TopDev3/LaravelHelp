@@ -13,8 +13,6 @@
     <!-- SEO Meta Tags -->
     <x-seo-meta />
 
-    <!-- Calendly widget CSS -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
 
     <!-- === CSS CDNs & StyleSheets === -->
@@ -46,9 +44,9 @@
                     <li><a href="">Home</a></li>
                     <li><a href="">Problems</a></li>
                     <li><a href="">Benefits</a></li>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="">About Me</a></li>
                     <li><a href="">Schedule</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Contact Me</a></li>
                 </ul>
             </div>
         </div>
@@ -88,7 +86,7 @@
                         <li><a class="p-3" href="#home">Home</a></li>
                         <li><a class="p-3" href="#problems">Problems</a></li>
                         <li><a class="p-3" href="#benefits">Benefits</a></li>
-                        <li><a class="p-3" href="#about">About Us</a></li>
+                        <li><a class="p-3" href="#about">About Me</a></li>
                         <li><a class="p-3" href="#schedule">Schedule</a></li>
                         <li><a class="p-3" href="#contact">FAQ</a></li>
                     </ul>
@@ -137,6 +135,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__content text-center flex-column d-flex align-items-center">
+                        <span class="hero__badge d-inline-flex align-items-center gap-2 text-primary fw-semibold rounded-pill px-3 py-2 mb-3"
+                              style="background-color: rgba(220, 53, 69, 0.08); border: 1px solid rgba(220, 53, 69, 0.25); font-size: 0.95rem;">
+                            <i class="ri-sparkling-2-line"></i> AI-Powered Laravel Development
+                        </span>
                         <h1 class="fs-1 fw-bold pb-1 hero__title position-relative">
                             Is your Laravel app <span class="text-primary">slow,</span> <br
                                     class="d-none d-md-inline-block">
@@ -157,9 +159,9 @@
                                         <input class="email px-4 py-3 bg-white" type="email" placeholder="Enter your email">
                                     </div>
                                     <div class="col-lg-6">
-                                        {{-- Removed data-bs-toggle and data-bs-target, added onclick for Calendly --}}
+                                        {{-- Removed data-bs-toggle and data-bs-target, opens booking page --}}
                                         <button type="button"
-                                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                                                onclick="bookConsultation(); return false;"
                                                 class="btn btn-main hero__form-btn"
                                                 style="white-space: nowrap; min-width: 250px; width: 250px;">
                                             Schedule Free Consultation
@@ -168,21 +170,12 @@
                                 </div>
                             </form>
                             <div class="d-flex align-items-center justify-content-center my-4 gap-3">
-                                <div style="height: 1px; width: 80px; background-color: #6c757d;"></div>
-                                <span class="text-secondary fs-6">or</span>
-                                <div style="height: 1px; width: 80px; background-color: #6c757d;"></div>
+                                <div style="height: 1px; width: 60px; background-color: #6c757d;"></div>
+                                <span class="text-secondary fs-6">or send me an email to</span>
+                                <div style="height: 1px; width: 60px; background-color: #6c757d;"></div>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center">
-                                <a href="mailto:contact@laravelhelp.com" class="btn btn-outline d-flex align-items-center justify-content-center gap-2" style="min-width: 250px; width: 250px;">
-                                    <i class="ri-mail-line fs-5"></i>
-                                    <span style="font-size: 0.85rem;">contact@laravelhelp.com</span>
-                                </a>
-                                <button
-                                        onclick="Livewire.dispatch('openSendQuestionModal')"
-                                        type="button"
-                                        class="btn btn-outline d-flex align-items-center justify-content-center gap-2" style="min-width: 250px; width: 250px;">
-                                    <i class="ri-question-line fs-5"></i> Send us a question
-                                </button>
+                            <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                                <span id="contact-email" class="fs-5 fw-semibold text-primary user-select-all">afpinedac@gmail.com</span>
                             </div>
                         </div>
 
@@ -224,19 +217,45 @@
                                     Actionable insights guaranteed
                                 </p>
                             </div>
+
+                            <div class="ai__block d-flex px-1 align-items-center gap-3 mt-2 mt-sm-3 mt-md-0">
+                                    <span class="time__block-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                                    stroke="#F8F9FA" stroke-width="2"/>
+                                            <path d="M13 7L9.5 12.5H12L11 17L14.5 11.5H12L13 7Z" stroke="#F8F9FA"
+                                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+
+                                <p class="text-secondary fs-16">
+                                    AI-accelerated development
+                                </p>
+                            </div>
                         </div>
 
 
                         <!-- Hero Buttons -->
                         <div
                                 class="hero__btn-wrapper d-flex gap-1 justify-content-center align-items-center flex-wrap">
-                            {{-- Updated button to trigger paid Calendly popup, kept original text --}}
+                            {{-- Updated button to trigger Google Calendar booking page, kept original text --}}
                             <button type="button"
-                                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/help-me-now'}); return false;"
+                                    onclick="bookConsultation(); return false;"
                                     class="btn btn-outline">
                                 Hire My Services
                             </button>
                         </div>
+
+                        <!-- Open to Work -->
+                        <p class="hero__cv-note mt-4 mb-0 fs-6 text-secondary">
+                            <i class="ri-briefcase-line text-primary"></i>
+                            Looking for a lead for your team, or someone with the knowledge and experience to move projects forward?
+                            <br class="d-none d-md-inline-block">
+                            Open to full-time roles — senior Laravel developer, tech lead, or hands-on CTO.
+                            <a href="{{ url('/cv.pdf') }}" target="_blank" rel="noopener" class="text-primary fw-semibold text-decoration-underline">Download my CV</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -257,7 +276,7 @@
             </svg>
 
             <span>
-                    Our Achievements
+                    My Achievements
                 </span>
         </h3>
 
@@ -353,7 +372,7 @@
                             Upgrading PHP / Laravel
                         </h4>
                         <p class="fs-16">
-                            Stuck on an old version? We can help with safe, tested upgrades.
+                            Stuck on an old version? I can help with safe, tested upgrades.
                         </p>
                     </div>
 
@@ -522,9 +541,9 @@
 
             <div
                     class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2 pt-lg-3 ">
-                {{-- Changed button to trigger free Calendly popup --}}
+                {{-- Changed button to trigger Google Calendar booking page --}}
                 <button type="button"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                        onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
                     Fix These Issues Now
                 </button>
@@ -549,7 +568,7 @@
                 </svg>
 
                 <span>
-                        What We Offer
+                        What I Offer
                     </span>
             </h3>
 
@@ -765,9 +784,9 @@
 
 
             <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-3 pt-lg-3">
-                {{-- Changed button to trigger free Calendly popup --}}
+                {{-- Changed button to trigger Google Calendar booking page --}}
                 <button type="button"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                        onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
                     Book Your Free Audit
                 </button>
@@ -794,7 +813,7 @@
                 </svg>
 
                 <span>
-                        Why Choose Us?
+                        Why Choose Me?
                     </span>
             </h3>
 
@@ -1001,15 +1020,15 @@
                 </svg>
 
                 <span>
-                    Tools We Master
+                    Tools I Master
                 </span>
             </h3>
 
             <h2 class="section__title fs-3 fw-bold text-hea text-center mt-3 mt-lg-5 pt-1 pt-lg-2 bottom-to-top-anim">
-                Technologies We Use to Optimize Your Laravel Apps
+                Technologies I Use to Optimize Your Laravel Apps
             </h2>
 
-            <p class="fs-20 text-center mt-2 mt-lg-3">From debugging to deployment, we leverage the best tools <br class="d-none d-md-flex"> in the Laravel ecosystem.</p>
+            <p class="fs-20 text-center mt-2 mt-lg-3">From debugging to deployment, I leverage the best tools <br class="d-none d-md-flex"> in the Laravel ecosystem.</p>
 
             <div class="tech-categories mt-4 mt-lg-5 pt-lg-2">
                 <div class="row g-4">
@@ -1055,6 +1074,30 @@
                                     <img src="{{ asset('assets/img/tech-logos/composer.svg') }}" alt="Composer" width="40" height="40">
                                     <span class="d-block mt-1 small">Composer</span>
                                 </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/javascript.svg') }}" alt="JavaScript" width="40" height="40">
+                                    <span class="d-block mt-1 small">JavaScript</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/nodejs.svg') }}" alt="Node.js" width="40" height="40">
+                                    <span class="d-block mt-1 small">Node.js</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/python.svg') }}" alt="Python" width="40" height="40">
+                                    <span class="d-block mt-1 small">Python</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/java.svg') }}" alt="Java" width="40" height="40">
+                                    <span class="d-block mt-1 small">Java</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/bootstrap.svg') }}" alt="Bootstrap" width="40" height="40">
+                                    <span class="d-block mt-1 small">Bootstrap</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/sass.svg') }}" alt="Sass" width="40" height="40">
+                                    <span class="d-block mt-1 small">Sass</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1089,12 +1132,28 @@
                                     <span class="d-block mt-1 small">PostgreSQL</span>
                                 </div>
                                 <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/mongodb.svg') }}" alt="MongoDB" width="40" height="40">
+                                    <span class="d-block mt-1 small">MongoDB</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
                                     <img src="{{ asset('assets/img/tech-logos/elasticsearch.svg') }}" alt="Elasticsearch" width="40" height="40">
                                     <span class="d-block mt-1 small">Elastic</span>
                                 </div>
                                 <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/meilisearch.svg') }}" alt="MeiliSearch" width="40" height="40">
+                                    <span class="d-block mt-1 small">MeiliSearch</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/algolia.svg') }}" alt="Algolia" width="40" height="40">
+                                    <span class="d-block mt-1 small">Algolia</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
                                     <img src="{{ asset('assets/img/tech-logos/aws.svg') }}" alt="AWS" width="40" height="40">
                                     <span class="d-block mt-1 small">AWS</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/gcp.svg') }}" alt="Google Cloud" width="40" height="40">
+                                    <span class="d-block mt-1 small">GCP</span>
                                 </div>
                                 <div class="tech-logo-item text-center">
                                     <img src="{{ asset('assets/img/tech-logos/digitalocean.svg') }}" alt="DigitalOcean" width="40" height="40">
@@ -1105,6 +1164,32 @@
                                     <span class="d-block mt-1 small">GitHub</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Payments & Fintech -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tech-category h-100 p-4 border rounded-3">
+                            <h4 class="text-secondary fs-6 fw-semibold mb-3">Payments & Fintech</h4>
+                            <div class="d-flex flex-wrap gap-3 justify-content-center">
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/stripe.svg') }}" alt="Stripe" width="40" height="40">
+                                    <span class="d-block mt-1 small">Stripe</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/paypal.svg') }}" alt="PayPal" width="40" height="40">
+                                    <span class="d-block mt-1 small">PayPal</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <img src="{{ asset('assets/img/tech-logos/braintree.svg') }}" alt="Braintree" width="40" height="40">
+                                    <span class="d-block mt-1 small">Braintree</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <i class="ri-bank-line" style="font-size: 34px; line-height: 40px; display: inline-block; height: 40px; color: #DC3545;" aria-label="Plaid"></i>
+                                    <span class="d-block mt-1 small">Plaid</span>
+                                </div>
+                            </div>
+                            <p class="small text-center mt-3 mb-0" style="color: #6c757d;">+ Astra · Checkbook · Synctera · ZumRails · Avalara</p>
                         </div>
                     </div>
 
@@ -1195,6 +1280,10 @@
                                 <div class="tech-logo-item text-center">
                                     <img src="{{ asset('assets/img/tech-logos/gemini.svg') }}" alt="Gemini" width="40" height="40">
                                     <span class="d-block mt-1 small">Gemini</span>
+                                </div>
+                                <div class="tech-logo-item text-center">
+                                    <i class="ri-plug-line" style="font-size: 34px; line-height: 40px; display: inline-block; height: 40px; color: #DC3545;" aria-label="MCP Servers"></i>
+                                    <span class="d-block mt-1 small">MCP Servers</span>
                                 </div>
                             </div>
                         </div>
@@ -1306,7 +1395,7 @@
                                 {{-- <input type="email" placeholder="Enter your email"> --}}
 
                                 <button type="button"
-                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                                        onclick="bookConsultation(); return false;"
                                         class="btn btn-main mt-3 w-100"> {{-- Added w-100 for consistency --}}
                                     Book My Free Call
                                 </button>
@@ -1522,9 +1611,9 @@
                         join <span class="text-secondary fw-bold">the companies</span> who improved their Laravel
                         applications
                     </p>
-                    {{-- Updated button to trigger free Calendly popup --}}
+                    {{-- Updated button to trigger Google Calendar booking page --}}
                     <button type="button"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/laravel-help/30min'}); return false;"
+                            onclick="bookConsultation(); return false;"
                             class="btn btn-main cta__btn mt-3 mt-lg-0">
                         Book Your Free Call
                     </button>
@@ -1558,7 +1647,7 @@
                     class="section__title fs-3 fw-bold text-hea text-center mt-3 mt-lg-5 pt-2 pt-lg-3 mb-2 mb-lg-3 bottom-to-top-anim">
                 Common Questions
             </h2>
-            <p>Everything you need to know about the free consultation and our services</p>
+            <p>Everything you need to know about the free consultation and my services</p>
         </div>
 
         <div class="faq__wrapper position-relative">
@@ -1670,7 +1759,7 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $120 USD and allows you to book a dedicated slot quickly via Calendly for in-depth troubleshooting or guidance.
+                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $120 USD and allows you to book a dedicated slot quickly on my Google Calendar booking page for in-depth troubleshooting or guidance.
                                 </p>
                                 <p class="mt-2">
                                     The free audit is a 60-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
@@ -1687,8 +1776,8 @@
                     <div class="cardBox__content">
                         <p>Have more questions or ready to start?</p>
                     </div>
-                    <a href="#" onclick="event.preventDefault(); Livewire.dispatch('openSendQuestionModal')" class="btn btn-main btn--sm mt-3 mt-sm-0">
-                        Ask Your Question
+                    <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener" onclick="bookConsultation(); return false;" class="btn btn-main btn--sm mt-3 mt-sm-0">
+                        Book a Free Call
                     </a>
                 </div>
             </div>
@@ -1836,24 +1925,18 @@
 <x-modal-help-me-now/>
 
 
-@livewire('send-question-modal-component')
-@livewireScripts
-{!! NoCaptcha::renderJs() !!}
-
-<!-- Calendly widget JS -->
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
-<!-- Calendly Event Listener - Google Ads Conversion -->
+<!-- Google Calendar booking page - fires Google Ads conversion on click -->
 <script>
-window.addEventListener('message', function(e) {
-    if (e.data.event && e.data.event === 'calendly.event_scheduled') {
+function bookConsultation() {
+    if (typeof gtag === 'function') {
         gtag('event', 'conversion', {
             'send_to': 'AW-799679405/2NUBCMPYrdgbEK3HqP0C',
             'value': 1.0,
             'currency': 'COP'
         });
     }
-});
+    window.open('{{ config('config.booking_url') }}', '_blank', 'noopener');
+}
 </script>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -1862,7 +1945,6 @@ window.addEventListener('message', function(e) {
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/plugin.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -1880,9 +1962,9 @@ window.addEventListener('message', function(e) {
 <!-- Typed.js CDN -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-{{-- Typed.js Initialization, reCAPTCHA, and SweetAlert Logic --}}
+{{-- Typed.js Initialization --}}
 <script>
-    document.addEventListener('livewire:init', () => {
+    document.addEventListener('DOMContentLoaded', () => {
         // --- Typed.js Initialization ---
         const problems = [
             "Slow database queries?",
@@ -1908,96 +1990,6 @@ window.addEventListener('message', function(e) {
                 });
             } catch (e) { console.error("Error initializing Typed.js:", e); }
         } else { console.warn("Typed.js target element '#common-problems' not found."); }
-
-        // --- reCAPTCHA Logic ---
-        let recaptchaWidgetId = null;
-
-        function setRecaptchaToken(token) {
-            const hiddenInput = document.getElementById('recaptcha_token_input');
-            if (hiddenInput) {
-                hiddenInput.value = token;
-                // Manually trigger input event for Livewire to pick up the change
-                hiddenInput.dispatchEvent(new Event('input'));
-                console.log('reCAPTCHA token set on hidden input');
-            } else {
-                console.error('Hidden reCAPTCHA input not found!');
-            }
-        }
-
-        Livewire.on('modalOpened', () => {
-            console.log('Modal opened event received.');
-            setTimeout(() => {
-                const container = document.getElementById('recaptcha-container');
-                if (container) {
-                    console.log('Recaptcha container found.');
-                    if (typeof grecaptcha !== 'undefined' && grecaptcha.render && container.innerHTML.trim() === '') {
-                        console.log('Rendering reCAPTCHA using hidden input sync...');
-                        try {
-                            recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
-                                'sitekey' : '{{ config('captcha.sitekey') }}',
-                                'theme' : 'light',
-                                'callback' : setRecaptchaToken, // Use named function
-                                'expired-callback': () => {
-                                    console.log('reCAPTCHA token expired');
-                                    setRecaptchaToken(null); // Clear hidden input
-                                 },
-                                 'error-callback': () => {
-                                    console.error('reCAPTCHA error callback triggered');
-                                    setRecaptchaToken(null); // Clear hidden input
-                                 }
-                            });
-                             console.log('Render call successful, widget ID:', recaptchaWidgetId);
-                        } catch (e) {
-                            console.error('Error rendering reCAPTCHA:', e);
-                        }
-                    } else if (typeof grecaptcha !== 'undefined' && grecaptcha.reset && recaptchaWidgetId !== null) {
-                        console.log('Resetting reCAPTCHA widget:', recaptchaWidgetId);
-                        try {
-                            grecaptcha.reset(recaptchaWidgetId);
-                            setRecaptchaToken(null); // Clear hidden input on reset
-                        } catch (e) {
-                            console.error('Error resetting reCAPTCHA:', e);
-                        }
-                    } else {
-                        console.warn('grecaptcha not ready or container not empty.');
-                    }
-                 } else {
-                     console.warn('Recaptcha container not found in modal (after delay).');
-                 }
-            }, 250);
-        });
-
-        // --- SweetAlert Listeners ---
-        Livewire.on('questionSentSuccessfully', (event) => {
-            const message = event.message || 'Your question has been sent successfully!';
-            Swal.fire({
-                title: 'Success!',
-                text: message,
-                icon: 'success',
-                confirmButtonText: 'Ok',
-                confirmButtonColor: '#DC3545'
-            }).then((result) => {
-                // After the user clicks "Ok"
-                console.log('SweetAlert closed, dispatching closeSendQuestionModalEvent...'); // Log added
-                Livewire.dispatch('closeSendQuestionModalEvent');
-                console.log('closeSendQuestionModalEvent dispatched.'); // Log added
-            });
-        });
-
-        Livewire.on('questionSendFailed', (event) => {
-             // Safely access the message, provide a default if missing
-            const message = event.message || 'An error occurred. Please try again.';
-
-            Swal.fire({
-                title: 'Error!',
-                text: message, // Use the message from the event
-                icon: 'error',
-                confirmButtonText: 'Ok',
-                confirmButtonColor: '#DC3545'
-            });
-            // Don't close the modal on error, let the user retry
-        });
-
     });
 </script>
 

@@ -6,7 +6,12 @@
                 <button type="button" class="btn-close btn-close-sm" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body py-4 text-secondary">
-                <p>Please use the Calendly links available on the main page buttons to schedule your free 60-minute consultation.</p>
+                <p>Pick a time on my booking page to schedule your free 60-minute consultation — every booking automatically includes a Google Meet link.</p>
+                <div class="text-center mt-3">
+                    <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener" class="btn btn-main d-inline-flex align-items-center gap-2">
+                        <i class="ri-calendar-schedule-fill"></i> Open Booking Page
+                    </a>
+                </div>
                 
                 <p class="mt-4 text-muted fst-italic">
                     <small><strong>Note:</strong> I will try to respond to your request in the shortest possible time.</small>
