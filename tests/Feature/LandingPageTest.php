@@ -6,16 +6,19 @@ use Tests\TestCase;
 
 class LandingPageTest extends TestCase
 {
-    public function test_hero_shows_payments_fintech_badge_and_subline(): void
+    public function test_hero_shows_ai_badge_and_fintech_subline(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('Laravel for Payments &amp; Fintech', false);
+        // AI badge restored.
+        $response->assertSee('AI-Powered Laravel Development');
+        $response->assertDontSee('Laravel for Payments &amp; Fintech', false);
+        // Sub-line leads with Laravel audits, then the fintech specialty.
+        $response->assertSee('Laravel audits &amp; development', false);
+        $response->assertSee('specialized for', false);
         $response->assertSee('payouts &amp; fintech integrations', false);
-        // The AI message survives in the trust bullet.
         $response->assertSee('AI-accelerated development');
-        $response->assertDontSee('AI-Powered Laravel Development');
     }
 
     public function test_payments_fintech_section_highlights_cv_capabilities(): void

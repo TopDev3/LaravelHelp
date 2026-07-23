@@ -137,7 +137,7 @@
                     <div class="hero__content text-center flex-column d-flex align-items-center">
                         <span class="hero__badge d-inline-flex align-items-center gap-2 text-primary fw-semibold rounded-pill px-3 py-2 mb-3"
                               style="background-color: rgba(220, 53, 69, 0.08); border: 1px solid rgba(220, 53, 69, 0.25); font-size: 0.95rem;">
-                            <i class="ri-bank-card-line"></i> Laravel for Payments &amp; Fintech
+                            <i class="ri-sparkling-2-line"></i> AI-Powered Laravel Development
                         </span>
                         <h1 class="fs-1 fw-bold pb-1 hero__title position-relative">
                             Is your Laravel app <span class="text-primary">slow,</span> <br
@@ -147,7 +147,7 @@
                         </h1>
 
                         <p class="hero__desc fs-5 mt-3 mt-lg-4 mb-1 pb-1">
-                            Specialized help for <span class="fw-semibold text-secondary">payment platforms, payouts &amp; fintech integrations</span> — plus general Laravel audits.
+                            <span class="fw-semibold text-secondary">Laravel audits &amp; development</span> — specialized for payment platforms, payouts &amp; fintech integrations.
                         </p>
 
                         <p class="hero__desc fs-5 mb-2 mb-lg-3 pb-1">
