@@ -137,7 +137,7 @@
                     <div class="hero__content text-center flex-column d-flex align-items-center">
                         <span class="hero__badge d-inline-flex align-items-center gap-2 text-primary fw-semibold rounded-pill px-3 py-2 mb-3"
                               style="background-color: rgba(220, 53, 69, 0.08); border: 1px solid rgba(220, 53, 69, 0.25); font-size: 0.95rem;">
-                            <i class="ri-sparkling-2-line"></i> AI-Powered Laravel Development
+                            <i class="ri-bank-card-line"></i> Laravel for Payments &amp; Fintech
                         </span>
                         <h1 class="fs-1 fw-bold pb-1 hero__title position-relative">
                             Is your Laravel app <span class="text-primary">slow,</span> <br
@@ -146,7 +146,11 @@
                             full of bugs?
                         </h1>
 
-                        <p class="hero__desc fs-5 mt-3 mt-lg-5 mb-2 mb-lg-3 pb-1">
+                        <p class="hero__desc fs-5 mt-3 mt-lg-4 mb-1 pb-1">
+                            Specialized help for <span class="fw-semibold text-secondary">payment platforms, payouts &amp; fintech integrations</span> — plus general Laravel audits.
+                        </p>
+
+                        <p class="hero__desc fs-5 mb-2 mb-lg-3 pb-1">
                             Book a free Laravel code audit and get actionable insights in just 60 minutes.
                         </p>
 
@@ -523,6 +527,56 @@
                         </h4>
                         <p class="fs-16">
                             Update safely with compatibility checks.
+                        </p>
+                    </div>
+
+                    <div class="challenges__item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6" fill="none">
+                            <path d="M1 3L3 5L6.33333 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                </div>
+
+
+                <div class="challenges__item d-flex align-items-center radius-8 stacky__card">
+
+                    <div class="challenges__item-img">
+                        <img src="./assets/img/icons-img/problem-icon-1.png" alt="image" class="img-fluid">
+                    </div>
+
+                    <div>
+                        <h4 class="fs-5 fw-bold text-secondary challenges__item-title">
+                            Payment integrations breaking
+                        </h4>
+                        <p class="fs-16">
+                            Webhooks, transfers or balances hard to reconcile? I stabilize payment &amp; bank integrations.
+                        </p>
+                    </div>
+
+                    <div class="challenges__item-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="6" viewBox="0 0 8 6" fill="none">
+                            <path d="M1 3L3 5L6.33333 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                </div>
+
+
+                <div class="challenges__item d-flex align-items-center radius-8 stacky__card">
+
+                    <div class="challenges__item-img">
+                        <img src="./assets/img/icons-img/problem-icon-2.png" alt="image" class="img-fluid">
+                    </div>
+
+                    <div>
+                        <h4 class="fs-5 fw-bold text-secondary challenges__item-title">
+                            KYC / compliance &amp; payment security
+                        </h4>
+                        <p class="fs-16">
+                            Struggling with KYB/KYC onboarding, reconciliation or securing money-movement flows? I've shipped it in production.
                         </p>
                     </div>
 
@@ -1303,6 +1357,73 @@
         }
     </style>
     <!-- ========= Tech Stack Section End ========== -->
+
+
+    <!-- ========= Payments & Fintech Section Start ========== -->
+    <section id="fintech" class="section fintech-section overflow-hidden" style="padding-bottom: 120px;">
+        <div class="container">
+            <h3 class="section__subtitle section__subtitle-2 fw-semibold mx-auto position-relative d-flex align-items-center justify-content-center mx-auto fs-4 text-primary bg-white animated-border">
+                <div class="border-effect"></div>
+                <i class="ri-bank-card-line fs-3"></i>
+                <span>Payments &amp; Fintech</span>
+            </h3>
+
+            <h2 class="section__title fs-3 fw-bold text-hea text-center mt-3 mt-lg-5 pt-1 pt-lg-2 bottom-to-top-anim">
+                Deep expertise in payments &amp; fintech platforms
+            </h2>
+
+            <p class="fs-20 text-center mt-2 mt-lg-3">Years shipping production money-movement systems <br class="d-none d-md-flex"> — from payout engines to bank &amp; card integrations.</p>
+
+            <div class="row g-4 mt-3 mt-lg-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="fintech-card h-100 p-4 border rounded-3 text-center">
+                        <i class="ri-exchange-dollar-line text-primary" style="font-size: 44px;"></i>
+                        <h4 class="fs-5 fw-bold text-secondary mt-3 mb-2">Payment &amp; bank integrations</h4>
+                        <p class="fs-16 mb-0">Stripe, PayPal, Plaid, Astra, Checkbook, Synctera, ZumRails and more — webhooks, transfers, reconciliation and onboarding.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="fintech-card h-100 p-4 border rounded-3 text-center">
+                        <i class="ri-wallet-3-line text-primary" style="font-size: 44px;"></i>
+                        <h4 class="fs-5 fw-bold text-secondary mt-3 mb-2">Payout &amp; wallet engines</h4>
+                        <p class="fs-16 mb-0">Event sourcing payout engines processing instant payments, wallet pre-funding, and zero-downtime migrations of real balances.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="fintech-card h-100 p-4 border rounded-3 text-center">
+                        <i class="ri-shield-check-line text-primary" style="font-size: 44px;"></i>
+                        <h4 class="fs-5 fw-bold text-secondary mt-3 mb-2">Compliance &amp; security</h4>
+                        <p class="fs-16 mb-0">KYB/KYC onboarding, PCI-aware architectures, and fixing critical issues — auth bypass, unsigned JWT, payment tampering.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="fintech-card h-100 p-4 border rounded-3 text-center">
+                        <i class="ri-node-tree text-primary" style="font-size: 44px;"></i>
+                        <h4 class="fs-5 fw-bold text-secondary mt-3 mb-2">Fintech domain modeling</h4>
+                        <p class="fs-16 mb-0">Domain-Driven Design for money-math: distributions, reporting, ledgers and provider-agnostic abstractions with high test coverage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2">
+                <button type="button" onclick="bookConsultation(); return false;" class="btn btn-main mx-auto">
+                    Talk About Your Payments Project
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .fintech-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+        }
+        .fintech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(220, 53, 69, 0.12);
+        }
+    </style>
+    <!-- ========= Payments & Fintech Section End ========== -->
 
 
     <!-- ======== Work Together Section Start =========== -->

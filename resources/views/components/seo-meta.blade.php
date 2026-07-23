@@ -1,7 +1,7 @@
 <!-- Primary Meta Tags -->
-<meta name="title" content="LaravelHelp - Expert Laravel Consulting, Performance Audits & Development">
-<meta name="description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications. Get professional help from a senior Laravel developer.">
-<meta name="keywords" content="Laravel consulting, Laravel developer, Laravel expert, PHP consulting, Laravel performance optimization, Laravel code audit, Laravel bug fixing, Livewire developer, Laravel API development, Laravel migration, Laravel upgrade, PHP developer, Laravel freelancer, Laravel agency, Laravel support, Laravel maintenance, Laravel security audit, Laravel scalability, Laravel architecture, Laravel best practices, Laravel slow app, PHP slow performance, Laravel app running slow, fix slow Laravel, Laravel optimization help, Laravel website slow, PHP application slow, Laravel performance issues, Laravel loading slow, slow Laravel queries, Laravel memory issues, Laravel timeout errors, fix Laravel bugs, Laravel application not working, Laravel error fixing, PHP performance problems, speed up Laravel, Laravel bottleneck, optimize Laravel app, Laravel high CPU usage">
+<meta name="title" content="LaravelHelp - Laravel Payments & Fintech Development, Consulting & Audits">
+<meta name="description" content="Expert Laravel developer specializing in payments & fintech. I build and audit payment platforms, payout engines, and bank/card integrations (Stripe, Plaid, Synctera) — plus general Laravel performance audits, bug fixing, and scaling.">
+<meta name="keywords" content="Laravel payments developer, Laravel fintech developer, Laravel payment integration, Stripe Laravel developer, Plaid Laravel integration, Laravel payout system, fintech Laravel consulting, PCI compliance Laravel, KYC KYB Laravel, payment reconciliation, event sourcing payments, Laravel banking integration, Laravel consulting, Laravel developer, Laravel expert, PHP consulting, Laravel performance optimization, Laravel code audit, Laravel bug fixing, Livewire developer, Laravel API development, Laravel migration, Laravel upgrade, PHP developer, Laravel freelancer, Laravel support, Laravel security audit, Laravel scalability, Laravel architecture, fix slow Laravel, speed up Laravel, optimize Laravel app">
 <meta name="author" content="LaravelHelp">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
@@ -13,8 +13,8 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url('/') }}">
-<meta property="og:title" content="LaravelHelp - Expert Laravel Consulting & Audits">
-<meta property="og:description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
+<meta property="og:title" content="LaravelHelp - Laravel Payments & Fintech Development & Audits">
+<meta property="og:description" content="Expert Laravel developer specializing in payments & fintech — building and auditing payment platforms, payout engines and bank integrations, plus general Laravel performance, bug fixing and scaling.">
 <meta property="og:image" content="{{ asset('assets/img/og-image.png') }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,8 +24,8 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="{{ url('/') }}">
-<meta name="twitter:title" content="LaravelHelp - Expert Laravel Consulting & Audits">
-<meta name="twitter:description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.">
+<meta name="twitter:title" content="LaravelHelp - Laravel Payments & Fintech Development & Audits">
+<meta name="twitter:description" content="Expert Laravel developer specializing in payments & fintech — building and auditing payment platforms, payout engines and bank integrations, plus general Laravel performance, bug fixing and scaling.">
 <meta name="twitter:image" content="{{ asset('assets/img/og-image.png') }}">
 
 <!-- Additional SEO -->
@@ -51,7 +51,7 @@
         "height": 512
     },
     "image": "https://laravelhelp.com/assets/img/og-image.png",
-    "description": "Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications.",
+    "description": "Expert Laravel developer specializing in payments & fintech — building and auditing payment platforms, payout engines and bank integrations, plus general Laravel performance, bug fixing and scaling.",
     "email": "afpinedac@gmail.com",
     "sameAs": []
 }
@@ -73,7 +73,7 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "LaravelHelp",
-    "description": "Expert Laravel consulting services specializing in performance optimization, code audits, bug fixing, and application scaling.",
+    "description": "Expert Laravel developer specializing in payments & fintech platforms: payment integrations, payout engines, KYC/KYB and compliance, plus performance optimization, code audits, and scaling.",
     "url": "https://laravelhelp.com",
     "logo": "https://laravelhelp.com/assets/img/logo/logo2.png",
     "image": "https://laravelhelp.com/assets/img/og-image.png",
@@ -85,11 +85,13 @@
     },
     "sameAs": [],
     "serviceType": [
+        "Laravel Payments & Fintech Development",
+        "Payment Integration",
+        "Payout System Development",
         "Laravel Consulting",
         "PHP Development",
         "Code Audit",
         "Performance Optimization",
-        "Laravel Migration",
         "API Development"
     ],
     "areaServed": {
