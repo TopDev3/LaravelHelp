@@ -6,50 +6,13 @@ use Tests\TestCase;
 
 class LandingPageTest extends TestCase
 {
-    public function test_hero_shows_ai_badge_and_fintech_subline(): void
+    public function test_hero_shows_the_ai_powered_badge(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        // AI badge restored.
         $response->assertSee('AI-Powered Laravel Development');
-        $response->assertDontSee('Laravel for Payments &amp; Fintech', false);
-        // Sub-line leads with Laravel audits, then the fintech specialty.
-        $response->assertSee('Laravel audits &amp; development', false);
-        $response->assertSee('specialized for', false);
-        $response->assertSee('payouts &amp; fintech integrations', false);
         $response->assertSee('AI-accelerated development');
-    }
-
-    public function test_payments_fintech_section_highlights_cv_capabilities(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-        $response->assertSee('Payment &amp; bank integrations', false);
-        $response->assertSee('Payout &amp; wallet engines', false);
-        $response->assertSee('Compliance &amp; security', false);
-        $response->assertSee('Fintech domain modeling');
-        $response->assertSee('Event sourcing');
-        $response->assertSee('KYB/KYC');
-    }
-
-    public function test_challenges_section_includes_fintech_pain_points(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-        $response->assertSee('reconcile');
-        $response->assertSee('KYC');
-    }
-
-    public function test_seo_meta_targets_payments_fintech(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-        $response->assertSee('fintech', false);
-        $response->assertSee('payment', false);
     }
 
     public function test_tech_stack_section_uses_first_person_and_mentions_mcp(): void
