@@ -135,10 +135,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="hero__content text-center flex-column d-flex align-items-center">
-                        <span class="hero__badge d-inline-flex align-items-center gap-2 text-primary fw-semibold rounded-pill px-3 py-2 mb-3"
-                              style="background-color: rgba(220, 53, 69, 0.08); border: 1px solid rgba(220, 53, 69, 0.25); font-size: 0.95rem;">
-                            <i class="ri-sparkling-2-line"></i> AI-Powered Laravel Development
-                        </span>
                         <h1 class="fs-1 fw-bold pb-1 hero__title position-relative">
                             Is your Laravel app <span class="text-primary">slow,</span> <br
                                     class="d-none d-md-inline-block">
@@ -215,23 +211,6 @@
 
                                 <p class="text-secondary fs-16">
                                     Actionable insights guaranteed
-                                </p>
-                            </div>
-
-                            <div class="ai__block d-flex px-1 align-items-center gap-3 mt-2 mt-sm-3 mt-md-0">
-                                    <span class="time__block-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24" fill="none">
-                                            <path
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                                                    stroke="#F8F9FA" stroke-width="2"/>
-                                            <path d="M13 7L9.5 12.5H12L11 17L14.5 11.5H12L13 7Z" stroke="#F8F9FA"
-                                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-
-                                <p class="text-secondary fs-16">
-                                    AI-accelerated development
                                 </p>
                             </div>
                         </div>

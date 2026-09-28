@@ -6,13 +6,17 @@ use Tests\TestCase;
 
 class LandingPageTest extends TestCase
 {
-    public function test_hero_shows_the_ai_powered_badge(): void
+    public function test_hero_leads_with_the_headline_and_no_ai_claims(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('AI-Powered Laravel Development');
-        $response->assertSee('AI-accelerated development');
+        // The hero opens straight on the headline; the AI badge and bullet are gone.
+        $response->assertSee('Is your Laravel app', false);
+        $response->assertSee('Book a free Laravel code audit', false);
+        $response->assertDontSee('AI-Powered Laravel Development');
+        $response->assertDontSee('AI-accelerated development');
+        $response->assertDontSee('hero__badge', false);
     }
 
     public function test_landing_page_has_no_payments_or_fintech_positioning(): void
