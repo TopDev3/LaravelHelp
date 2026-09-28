@@ -15,6 +15,17 @@ class LandingPageTest extends TestCase
         $response->assertSee('AI-accelerated development');
     }
 
+    public function test_landing_page_has_no_payments_or_fintech_positioning(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        // The landing page targets general Laravel consulting, not a payments niche.
+        foreach (['Fintech', 'fintech', 'Payments &', 'payout', 'KYC', 'KYB', 'Plaid', 'Synctera', 'Checkbook', 'ZumRails'] as $term) {
+            $response->assertDontSee($term, false);
+        }
+    }
+
     public function test_tech_stack_section_uses_first_person_and_mentions_mcp(): void
     {
         $response = $this->get('/');
@@ -30,11 +41,6 @@ class LandingPageTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('Payments & Fintech', false);
-        $response->assertSee('Stripe');
-        $response->assertSee('PayPal');
-        $response->assertSee('Plaid');
-        $response->assertSee('Synctera');
         $response->assertSee('Node.js');
         $response->assertSee('Python');
         $response->assertSee('MongoDB');

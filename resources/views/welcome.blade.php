@@ -1167,32 +1167,6 @@
                         </div>
                     </div>
 
-                    <!-- Payments & Fintech -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="tech-category h-100 p-4 border rounded-3">
-                            <h4 class="text-secondary fs-6 fw-semibold mb-3">Payments & Fintech</h4>
-                            <div class="d-flex flex-wrap gap-3 justify-content-center">
-                                <div class="tech-logo-item text-center">
-                                    <img src="{{ asset('assets/img/tech-logos/stripe.svg') }}" alt="Stripe" width="40" height="40">
-                                    <span class="d-block mt-1 small">Stripe</span>
-                                </div>
-                                <div class="tech-logo-item text-center">
-                                    <img src="{{ asset('assets/img/tech-logos/paypal.svg') }}" alt="PayPal" width="40" height="40">
-                                    <span class="d-block mt-1 small">PayPal</span>
-                                </div>
-                                <div class="tech-logo-item text-center">
-                                    <img src="{{ asset('assets/img/tech-logos/braintree.svg') }}" alt="Braintree" width="40" height="40">
-                                    <span class="d-block mt-1 small">Braintree</span>
-                                </div>
-                                <div class="tech-logo-item text-center">
-                                    <i class="ri-bank-line" style="font-size: 34px; line-height: 40px; display: inline-block; height: 40px; color: #DC3545;" aria-label="Plaid"></i>
-                                    <span class="d-block mt-1 small">Plaid</span>
-                                </div>
-                            </div>
-                            <p class="small text-center mt-3 mb-0" style="color: #6c757d;">+ Astra · Checkbook · Synctera · ZumRails · Avalara</p>
-                        </div>
-                    </div>
-
                     <!-- Debugging & Profiling -->
                     <div class="col-md-6 col-lg-4">
                         <div class="tech-category h-100 p-4 border rounded-3">
