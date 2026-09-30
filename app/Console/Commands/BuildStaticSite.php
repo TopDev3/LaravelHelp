@@ -37,12 +37,33 @@ class BuildStaticSite extends Command
         // 3. The CV, served as /cv.pdf (a real file on a static host).
         File::copy(resource_path('files/Andres-Pineda-CV.pdf'), $output.'/cv.pdf');
 
-        // 4. GitHub Pages plumbing.
+        // 4. Crawler and AI-agent entry points.
+        File::copy(public_path('robots.txt'), $output.'/robots.txt');
+        File::copy(public_path('llms.txt'), $output.'/llms.txt');
+        File::put($output.'/sitemap.xml', $this->sitemap($base));
+
+        // 5. GitHub Pages plumbing.
         File::put($output.'/CNAME', 'laravelhelp.com');
         File::put($output.'/.nojekyll', '');
 
         $this->info("Static site built at {$output} (base: {$base})");
 
         return self::SUCCESS;
+    }
+
+    private function sitemap(string $base): string
+    {
+        $lastmod = now()->toDateString();
+
+        return <<<XML
+            <?xml version="1.0" encoding="UTF-8"?>
+            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                <url>
+                    <loc>{$base}/</loc>
+                    <lastmod>{$lastmod}</lastmod>
+                </url>
+            </urlset>
+
+            XML;
     }
 }

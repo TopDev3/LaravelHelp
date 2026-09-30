@@ -152,16 +152,16 @@
                             <form action="" class="hero__form">
                                 <div class="row g-3">
                                     <div class="col-lg-6">
-                                        <input class="email px-4 py-3 bg-white" type="email" placeholder="Enter your email">
+                                        <input class="email px-4 py-3 bg-white" type="email" placeholder="Enter your email" aria-label="Your email (prefills the booking form)">
                                     </div>
                                     <div class="col-lg-6">
                                         {{-- Opens the Cal.com booking popup --}}
-                                        <button type="button"
+                                        <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                                                 onclick="bookConsultation(); return false;"
                                                 class="btn btn-main hero__form-btn"
                                                 style="white-space: nowrap; min-width: 250px; width: 250px;">
                                             Schedule Free Consultation
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </form>
@@ -220,11 +220,11 @@
                         <div
                                 class="hero__btn-wrapper d-flex gap-1 justify-content-center align-items-center flex-wrap">
                             {{-- Opens the Cal.com booking popup --}}
-                            <button type="button"
+                            <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                                     onclick="bookConsultation(); return false;"
                                     class="btn btn-outline">
                                 Hire My Services
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -256,12 +256,12 @@
 
                 {{-- Ensure full width, space between, and NO wrapping --}}
                 <div
-                        class="achivement__counts w-100 d-flex justify-content-between align-items-center row-gap-3 odometer-trigger">
+                        class="achivement__counts w-100 d-flex justify-content-around align-items-center row-gap-3 odometer-trigger">
 
                     {{-- Removed px-md-5 and mb-sm-0 --}}
                     <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
-                            <span class="odometer" data-target="15">0</span> +
+                            <span class="odometer" data-target="15">15</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Years Experience</p>
                     </div>
@@ -269,17 +269,9 @@
                     {{-- Removed px-md-5 and mb-sm-0 --}}
                     <div class="achivement__count-item text-center mb-3">
                         <h2 class="fs-2 fw-bold text-white">
-                            <span class="odometer" data-target="45">0</span> +
+                            <span class="odometer" data-target="45">45</span> +
                         </h2>
                         <p class="text-white fs-20 fw-medium">Projects Built</p>
-                    </div>
-
-                     {{-- Removed px-md-5 and mb-sm-0 --}}
-                    <div class="achivement__count-item text-center mb-3">
-                        <h2 class="fs-2 fw-bold text-white">
-                            <span class="odometer" data-target="2.5">0</span> k
-                        </h2>
-                        <p class="text-white fs-20 fw-medium">Github Stars</p>
                     </div>
                 </div>
 
@@ -512,11 +504,11 @@
             <div
                     class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2 pt-lg-3 ">
                 {{-- Opens the Cal.com booking popup --}}
-                <button type="button"
+                <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                         onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
                     Fix These Issues Now
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -755,11 +747,11 @@
 
             <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-3 pt-lg-3">
                 {{-- Opens the Cal.com booking popup --}}
-                <button type="button"
+                <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                         onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
                     Book Your Free Audit
-                </button>
+                </a>
             </div>
 
 
@@ -1338,11 +1330,11 @@
                             {{-- <form action="" class="book__form mt-4"> --}}
                                 {{-- <input type="email" placeholder="Enter your email"> --}}
 
-                                <button type="button"
+                                <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                                         onclick="bookConsultation(); return false;"
                                         class="btn btn-main mt-3 w-100"> {{-- Added w-100 for consistency --}}
                                     Book My Free Call
-                                </button>
+                                </a>
 
                             {{-- </form> --}}
 
@@ -1392,28 +1384,6 @@
                             </h3>
                             <p>
                                 Projects Delivered
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="fact__item d-flex align-items-center gap-2 gap-lg-3 pe-3 pe-lg-4">
-                        <div class="fact__item-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"
-                                 fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M11.4167 3.96441C11.3691 3.72793 11.241 3.51528 11.0542 3.36273C10.8674 3.21018 10.6334 3.1272 10.3922 3.12793C10.151 3.12867 9.91755 3.21309 9.73166 3.36678C9.54577 3.52046 9.41897 3.7339 9.3729 3.97066V3.97482L9.36665 3.99566C9.339 4.13602 9.30774 4.27565 9.2729 4.4144C9.18131 4.78791 9.07498 5.15764 8.95415 5.52274C8.65207 6.4269 8.24165 7.3144 7.77082 7.78941C7.29999 8.26232 6.41665 8.67899 5.51249 8.98732C5.01218 9.15579 4.5031 9.29697 3.98749 9.41024L3.96665 9.4144C3.72898 9.46062 3.51482 9.58819 3.36101 9.77518C3.20719 9.96218 3.12332 10.1969 3.12381 10.439C3.12431 10.6812 3.20913 10.9156 3.36371 11.1019C3.51829 11.2883 3.73296 11.415 3.97082 11.4602H3.97499L3.99582 11.4665C4.13619 11.4941 4.27581 11.5254 4.41457 11.5602C4.69999 11.6311 5.09374 11.7352 5.5229 11.879C6.42707 12.1811 7.31457 12.5915 7.78957 13.0623C8.26249 13.5332 8.67915 14.4165 8.98749 15.3207C9.15596 15.821 9.29714 16.33 9.4104 16.8457L9.41457 16.8665C9.46079 17.1042 9.58836 17.3183 9.77535 17.4721C9.96234 17.626 10.1971 17.7098 10.4392 17.7093C10.6813 17.7088 10.9157 17.624 11.1021 17.4694C11.2885 17.3149 11.4152 17.1002 11.4604 16.8623V16.8582L11.4667 16.8373C11.4943 16.697 11.5256 16.5573 11.5604 16.4186C11.6312 16.1332 11.7354 15.7394 11.8792 15.3102C12.1812 14.4061 12.5917 13.5186 13.0625 13.0436C13.5333 12.5707 14.4167 12.154 15.3208 11.8457C15.8211 11.6772 16.3302 11.536 16.8458 11.4227L16.8667 11.4186C17.1043 11.3724 17.3185 11.2448 17.4723 11.0578C17.6261 10.8708 17.71 10.6361 17.7095 10.3939C17.709 10.1518 17.6242 9.91741 17.4696 9.73105C17.315 9.54468 17.1004 9.41798 16.8625 9.37274H16.8583L16.8375 9.36649C16.6971 9.33884 16.5575 9.30758 16.4187 9.27274C16.0452 9.18114 15.6755 9.07481 15.3104 8.95399C14.4062 8.6519 13.5187 8.24149 13.0437 7.77066C12.5708 7.29982 12.1542 6.41649 11.8458 5.51232C11.6774 5.01202 11.5362 4.50294 11.4229 3.98732L11.4167 3.96441ZM13.325 10.4061C12.6937 10.1102 12.0604 9.72899 11.575 9.24774C11.0917 8.76857 10.7083 8.13732 10.4083 7.50816C10.1104 8.13941 9.72915 8.77274 9.2479 9.25815C8.76874 9.74149 8.13749 10.1248 7.50832 10.4248C8.13957 10.7227 8.7729 11.104 9.25832 11.5852C9.74165 12.0644 10.125 12.6957 10.425 13.3248C10.7229 12.6936 11.1042 12.0602 11.5854 11.5748C12.0646 11.0915 12.6958 10.7061 13.325 10.4061ZM39.5833 6.77065C39.9977 6.77065 40.3952 6.93527 40.6882 7.2283C40.9812 7.52133 41.1458 7.91875 41.1458 8.33316V8.85399H41.6667C42.0811 8.85399 42.4785 9.01861 42.7715 9.31163C43.0645 9.60466 43.2292 10.0021 43.2292 10.4165C43.2292 10.8309 43.0645 11.2283 42.7715 11.5213C42.4785 11.8144 42.0811 11.979 41.6667 11.979H41.1458V12.4998C41.1458 12.9142 40.9812 13.3117 40.6882 13.6047C40.3952 13.8977 39.9977 14.0623 39.5833 14.0623C39.1689 14.0623 38.7715 13.8977 38.4785 13.6047C38.1854 13.3117 38.0208 12.9142 38.0208 12.4998V11.979H37.5C37.0856 11.979 36.6882 11.8144 36.3951 11.5213C36.1021 11.2283 35.9375 10.8309 35.9375 10.4165C35.9375 10.0021 36.1021 9.60466 36.3951 9.31163C36.6882 9.01861 37.0856 8.85399 37.5 8.85399H38.0208V8.33316C38.0208 7.91875 38.1854 7.52133 38.4785 7.2283C38.7715 6.93527 39.1689 6.77065 39.5833 6.77065ZM24.975 12.8748C24.2896 13.7707 23.5125 15.1561 22.3646 17.2123L21.7854 18.254L21.6729 18.454C21.1521 19.3977 20.6771 20.2498 19.9125 20.829C19.1375 21.4186 18.1958 21.629 17.175 21.8582L16.9583 21.9061L15.8333 22.1623C13.6 22.6665 12.1104 23.0082 11.0937 23.4082C10.1083 23.7977 9.97707 24.0852 9.92707 24.2457C9.87082 24.4248 9.82707 24.7707 10.4167 25.7102C11.0208 26.6665 12.0417 27.8665 13.5583 29.6415L14.3271 30.5394L14.4687 30.7061C15.1729 31.5248 15.7979 32.2561 16.0875 33.1811C16.3729 34.1019 16.2771 35.0644 16.1708 36.1602L16.15 36.3811L16.0312 37.5811C15.8021 39.9457 15.6521 41.5519 15.7021 42.6998C15.7542 43.8457 15.9937 44.079 16.1042 44.1644C16.1896 44.229 16.4208 44.3977 17.4458 44.1019C18.4917 43.804 19.8917 43.1644 21.9812 42.2019L23.0354 41.7165L23.2437 41.6207C24.1917 41.1832 25.075 40.7727 26.0417 40.7727C27.0083 40.7727 27.8917 41.1811 28.8417 41.6207L29.0479 41.7165L30.1021 42.2019C32.1917 43.1644 33.5917 43.804 34.6375 44.104C35.6625 44.3957 35.8937 44.229 35.9792 44.1644C36.0896 44.0811 36.3292 43.8477 36.3812 42.6998C36.4333 41.5519 36.2812 39.9457 36.05 37.5811L35.9354 36.3811L35.9146 36.1582C35.8062 35.0644 35.7104 34.1019 35.9979 33.1811C36.2854 32.2561 36.9104 31.5248 37.6146 30.7061L37.7562 30.5394L38.525 29.6415C40.0437 27.8665 41.0646 26.6665 41.6667 25.7102C42.2583 24.7707 42.2125 24.4248 42.1562 24.2457C42.1062 24.0852 41.975 23.7977 40.9896 23.4082C39.9729 23.0082 38.4833 22.6665 36.2521 22.1623L35.125 21.9061L34.9083 21.8582C33.8875 21.629 32.9458 21.4186 32.1708 20.8311C31.4062 20.2477 30.9333 19.3977 30.4104 18.4561L30.2979 18.254L29.7187 17.2123C28.5729 15.1561 27.7937 13.7686 27.1083 12.8748C26.4229 11.9811 26.1292 11.979 26.0417 11.979C25.9542 11.979 25.6583 11.9832 24.975 12.8748ZM22.4937 10.9748C23.35 9.85607 24.4521 8.85399 26.0417 8.85399C27.6292 8.85399 28.7333 9.85607 29.5896 10.9748C30.4312 12.0727 31.3187 13.6623 32.3854 15.579L33.0271 16.7332C33.7333 17.9977 33.8854 18.2082 34.0604 18.3415C34.2271 18.4665 34.4417 18.5498 35.8146 18.8582L37.0708 19.1436C39.1375 19.6102 40.8687 20.0019 42.1333 20.5019C43.4562 21.0227 44.6729 21.8144 45.1396 23.3186C45.6042 24.8061 45.075 26.1602 44.3104 27.3748C43.5708 28.5477 42.3979 29.9227 40.9833 31.5748L40.1312 32.5707C39.2042 33.6561 39.0521 33.8769 38.9812 34.1102C38.9062 34.3477 38.9042 34.6332 39.0437 36.0811L39.1729 37.404C39.3875 39.6123 39.5646 41.4415 39.5021 42.8415C39.4396 44.2665 39.1125 45.7082 37.8687 46.654C36.5979 47.6186 35.1292 47.4957 33.7771 47.1082C32.4708 46.7332 30.8521 45.9873 28.9167 45.0977L27.7417 44.5561C26.45 43.9623 26.2333 43.8977 26.0417 43.8977C25.85 43.8977 25.6333 43.9602 24.3417 44.5561L23.1667 45.0977C21.2292 45.9873 19.6125 46.7332 18.3062 47.1082C16.9542 47.4957 15.4854 47.6186 14.2146 46.654C12.9708 45.7082 12.6437 44.2665 12.5812 42.8415C12.5187 41.4415 12.6958 39.6123 12.9104 37.404L13.0375 36.0811C13.1792 34.6332 13.1771 34.3498 13.1021 34.1102C13.0312 33.8769 12.8792 33.6561 11.9521 32.5707L11.1 31.5748C9.68749 29.9227 8.51249 28.5477 7.7729 27.3748C7.00832 26.1602 6.48124 24.8061 6.94374 23.3186C7.4104 21.8123 8.62707 21.0227 9.9479 20.5019C11.2146 20.0019 12.9458 19.6102 15.0125 19.1436L16.2687 18.8582C17.6417 18.5477 17.8583 18.4665 18.0229 18.3415C18.1979 18.2082 18.35 17.9977 19.0562 16.7332L19.6979 15.579C20.7667 13.6623 21.6521 12.0727 22.4937 10.9748Z"
-                                      fill="#212529"/>
-                            </svg>
-                        </div>
-
-                        <div class="fact__item-content">
-                            <h3 class="fs-5 fw-bold text-secondary">
-                                <span>25</span>k
-                            </h3>
-                            <p>
-                                GitHub Stars
                             </p>
                         </div>
 
@@ -1556,11 +1526,11 @@
                         applications
                     </p>
                     {{-- Opens the Cal.com booking popup --}}
-                    <button type="button"
+                    <a href="{{ config('config.booking_url') }}" target="_blank" rel="noopener"
                             onclick="bookConsultation(); return false;"
                             class="btn btn-main cta__btn mt-3 mt-lg-0">
                         Book Your Free Call
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1666,7 +1636,7 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    Pricing depends on the project scope and complexity. After the free audit, if you're interested in proceeding, we'll discuss your specific needs and I can provide a detailed proposal with clear deliverables and pricing options (e.g., hourly rate, fixed project fee, or retainer).
+                                    Hourly work starts at $60 USD per hour. After the free audit, if you'd like to proceed, I'll send a detailed proposal with clear deliverables and pricing options: hourly, a fixed project fee, or a retainer. Fixed fees depend on the project's scope and complexity.
                                 </p>
                             </div>
                         </div>
@@ -1917,6 +1887,28 @@ function bookConsultation() {
 
     Cal.ns.booking("modal", {calLink: "{{ config('config.cal_link') }}", config: config});
 }
+
+// WebMCP (draft web standard): lets in-browser AI agents discover the booking action and call it directly.
+// The visitor still picks the time and confirms the booking themselves.
+if (document.modelContext && typeof document.modelContext.registerTool === 'function') {
+    document.modelContext.registerTool({
+        name: 'book_free_consultation',
+        description: 'Open the calendar to book a free 30-minute Laravel consultation with Andrés Pineda (LaravelHelp). The visitor chooses a time and confirms the booking.',
+        inputSchema: {
+            type: 'object',
+            properties: {
+                email: {type: 'string', description: "The visitor's email, used to prefill the booking form"},
+            },
+        },
+        async execute({email} = {}) {
+            if (email) {
+                document.querySelector('.hero__form .email').value = email;
+            }
+            bookConsultation();
+            return {content: [{type: 'text', text: 'Opened the booking calendar. Booking page: {{ config('config.booking_url') }}'}]};
+        },
+    });
+}
 </script>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -1932,6 +1924,11 @@ function bookConsultation() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{{-- Counters ship their real values for crawlers and agents; browsers start them at 0 so they can animate. --}}
+<script>
+document.querySelectorAll('.odometer[data-target]').forEach(function (el) { el.textContent = '0'; });
+</script>
 
 <!-- Odometer -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>

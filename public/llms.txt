@@ -1,0 +1,32 @@
+# LaravelHelp
+
+> LaravelHelp is the independent consultancy of Andrés Pineda, a senior Laravel and PHP engineer who helps companies fix slow, outdated or buggy Laravel applications. Fully remote from Medellín, Colombia, working US Eastern/Central hours.
+
+Andrés Pineda (Ph.D. in Systems & Informatics) has 15+ years of experience building production software, across payments, e-commerce and data-heavy platforms. LaravelHelp is one person, not an agency: clients work directly with the engineer who does the work.
+
+## Services
+
+- Laravel and PHP upgrades: moving applications off unsupported versions, in small steps with tests. Laravel 11 stopped receiving security fixes on March 12, 2026, and PHP 8.2 stops on December 31, 2026.
+- Performance audits and optimization: slow queries, N+1 problems, caching, queues and database load.
+- Code, architecture and security reviews.
+- Bug fixing and ongoing maintenance.
+- Automated tests with Pest and PHPUnit for untested applications.
+- Senior Laravel capacity for existing teams, per project or part-time.
+
+## How to work with LaravelHelp
+
+- Free 30-minute consultation on Google Meet. You describe or screen-share the problem and leave with concrete next steps. No code access is needed. Book at https://cal.com/laravel-help/30min
+- "Help Me Now" urgent session: a paid 1-hour priority consultation for $120 USD, booked through the same booking page.
+- Hourly work starts at $60 USD per hour. Larger projects can also be quoted after the free call as a fixed fee or a retainer.
+- Email: afpinedac@gmail.com
+
+## Technologies
+
+Laravel, PHP, Livewire, Inertia, Alpine.js, Vue.js, React, Tailwind CSS, MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch, Meilisearch, Algolia, AWS, Google Cloud, DigitalOcean, Laravel Forge, Nginx, Docker, Xdebug, Blackfire, Pest, PHPUnit, k6, Sentry, New Relic and Datadog.
+
+## Links
+
+- [Website](https://laravelhelp.com/): services, frequently asked questions and booking
+- [Book a free consultation](https://cal.com/laravel-help/30min): 30-minute video call
+- [CV](https://laravelhelp.com/cv.pdf): Andrés Pineda's résumé (PDF)
+- [GitHub](https://github.com/afpinedac)

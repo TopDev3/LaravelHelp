@@ -154,4 +154,65 @@ class LandingPageTest extends TestCase
         $response->assertSee('About Me');
         $response->assertDontSee('Send us a question');
     }
+
+    public function test_booking_ctas_are_real_links_agents_can_follow(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        $this->assertSame(0, preg_match_all('/<button[^>]*onclick="bookConsultation/', $content));
+        $this->assertGreaterThanOrEqual(
+            7,
+            substr_count($content, 'href="https://cal.com/laravel-help/30min" target="_blank" rel="noopener"')
+        );
+    }
+
+    public function test_counters_ship_real_values_in_the_html(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('<span class="odometer" data-target="15">15</span>', false);
+        $response->assertSee('<span class="odometer" data-target="45">45</span>', false);
+        $response->assertDontSee('data-target="15">0</span>', false);
+    }
+
+    public function test_structured_data_describes_the_consultant_offers_and_booking(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        preg_match_all('#<script type="application/ld\+json">(.*?)</script>#s', $content, $matches);
+        $types = collect($matches[1])
+            ->map(fn (string $json) => json_decode($json, true, flags: JSON_THROW_ON_ERROR))
+            ->flatMap(fn (array $data) => $data['@graph'] ?? [$data])
+            ->pluck('@type')
+            ->all();
+
+        $this->assertEqualsCanonicalizing(['Person', 'WebSite', 'ProfessionalService', 'FAQPage'], $types);
+        $this->assertStringContainsString('"@type": "ReserveAction"', $content);
+        $this->assertStringContainsString('"addressCountry": "CO"', $content);
+        $this->assertStringNotContainsString('"addressCountry": "US"', $content);
+        $this->assertMatchesRegularExpression('#<link rel="describedby" type="text/markdown" href="[^"]*/llms\.txt">#', $content);
+    }
+
+    public function test_stats_only_claim_verifiable_facts_and_pricing_is_published(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        // The public GitHub account does not back a stars claim, so none is made.
+        $response->assertDontSee('GitHub Stars');
+        $response->assertDontSee('Github Stars');
+        $response->assertSee('15+ Years Experience');
+        $response->assertSee('Hourly work starts at $60 USD per hour.');
+        $this->assertStringContainsString('Hourly work starts at $60 USD per hour.', file_get_contents(public_path('llms.txt')));
+    }
+
+    public function test_booking_is_exposed_as_a_webmcp_tool(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('document.modelContext.registerTool', false);
+        $response->assertSee("name: 'book_free_consultation'", false);
+    }
 }
