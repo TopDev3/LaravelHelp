@@ -143,7 +143,7 @@
                         </h1>
 
                         <p class="hero__desc fs-5 mt-3 mt-lg-5 mb-2 mb-lg-3 pb-1">
-                            Book a free Laravel code audit and get actionable insights in just 60 minutes.
+                            Book a free Laravel code audit and get actionable insights in just 30 minutes.
                         </p>
 
 
@@ -155,7 +155,7 @@
                                         <input class="email px-4 py-3 bg-white" type="email" placeholder="Enter your email">
                                     </div>
                                     <div class="col-lg-6">
-                                        {{-- Removed data-bs-toggle and data-bs-target, opens booking page --}}
+                                        {{-- Opens the Cal.com booking popup --}}
                                         <button type="button"
                                                 onclick="bookConsultation(); return false;"
                                                 class="btn btn-main hero__form-btn"
@@ -193,7 +193,7 @@
                                         </svg>
                                     </span>
                                 <p class="text-secondary fs-16">
-                                    60-minute free consultation
+                                    30-minute free consultation
                                 </p>
                             </div>
 
@@ -219,22 +219,13 @@
                         <!-- Hero Buttons -->
                         <div
                                 class="hero__btn-wrapper d-flex gap-1 justify-content-center align-items-center flex-wrap">
-                            {{-- Updated button to trigger Google Calendar booking page, kept original text --}}
+                            {{-- Opens the Cal.com booking popup --}}
                             <button type="button"
                                     onclick="bookConsultation(); return false;"
                                     class="btn btn-outline">
                                 Hire My Services
                             </button>
                         </div>
-
-                        <!-- Open to Work -->
-                        <p class="hero__cv-note mt-4 mb-0 fs-6 text-secondary">
-                            <i class="ri-briefcase-line text-primary"></i>
-                            Looking for a lead for your team, or someone with the knowledge and experience to move projects forward?
-                            <br class="d-none d-md-inline-block">
-                            Open to full-time roles — senior Laravel developer, tech lead, or hands-on CTO.
-                            <a href="{{ url('/cv.pdf') }}" target="_blank" rel="noopener" class="text-primary fw-semibold text-decoration-underline">Download my CV</a>
-                        </p>
                     </div>
                 </div>
             </div>
@@ -520,7 +511,7 @@
 
             <div
                     class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-2 pt-lg-3 ">
-                {{-- Changed button to trigger Google Calendar booking page --}}
+                {{-- Opens the Cal.com booking popup --}}
                 <button type="button"
                         onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
@@ -557,7 +548,7 @@
                 What You Get With a Free Audit
             </h2>
 
-            <p class="fs-20 text-center mt-2 mt-lg-3">Schedule your free 60-minute consultation and receive expert
+            <p class="fs-20 text-center mt-2 mt-lg-3">Schedule your free 30-minute consultation and receive expert
                 insights tailored <br class="d-none d-md-flex"> to your application.</p>
 
 
@@ -763,7 +754,7 @@
 
 
             <div class="btn-group d-flex justify-content-center align-items-center gap-3 mt-4 mt-lg-5 pt-3 pt-lg-3">
-                {{-- Changed button to trigger Google Calendar booking page --}}
+                {{-- Opens the Cal.com booking popup --}}
                 <button type="button"
                         onclick="bookConsultation(); return false;"
                         class="btn btn-main mx-auto">
@@ -1299,7 +1290,7 @@
                                     </div>
 
                                     <p class="fs-18">
-                                        60-minute consultation call
+                                        30-minute consultation call
                                     </p>
                                 </div>
 
@@ -1564,7 +1555,7 @@
                         join <span class="text-secondary fw-bold">the companies</span> who improved their Laravel
                         applications
                     </p>
-                    {{-- Updated button to trigger Google Calendar booking page --}}
+                    {{-- Opens the Cal.com booking popup --}}
                     <button type="button"
                             onclick="bookConsultation(); return false;"
                             class="btn btn-main cta__btn mt-3 mt-lg-0">
@@ -1612,7 +1603,7 @@
                             <button class="accordion-button fs-5 text-secondary fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
-                                What happens during the free 60-minute audit?
+                                What happens during the free 30-minute audit?
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show"
@@ -1637,7 +1628,7 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    No, full access is not required for the initial 60-minute audit. You can share specific code snippets via screenshare or describe the problems you're facing. If we decide to work together on a larger project, we can discuss secure access methods then, often via a temporary, read-only account on your Git repository.
+                                    No, full access is not required for the initial 30-minute audit. You can share specific code snippets via screenshare or describe the problems you're facing. If we decide to work together on a larger project, we can discuss secure access methods then, often via a temporary, read-only account on your Git repository.
                                 </p>
                             </div>
                         </div>
@@ -1712,10 +1703,10 @@
                              data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    The "Help Me Now" service is a **paid, 1-hour priority consultation session** designed for urgent issues that require immediate attention. It costs $120 USD and allows you to book a dedicated slot quickly on my Google Calendar booking page for in-depth troubleshooting or guidance.
+                                    The "Help Me Now" service is a <strong>paid, 1-hour priority consultation session</strong> designed for urgent issues that require immediate attention. It costs $120 USD and allows you to book a dedicated slot quickly on my booking page for in-depth troubleshooting or guidance.
                                 </p>
                                 <p class="mt-2">
-                                    The free audit is a 60-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
+                                    The free audit is a 30-minute introductory call to discuss your application's general health, identify potential areas for improvement, and see if we're a good fit to work together on larger tasks. It doesn't guarantee immediate problem-solving for urgent situations like the "Help Me Now" session does.
                                 </p>
                             </div>
                         </div>
@@ -1878,17 +1869,53 @@
 <x-modal-help-me-now/>
 
 
-<!-- Google Calendar booking page - fires Google Ads conversion on click -->
+<!-- Cal.com booking popup - fires the Google Ads conversion only once a booking is confirmed -->
 <script>
-function bookConsultation() {
-    if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-799679405/2NUBCMPYrdgbEK3HqP0C',
-            'value': 1.0,
-            'currency': 'COP'
-        });
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "booking", {origin: "https://app.cal.com"});
+
+// If the embed script is blocked (ad blockers, network), fall back to the booking page in a new tab.
+let calEmbedFailed = false;
+document.querySelector('script[src="https://app.cal.com/embed/embed.js"]')
+    .addEventListener('error', function () { calEmbedFailed = true; });
+
+Cal.ns.booking("on", {
+    action: "bookingSuccessfulV2",
+    callback: function (e) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-799679405/2NUBCMPYrdgbEK3HqP0C',
+                'value': 1.0,
+                'currency': 'COP',
+                'transaction_id': e.detail.data.uid
+            });
+        }
     }
-    window.open('{{ config('config.booking_url') }}', '_blank', 'noopener');
+});
+
+function bookConsultation() {
+    // Opening the booker is only a GA4 event; the Ads conversion waits for the confirmed booking.
+    if (typeof gtag === 'function') {
+        gtag('event', 'booking_opened');
+    }
+
+    if (calEmbedFailed) {
+        window.open('{{ config('config.booking_url') }}', '_blank', 'noopener');
+        return;
+    }
+
+    // An open Bootstrap modal traps focus and would keep it out of the booking form.
+    document.querySelectorAll('.modal.show').forEach(function (el) {
+        bootstrap.Modal.getInstance(el)?.hide();
+    });
+
+    const config = {layout: "month_view", theme: "light"};
+    const email = document.querySelector('.hero__form .email')?.value.trim();
+    if (email) {
+        config.email = email;
+    }
+
+    Cal.ns.booking("modal", {calLink: "{{ config('config.cal_link') }}", config: config});
 }
 </script>
 

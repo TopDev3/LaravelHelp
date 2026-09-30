@@ -13,10 +13,10 @@
                     Need faster, prioritized assistance with your Laravel application?
                 </p>
                 <p class="mb-3">
-                    The "Help Me Now" service provides an **urgent 1-hour consultation** to tackle your immediate challenges.
+                    The "Help Me Now" service provides an <strong>urgent 1-hour consultation</strong> to tackle your immediate challenges.
                 </p>
                 <p class="mb-4">
-                    This dedicated session is available for **$120 USD**. 
+                    This dedicated session is available for <strong>$120 USD</strong>. 
                 </p>
                 <p class="text-center">
                     Click below to schedule your priority session immediately:

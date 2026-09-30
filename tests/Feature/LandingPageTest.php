@@ -52,25 +52,37 @@ class LandingPageTest extends TestCase
         $response->assertSee('Algolia');
     }
 
-    public function test_hero_shows_open_to_work_message_with_cv_link(): void
+    public function test_hero_has_no_open_to_work_message(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('Looking for a lead for your team');
-        $response->assertSee('Open to full-time roles');
-        $response->assertSee('Download my CV');
-        $response->assertSee('cv.pdf" target="_blank"', false);
+        $response->assertDontSee('Open to full-time roles');
+        $response->assertDontSee('Download my CV');
     }
 
-    public function test_booking_uses_google_calendar_instead_of_calendly(): void
+    public function test_booking_uses_cal_com_popup(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('calendar.app.google/dkJ2j79RxDEi92uc6');
+        $response->assertSee('https://app.cal.com/embed/embed.js', false);
+        $response->assertSee('calLink: "laravel-help/30min"', false);
+        $response->assertDontSee('calendar.app.google');
         $response->assertDontSee('calendly.com');
-        $response->assertDontSee('Calendly');
+    }
+
+    public function test_ads_conversion_fires_on_confirmed_booking_not_on_click(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSeeInOrder([
+            'action: "bookingSuccessfulV2"',
+            "'send_to': 'AW-799679405/2NUBCMPYrdgbEK3HqP0C'",
+            'function bookConsultation()',
+        ], false);
+        $this->assertSame(1, substr_count($response->getContent(), "gtag('event', 'conversion'"));
     }
 
     public function test_question_modal_and_its_wiring_are_removed(): void
