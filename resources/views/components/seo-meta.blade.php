@@ -52,6 +52,7 @@
             "jobTitle": "Senior Laravel Consultant",
             "url": "https://laravelhelp.com",
             "email": "afpinedac@gmail.com",
+            "telephone": "{{ config('config.phone') }}",
             "sameAs": ["https://github.com/afpinedac"],
             "address": {
                 "@type": "PostalAddress",
@@ -75,6 +76,7 @@
             "logo": "https://laravelhelp.com/assets/img/logo/logo2.png",
             "image": "https://laravelhelp.com/assets/img/og-image.png",
             "email": "afpinedac@gmail.com",
+            "telephone": "{{ config('config.phone') }}",
             "priceRange": "From $60 USD per hour",
             "founder": {"@id": "https://laravelhelp.com/#andres-pineda"},
             "address": {

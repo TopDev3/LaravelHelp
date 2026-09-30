@@ -167,11 +167,17 @@
                             </form>
                             <div class="d-flex align-items-center justify-content-center my-4 gap-3">
                                 <div style="height: 1px; width: 60px; background-color: #6c757d;"></div>
-                                <span class="text-secondary fs-6">or send me an email to</span>
+                                <span class="text-secondary fs-6">or write to me directly</span>
                                 <div style="height: 1px; width: 60px; background-color: #6c757d;"></div>
                             </div>
-                            <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap">
+                            <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
                                 <span id="contact-email" class="fs-5 fw-semibold text-primary user-select-all">afpinedac@gmail.com</span>
+                                <a id="contact-whatsapp" href="{{ config('config.whatsapp_url') }}" target="_blank" rel="noopener"
+                                   onclick="if (typeof gtag === 'function') { gtag('event', 'whatsapp_click'); }"
+                                   class="fs-5 fw-semibold text-primary text-decoration-none d-inline-flex align-items-center gap-1"
+                                   aria-label="Message Andrés on WhatsApp at {{ config('config.phone') }}">
+                                    <i class="ri-whatsapp-line"></i> {{ config('config.phone') }}
+                                </a>
                             </div>
                         </div>
 

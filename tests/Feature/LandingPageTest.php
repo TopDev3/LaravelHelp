@@ -134,7 +134,7 @@ class LandingPageTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-        $response->assertSee('or send me an email to');
+        $response->assertSee('or write to me directly');
         $response->assertSee('user-select-all', false);
         $response->assertDontSee('copyContactEmail', false);
         $response->assertDontSee('mailto:afpinedac@gmail.com', false);
@@ -205,6 +205,17 @@ class LandingPageTest extends TestCase
         $response->assertSee('15+ Years Experience');
         $response->assertSee('Hourly work starts at $60 USD per hour.');
         $this->assertStringContainsString('Hourly work starts at $60 USD per hour.', file_get_contents(public_path('llms.txt')));
+    }
+
+    public function test_hero_offers_whatsapp_next_to_the_email(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        $this->assertStringContainsString('href="https://wa.me/573226375697"', $content);
+        $this->assertStringContainsString('+57 322 637 5697', $content);
+        $this->assertStringContainsString("gtag('event', 'whatsapp_click')", $content);
+        $this->assertStringContainsString('"telephone": "+57 322 637 5697"', $content);
+        $this->assertStringContainsString('+57 322 637 5697', file_get_contents(public_path('llms.txt')));
     }
 
     public function test_booking_is_exposed_as_a_webmcp_tool(): void
