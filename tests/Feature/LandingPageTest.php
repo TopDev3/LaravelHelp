@@ -226,4 +226,37 @@ class LandingPageTest extends TestCase
         $response->assertSee('document.modelContext.registerTool', false);
         $response->assertSee("name: 'book_free_consultation'", false);
     }
+
+    public function test_meta_description_fits_a_search_snippet(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        $this->assertSame(1, preg_match('/<meta name="description" content="([^"]*)"/', $content, $match));
+        // Bing flags descriptions over 160 characters; search engines truncate them.
+        $this->assertLessThanOrEqual(160, mb_strlen($match[1]));
+        $this->assertGreaterThanOrEqual(70, mb_strlen($match[1]));
+    }
+
+    public function test_page_has_a_single_h1(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        $this->assertSame(1, substr_count($content, '<h1'));
+    }
+
+    public function test_images_have_alt_text_unless_decorative(): void
+    {
+        $content = $this->get('/')->assertStatus(200)->getContent();
+
+        preg_match_all('/<img\b[^>]*>/s', $content, $images);
+        $this->assertNotEmpty($images[0]);
+
+        foreach ($images[0] as $image) {
+            if (str_contains($image, 'aria-hidden="true"')) {
+                continue;
+            }
+
+            $this->assertMatchesRegularExpression('/\balt="[^"\s][^"]*"/', $image, "Image without alt text: {$image}");
+        }
+    }
 }

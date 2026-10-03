@@ -32,7 +32,7 @@
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <div class="ofcanvus__logo">
-            <img src="./assets/img/logo/logo2.png" alt="">
+            <img src="./assets/img/logo/logo2.png" alt="LaravelHelp">
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -790,14 +790,14 @@
                 <div class="col-lg-3 ">
                     <div class="left__part text-center text-lg-start left-to-right-anim">
                         <div class="img pb-1">
-                            <img class="img-fluid radius-8 choose__us-img" src="./assets/img/me.png" alt="">
+                            <img class="img-fluid radius-8 choose__us-img" src="./assets/img/me.png" alt="Andrés Pineda, senior Laravel consultant">
                         </div>
 
 
                         <div
                                 class="developer border-card radius-16 shadow-1 py-4 px-2  d-flex gap-3 align-items-center mt-4">
                             <div class="">
-                                <img class="developer-img img-fluid" src="./assets/img/me.png" alt="img">
+                                <img class="developer-img img-fluid" src="./assets/img/me.png" alt="Andrés Pineda">
                             </div>
 
                             <div class="developer__details">
@@ -953,7 +953,7 @@
                                         <h4 class="text-center fs-20 fw-bold text-secondary my-3">
                                             Follow industry best practices and standards.
                                         </h4>
-                                        <img src="./assets/img/choose-banner.png" class="img-fluid" alt="">
+                                        <img src="./assets/img/choose-banner.png" class="img-fluid" alt="Covers of Laravel and software engineering books, from Laravel: Up &amp; Running to Clean Architecture">
 
                                     </div>
                                 </div>
@@ -1525,7 +1525,7 @@
             <div class="row text-center px-3">
                 <div
                         class="cta d-lg-flex mx-auto align-items-center justify-content-center border-card radius-16 flex-wrap bottom-to-top-anim">
-                    <img src="./assets/img/me.png" alt="" class="cta__img">
+                    <img src="./assets/img/me.png" alt="Andrés Pineda" class="cta__img">
 
                     <p class="mt-3 mt-lg-0">
                         join <span class="text-secondary fw-bold">the companies</span> who improved their Laravel
@@ -1726,9 +1726,9 @@
 
             <div class="newsletter__wrapper position-relative">
                 <img src="assets/img/icons-img/newsletter-obj.svg" class="newsletter-obj-1 position-absolute"
-                     alt="">
+                     alt="" aria-hidden="true">
                 <img src="assets/img/icons-img/newsletter-obj.svg" class="newsletter-obj-2 position-absolute"
-                     alt="">
+                     alt="" aria-hidden="true">
                 <div class="newsletter__content text-center">
                     <h2 class="bottom-to-top-anim">Is your application plagued by...</h2>
                     <p class="fs-5 text-secondary fw-medium" style="min-height: 1.5em;"><span id="common-problems"></span></p>

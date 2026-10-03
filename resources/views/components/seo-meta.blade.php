@@ -1,6 +1,6 @@
 <!-- Primary Meta Tags -->
 <meta name="title" content="LaravelHelp - Expert Laravel Consulting, Performance Audits & Development">
-<meta name="description" content="Expert Laravel consulting services. I help businesses optimize performance, fix critical bugs, conduct code audits, and scale Laravel applications. Get professional help from a senior Laravel developer.">
+<meta name="description" content="Senior Laravel consultant with 15+ years: upgrades, performance audits, bug fixes and code reviews for production Laravel apps. Book a free 30-minute call.">
 <meta name="keywords" content="Laravel consulting, Laravel developer, Laravel expert, PHP consulting, Laravel performance optimization, Laravel code audit, Laravel bug fixing, Livewire developer, Laravel API development, Laravel migration, Laravel upgrade, PHP developer, Laravel freelancer, Laravel agency, Laravel support, Laravel maintenance, Laravel security audit, Laravel scalability, Laravel architecture, Laravel best practices, Laravel slow app, PHP slow performance, Laravel app running slow, fix slow Laravel, Laravel optimization help, Laravel website slow, PHP application slow, Laravel performance issues, Laravel loading slow, slow Laravel queries, Laravel memory issues, Laravel timeout errors, fix Laravel bugs, Laravel application not working, Laravel error fixing, PHP performance problems, speed up Laravel, Laravel bottleneck, optimize Laravel app, Laravel high CPU usage">
 <meta name="author" content="Andrés Pineda">
 <meta name="robots" content="index, follow">
